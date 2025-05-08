@@ -3,8 +3,8 @@
 import * as origModule from '__SENTRY_NEXTJS_REQUEST_ASYNC_STORAGE_SHIM__';
 // @ts-expect-error We use `__SENTRY_WRAPPING_TARGET_FILE__` as a placeholder for the path to the file being wrapped.
 import * as serverComponentModule from '__SENTRY_WRAPPING_TARGET_FILE__';
-import type { WebFetchHeaders } from '@sentry/core';
-import * as Sentry from '@sentry/nextjs';
+import type { WebFetchHeaders } from '@debugg-ai/core';
+import * as Sentry from '@debugg-ai/nextjs';
 import type { RequestAsyncStorage } from './requestAsyncStorageShim';
 
 type NextAsyncStorageModule =
@@ -21,8 +21,8 @@ const requestAsyncStorage: RequestAsyncStorage | undefined =
   'workUnitAsyncStorage' in asyncStorageModule
     ? asyncStorageModule.workUnitAsyncStorage
     : 'requestAsyncStorage' in asyncStorageModule
-      ? asyncStorageModule.requestAsyncStorage
-      : undefined;
+    ? asyncStorageModule.requestAsyncStorage
+    : undefined;
 
 declare const serverComponentModule: {
   default: unknown;

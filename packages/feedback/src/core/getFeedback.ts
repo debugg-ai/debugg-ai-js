@@ -1,4 +1,4 @@
-import { getClient } from '@sentry/core';
+import { getClient } from '@debugg-ai/core';
 import type { buildFeedbackIntegration } from './integration';
 
 type FeedbackIntegration = ReturnType<typeof buildFeedbackIntegration>;

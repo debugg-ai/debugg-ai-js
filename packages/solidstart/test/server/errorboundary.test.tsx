@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/unbound-method */
-import type * as SentryCore from '@sentry/core';
-import { createTransport, getCurrentScope, setCurrentClient } from '@sentry/core';
+import type * as SentryCore from '@debugg-ai/core';
+import { createTransport, getCurrentScope, setCurrentClient } from '@debugg-ai/core';
 import { render } from '@solidjs/testing-library';
 import userEvent from '@testing-library/user-event';
 import { ErrorBoundary } from 'solid-js';
@@ -8,8 +8,8 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { NodeClient, withSentryErrorBoundary } from '../../src/server';
 
 const mockCaptureException = vi.fn();
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual<typeof SentryCore>('@sentry/core');
+vi.mock('@debugg-ai/core', async () => {
+  const actual = await vi.importActual<typeof SentryCore>('@debugg-ai/core');
   return {
     ...actual,
     captureException: (...args) => mockCaptureException(...args),

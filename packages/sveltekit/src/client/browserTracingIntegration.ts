@@ -1,5 +1,5 @@
-import type { Client, Integration, Span } from '@sentry/core';
-import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@sentry/core';
+import type { Client, Integration, Span } from '@debugg-ai/core';
+import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@debugg-ai/core';
 import {
   browserTracingIntegration as originalBrowserTracingIntegration,
   getCurrentScope,
@@ -27,6 +27,7 @@ export function browserTracingIntegration(
   return {
     ...integration,
     afterAllSetup: client => {
+      // @ts-expect-error
       integration.afterAllSetup(client);
 
       if (options.instrumentPageLoad !== false) {
@@ -43,6 +44,7 @@ export function browserTracingIntegration(
 function _instrumentPageload(client: Client): void {
   const initialPath = WINDOW.location?.pathname;
 
+  // @ts-expect-error
   const pageloadSpan = startBrowserTracingPageLoadSpan(client, {
     name: initialPath,
     op: 'pageload',
@@ -123,6 +125,7 @@ function _instrumentNavigations(client: Client): void {
       'sentry.sveltekit.navigation.to': parameterizedRouteDestination || undefined,
     };
 
+    // @ts-expect-error
     startBrowserTracingNavigationSpan(client, {
       name: parameterizedRouteDestination || rawRouteDestination || 'unknown',
       op: 'navigation',

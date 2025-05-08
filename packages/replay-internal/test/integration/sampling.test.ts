@@ -3,7 +3,7 @@
  */
 
 import '../utils/mock-internal-setTimeout';
-import { getClient } from '@sentry/core';
+import { getClient } from '@debugg-ai/core';
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { resetSdkMock } from '../mocks/resetSdkMock';
 

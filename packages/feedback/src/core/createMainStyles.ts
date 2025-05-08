@@ -1,4 +1,4 @@
-import type { FeedbackInternalOptions } from '@sentry/core';
+import type { FeedbackInternalOptions } from '@debugg-ai/core';
 import { DOCUMENT } from '../constants';
 
 const PURPLE = 'rgba(88, 74, 192, 1)';

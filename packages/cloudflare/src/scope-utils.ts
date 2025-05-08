@@ -1,6 +1,6 @@
 import type { IncomingRequestCfProperties } from '@cloudflare/workers-types';
-import type { Scope } from '@sentry/core';
-import { winterCGRequestToRequestData } from '@sentry/core';
+import type { Scope } from '@debugg-ai/core';
+import { winterCGRequestToRequestData } from '@debugg-ai/core';
 
 /**
  * Set cloud resource context on scope.

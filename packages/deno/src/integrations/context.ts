@@ -1,5 +1,5 @@
-import type { Event, IntegrationFn } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
+import type { Event, IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration } from '@debugg-ai/core';
 
 const INTEGRATION_NAME = 'DenoContext';
 

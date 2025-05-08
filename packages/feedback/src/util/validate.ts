@@ -1,4 +1,4 @@
-import type { FeedbackFormData, FeedbackInternalOptions } from '@sentry/core';
+import type { FeedbackFormData, FeedbackInternalOptions } from '@debugg-ai/core';
 
 export type Props = Pick<
   FeedbackInternalOptions,

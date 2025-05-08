@@ -1,5 +1,5 @@
-import type { Client } from '@sentry/core';
-import { getDynamicSamplingContextFromSpan, getRootSpan, spanToTraceContext } from '@sentry/core';
+import type { Client } from '@debugg-ai/core';
+import { getDynamicSamplingContextFromSpan, getRootSpan, spanToTraceContext } from '@debugg-ai/core';
 import { getActiveSpan } from './utils/getActiveSpan';
 
 /** Ensure the `trace` context is set on all events. */

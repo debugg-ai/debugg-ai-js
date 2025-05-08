@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { expect } from '@playwright/test';
 import { SDK_VERSION } from '@sentry/browser';
-import type { ReplayEvent } from '@sentry/core';
+import type { ReplayEvent } from '@debugg-ai/core';
 
 const DEFAULT_REPLAY_EVENT = {
   type: 'replay_event',

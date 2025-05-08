@@ -1,6 +1,6 @@
 import type { Page, Request, Response } from '@playwright/test';
 import type { ReplayEventWithTime } from '@sentry/browser';
-import type { Breadcrumb, Event, ReplayEvent, ReplayRecordingMode } from '@sentry/core';
+import type { Breadcrumb, Event, ReplayEvent, ReplayRecordingMode } from '@debugg-ai/core';
 import type {
   InternalEventContext,
   RecordingEvent,

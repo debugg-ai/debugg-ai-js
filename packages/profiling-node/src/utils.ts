@@ -13,7 +13,7 @@ import type {
   SdkInfo,
   ThreadCpuProfile,
   TransactionEvent,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import {
   createEnvelope,
   dsnToString,
@@ -21,7 +21,7 @@ import {
   getDebugImagesForResources,
   logger,
   uuid4,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { RawChunkCpuProfile, RawThreadCpuProfile } from '@sentry-internal/node-cpu-profiler';
 import * as os from 'os';
 import { env, versions } from 'process';

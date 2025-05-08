@@ -1,5 +1,5 @@
-import type { EventEnvelope, IntegrationFn, Profile, Span } from '@sentry/core';
-import { defineIntegration, getActiveSpan, getRootSpan, logger } from '@sentry/core';
+import type { EventEnvelope, IntegrationFn, Profile, Span } from '@debugg-ai/core';
+import { defineIntegration, getActiveSpan, getRootSpan, logger } from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { startProfileForSpan } from './startProfileForSpan';
 import type { ProfiledEvent } from './utils';

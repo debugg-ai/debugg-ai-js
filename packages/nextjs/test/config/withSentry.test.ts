@@ -1,5 +1,5 @@
-import * as SentryCore from '@sentry/core';
-import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@sentry/core';
+import * as SentryCore from '@debugg-ai/core';
+import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@debugg-ai/core';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { AugmentedNextApiResponse, NextApiHandler } from '../../src/common/types';

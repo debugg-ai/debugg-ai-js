@@ -19,7 +19,7 @@ export {
 } from './utils/spanTypes';
 
 // Re-export this for backwards compatibility (this used to be a different implementation)
-export { getDynamicSamplingContextFromSpan } from '@sentry/core';
+export { getDynamicSamplingContextFromSpan } from '@debugg-ai/core';
 
 export { isSentryRequestSpan } from './utils/isSentryRequest';
 
@@ -48,4 +48,4 @@ export { SentrySampler, wrapSamplingDecision } from './sampler';
 export { openTelemetrySetupCheck } from './utils/setupCheck';
 
 // Legacy
-export { getClient } from '@sentry/core';
+export { getClient } from '@debugg-ai/core';

@@ -1,4 +1,4 @@
-export * from '@sentry/browser';
+export * from '@debugg-ai/browser';
 
 export { init } from './sdk';
 export { captureReactException, reactErrorHandler } from './error';

@@ -1,4 +1,4 @@
-import type { Event } from '@sentry/core';
+import type { Event } from '@debugg-ai/core';
 
 const defaultAssertOptions = {
   method: 'POST',

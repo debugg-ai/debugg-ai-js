@@ -17,7 +17,7 @@ module.exports = {
     {
       files: ['src/config/templates/**/*.ts'],
       rules: {
-        // This complains about importing from @sentry/nextjs, so we skip this for template files
+        // This complains about importing from @debugg-ai/nextjs, so we skip this for template files
         'import/no-extraneous-dependencies': 'off',
       },
     },

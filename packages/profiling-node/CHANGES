@@ -130,7 +130,7 @@ the migration are now tracked in the root CHANGELOG.md.
 - fix: use gnu aarch compiler for arm64 binary (#172) by @bohdanw2
 - fix: Issue fixed for building binary with recompileFromSource (#173) by @whaagmans
 
-## 1.0.7
+## 1.0.8
 
 ### Various fixes & improvements
 
@@ -141,7 +141,7 @@ the migration are now tracked in the root CHANGELOG.md.
 - build: just dont handle errors (ee0f9b95) by @JonasBa
 - build: improve recompile error handling (07f2fd4d) by @JonasBa
 
-## 1.0.6
+## 1.0.8
 
 ### Various fixes & improvements
 
@@ -270,7 +270,7 @@ the migration are now tracked in the root CHANGELOG.md.
 - ref(profiling): drop nan for node abi (#127) by @JonasBa
 - feat(build): output esm and cjs modules (#126) by @JonasBa
 - Check if module exists before loading. Compile if missing (#122) by @vidhu
-- Add @sentry/core as dep (#125) by @vidhu
+- Add @debugg-ai/core as dep (#125) by @vidhu
 
 ## 0.3.0
 

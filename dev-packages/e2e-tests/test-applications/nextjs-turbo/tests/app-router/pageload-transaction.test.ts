@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 import { waitForTransaction } from '@sentry-internal/test-utils';
-import { parseSemver } from '@sentry/core';
+import { parseSemver } from '@debugg-ai/core';
 
 const packageJson = require('../../package.json');
 const nextjsVersion = packageJson.dependencies.next;

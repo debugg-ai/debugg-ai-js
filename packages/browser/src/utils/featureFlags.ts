@@ -1,5 +1,5 @@
-import type { Event, FeatureFlag } from '@sentry/core';
-import { getCurrentScope, logger } from '@sentry/core';
+import type { Event, FeatureFlag } from '@debugg-ai/core';
+import { getCurrentScope, logger } from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../debug-build';
 
 /**

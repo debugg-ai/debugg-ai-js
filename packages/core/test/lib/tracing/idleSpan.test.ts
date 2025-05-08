@@ -20,7 +20,7 @@ import type { Event } from '../../../src/types-hoist/event';
 import type { Span } from '../../../src/types-hoist/span';
 import { getDefaultTestClientOptions, TestClient } from '../../mocks/client';
 
-const dsn = 'https://123@sentry.io/42';
+const dsn = 'https://123@debugg.ai/42';
 
 describe('startIdleSpan', () => {
   beforeEach(() => {

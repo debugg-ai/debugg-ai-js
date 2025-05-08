@@ -1,4 +1,4 @@
-import { defineIntegration, getLocationHref } from '@sentry/core';
+import { defineIntegration, getLocationHref } from '@debugg-ai/core';
 import { WINDOW } from '../helpers';
 
 /**

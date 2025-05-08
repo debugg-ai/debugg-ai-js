@@ -1,6 +1,6 @@
 // mock helper functions not tested directly in this file
 import '../mocks';
-import * as core from '@sentry/core';
+import * as core from '@debugg-ai/core';
 import { describe, expect, it, vi } from 'vitest';
 import * as getWebpackPluginOptionsModule from '../../../src/config/webpackPluginOptions';
 import {
@@ -108,7 +108,7 @@ describe('constructWebpackConfigFunction()', () => {
           ({
             ...serverWebpackConfig,
             devtool: 'something-besides-source-map',
-          }) as any,
+          } as any),
       },
       undefined,
       {

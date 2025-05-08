@@ -16,7 +16,7 @@ export {
   extraErrorDataIntegration,
   rewriteFramesIntegration,
   consoleLoggingIntegration,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export { replayIntegration, getReplay } from '@sentry-internal/replay';
 export type {
@@ -61,8 +61,8 @@ export {
   instrumentSupabaseClient,
   zodErrorsIntegration,
   thirdPartyErrorFilterIntegration,
-} from '@sentry/core';
-export type { Span } from '@sentry/core';
+} from '@debugg-ai/core';
+export type { Span } from '@debugg-ai/core';
 export { makeBrowserOfflineTransport } from './transports/offline';
 export { browserProfilingIntegration } from './profiling/integration';
 export { spotlightBrowserIntegration } from './integrations/spotlight';

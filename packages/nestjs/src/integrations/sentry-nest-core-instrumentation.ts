@@ -31,7 +31,7 @@ import {
   isWrapped,
 } from '@opentelemetry/instrumentation';
 import { ATTR_HTTP_REQUEST_METHOD, ATTR_HTTP_ROUTE, SEMATTRS_HTTP_URL } from '@opentelemetry/semantic-conventions';
-import { SDK_VERSION } from '@sentry/core';
+import { SDK_VERSION } from '@debugg-ai/core';
 
 const supportedVersions = ['>=4.0.0 <12'];
 const COMPONENT = '@nestjs/core';

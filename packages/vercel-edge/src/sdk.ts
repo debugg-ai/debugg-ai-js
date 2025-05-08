@@ -6,7 +6,7 @@ import {
   ATTR_SERVICE_VERSION,
   SEMRESATTRS_SERVICE_NAMESPACE,
 } from '@opentelemetry/semantic-conventions';
-import type { Client, Integration, Options } from '@sentry/core';
+import type { Client, Integration, Options } from '@debugg-ai/core';
 import {
   consoleIntegration,
   createStackParser,
@@ -23,7 +23,7 @@ import {
   requestDataIntegration,
   SDK_VERSION,
   stackParserFromStackParserOptions,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import {
   enhanceDscWithOpenTelemetryRootSpanName,
   openTelemetrySetupCheck,
@@ -114,7 +114,9 @@ export function init(options: VercelEdgeOptions = {}): Client | undefined {
     validateOpenTelemetrySetup();
   }
 
+  // @ts-expect-error
   enhanceDscWithOpenTelemetryRootSpanName(client);
+  // @ts-expect-error
   setupEventContextTrace(client);
 
   return client;
@@ -157,6 +159,7 @@ export function setupOtel(client: VercelEdgeClient): void {
 
   // Create and configure NodeTracerProvider
   const provider = new BasicTracerProvider({
+    // @ts-expect-error
     sampler: new SentrySampler(client),
     resource: new Resource({
       [ATTR_SERVICE_NAME]: 'edge',

@@ -1,5 +1,5 @@
-import type { Event, EventHint, SendFeedback, SendFeedbackParams, TransportMakeRequestResponse } from '@sentry/core';
-import { captureFeedback, getClient, getCurrentScope, getLocationHref } from '@sentry/core';
+import type { Event, EventHint, SendFeedback, SendFeedbackParams, TransportMakeRequestResponse } from '@debugg-ai/core';
+import { captureFeedback, getClient, getCurrentScope, getLocationHref } from '@debugg-ai/core';
 import { FEEDBACK_API_SOURCE } from '../constants';
 
 /**

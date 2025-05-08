@@ -4,7 +4,7 @@ import type {
   HandleDocumentRequestFunction,
   LoaderFunctionArgs,
 } from '@remix-run/node';
-import type { RequestEventData, Span } from '@sentry/core';
+import type { RequestEventData, Span } from '@debugg-ai/core';
 import {
   addExceptionMechanism,
   captureException,
@@ -13,7 +13,7 @@ import {
   logger,
   objectify,
   winterCGRequestToRequestData,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../utils/debug-build';
 import type { RemixOptions } from '../utils/remixOptions';
 import { storeFormDataKeys } from '../utils/utils';

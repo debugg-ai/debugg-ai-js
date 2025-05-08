@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/unbound-method */
 import type * as SentryBrowser from '@sentry/browser';
-import { createTransport, getCurrentScope, setCurrentClient } from '@sentry/core';
+import { createTransport, getCurrentScope, setCurrentClient } from '@debugg-ai/core';
 import { render } from '@solidjs/testing-library';
 import userEvent from '@testing-library/user-event';
 import { ErrorBoundary } from 'solid-js';

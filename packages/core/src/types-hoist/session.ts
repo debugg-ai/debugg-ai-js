@@ -12,6 +12,7 @@ export interface Session {
   status: SessionStatus;
   release?: string;
   environment?: string;
+  hostName?: string;
   userAgent?: string;
   ipAddress?: string;
   errors: number;
@@ -37,6 +38,7 @@ export interface SessionAggregates {
   attrs?: {
     environment?: string;
     release?: string;
+    host_name?: string;
     ip_address?: string | null;
   };
   aggregates: Array<AggregationCounts>;
@@ -66,6 +68,7 @@ export interface SerializedSession {
   attrs?: {
     release?: string;
     environment?: string;
+    host_name?: string;
     user_agent?: string;
     ip_address?: string;
   };

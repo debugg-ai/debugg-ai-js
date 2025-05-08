@@ -1,5 +1,5 @@
-import type { ClientOptions, Event, Options, SeverityLevel } from '@sentry/core';
-import { Client, createTransport, getCurrentScope, resolvedSyncPromise } from '@sentry/core';
+import type { ClientOptions, Event, Options, SeverityLevel } from '@debugg-ai/core';
+import { Client, createTransport, getCurrentScope, resolvedSyncPromise } from '@debugg-ai/core';
 import { wrapClientClass } from '../../src/custom/client';
 import type { OpenTelemetryClient } from '../../src/types';
 

@@ -2,7 +2,7 @@
  * @vitest-environment jsdom
  */
 
-import type { Client } from '@sentry/core';
+import type { Client } from '@debugg-ai/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { createApp } from 'vue';
 import type { Options } from '../../src/types';

@@ -3,8 +3,8 @@
  */
 
 import '../../utils/mock-internal-setTimeout';
-import type { Event } from '@sentry/core';
-import { getClient } from '@sentry/core';
+import type { Event } from '@debugg-ai/core';
+import { getClient } from '@debugg-ai/core';
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { REPLAY_EVENT_NAME, SESSION_IDLE_EXPIRE_DURATION } from '../../../src/constants';
 import { handleGlobalEventListener } from '../../../src/coreHandlers/handleGlobalEvent';

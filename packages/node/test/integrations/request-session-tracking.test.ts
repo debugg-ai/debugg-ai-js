@@ -1,5 +1,5 @@
-import type { Client } from '@sentry/core';
-import { createTransport, Scope, ServerRuntimeClient, withScope } from '@sentry/core';
+import type { Client } from '@debugg-ai/core';
+import { createTransport, Scope, ServerRuntimeClient, withScope } from '@debugg-ai/core';
 import { EventEmitter } from 'stream';
 import { describe, expect, it, vi } from 'vitest';
 import { recordRequestSession } from '../../src/integrations/http/SentryHttpInstrumentation';

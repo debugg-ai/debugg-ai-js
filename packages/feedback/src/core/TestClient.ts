@@ -1,5 +1,5 @@
-import type { BrowserClientReplayOptions, ClientOptions, Event, SeverityLevel } from '@sentry/core';
-import { Client, createTransport, initAndBind, resolvedSyncPromise } from '@sentry/core';
+import type { BrowserClientReplayOptions, ClientOptions, Event, SeverityLevel } from '@debugg-ai/core';
+import { Client, createTransport, initAndBind, resolvedSyncPromise } from '@debugg-ai/core';
 
 export interface TestClientOptions extends ClientOptions, BrowserClientReplayOptions {}
 

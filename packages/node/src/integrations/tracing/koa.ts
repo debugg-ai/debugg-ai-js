@@ -1,6 +1,4 @@
-import { KoaInstrumentation } from '@opentelemetry/instrumentation-koa';
-import { ATTR_HTTP_ROUTE } from '@opentelemetry/semantic-conventions';
-import type { IntegrationFn, Span } from '@sentry/core';
+import type { IntegrationFn, Span } from '@debugg-ai/core';
 import {
   captureException,
   defineIntegration,
@@ -10,7 +8,9 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   spanToJSON,
-} from '@sentry/core';
+} from '@debugg-ai/core';
+import { KoaInstrumentation } from '@opentelemetry/instrumentation-koa';
+import { ATTR_HTTP_ROUTE } from '@opentelemetry/semantic-conventions';
 import { DEBUG_BUILD } from '../../debug-build';
 import { generateInstrumentOnce } from '../../otel/instrument';
 import { ensureIsWrapped } from '../../utils/ensureIsWrapped';
@@ -57,7 +57,7 @@ const _koaIntegration = (() => {
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  *
  * Sentry.init({
  *   integrations: [Sentry.koaIntegration()],
@@ -76,7 +76,7 @@ export const koaIntegration = defineIntegration(_koaIntegration);
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  * const Koa = require("koa");
  *
  * const app = new Koa();

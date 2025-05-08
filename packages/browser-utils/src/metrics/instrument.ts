@@ -1,4 +1,4 @@
-import { getFunctionName, logger } from '@sentry/core';
+import { getFunctionName, logger } from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { onCLS } from './web-vitals/getCLS';
 import { onFID } from './web-vitals/getFID';

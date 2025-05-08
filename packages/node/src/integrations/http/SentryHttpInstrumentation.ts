@@ -4,11 +4,7 @@ import { subscribe, unsubscribe } from 'node:diagnostics_channel';
 import type * as http from 'node:http';
 import type * as https from 'node:https';
 import type { EventEmitter } from 'node:stream';
-import { context, propagation } from '@opentelemetry/api';
-import { VERSION } from '@opentelemetry/core';
-import type { InstrumentationConfig } from '@opentelemetry/instrumentation';
-import { InstrumentationBase, InstrumentationNodeModuleDefinition } from '@opentelemetry/instrumentation';
-import type { AggregationCounts, Client, SanitizedRequestData, Scope } from '@sentry/core';
+import type { AggregationCounts, Client, SanitizedRequestData, Scope } from '@debugg-ai/core';
 import {
   addBreadcrumb,
   addNonEnumerableProperty,
@@ -23,7 +19,11 @@ import {
   parseUrl,
   stripUrlQueryAndFragment,
   withIsolationScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
+import { context, propagation } from '@opentelemetry/api';
+import { VERSION } from '@opentelemetry/core';
+import type { InstrumentationConfig } from '@opentelemetry/instrumentation';
+import { InstrumentationBase, InstrumentationNodeModuleDefinition } from '@opentelemetry/instrumentation';
 import { DEBUG_BUILD } from '../../debug-build';
 import { getRequestUrl } from '../../utils/getRequestUrl';
 

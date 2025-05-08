@@ -1,4 +1,4 @@
-import { captureException, getClient } from '@sentry/core';
+import { captureException, getClient } from '@debugg-ai/core';
 import { type Mock, afterEach, beforeEach, describe, expect, it, test, vi } from 'vitest';
 import type { ComponentPublicInstance } from 'vue';
 import { extractErrorContext, reportNuxtError } from '../../src/runtime/utils';
@@ -81,7 +81,7 @@ describe('extractErrorContext', () => {
 });
 
 describe('reportNuxtError', () => {
-  vi.mock('@sentry/core', async importOriginal => {
+  vi.mock('@debugg-ai/core', async importOriginal => {
     const actual = await importOriginal();
     return {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment

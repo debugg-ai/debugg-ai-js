@@ -1,4 +1,4 @@
-import type { Client, Integration, Options, ServerRuntimeClientOptions, StackParser } from '@sentry/core';
+import type { Client, Integration, Options, ServerRuntimeClientOptions, StackParser } from '@debugg-ai/core';
 import {
   createStackParser,
   dedupeIntegration,
@@ -9,7 +9,7 @@ import {
   linkedErrorsIntegration,
   nodeStackLineParser,
   stackParserFromStackParserOptions,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { DenoClient } from './client';
 import { breadcrumbsIntegration } from './integrations/breadcrumbs';
 import { denoContextIntegration } from './integrations/context';

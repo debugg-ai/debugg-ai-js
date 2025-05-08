@@ -1,4 +1,4 @@
-import type { Client, Event as SentryEvent, IntegrationFn, SentryWrappedXMLHttpRequest } from '@sentry/core';
+import type { Client, Event as SentryEvent, IntegrationFn, SentryWrappedXMLHttpRequest } from '@debugg-ai/core';
 import {
   addExceptionMechanism,
   addFetchInstrumentationHandler,
@@ -9,7 +9,7 @@ import {
   isSentryRequestUrl,
   logger,
   supportsNativeFetch,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { addXhrInstrumentationHandler, SENTRY_XHR_DATA_KEY } from '@sentry-internal/browser-utils';
 import { DEBUG_BUILD } from '../debug-build';
 

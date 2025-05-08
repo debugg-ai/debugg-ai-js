@@ -126,7 +126,7 @@ export {
   dedupeIntegration,
   extraErrorDataIntegration,
   rewriteFramesIntegration,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export { getDefaultIntegrations, init } from './sdk';
 

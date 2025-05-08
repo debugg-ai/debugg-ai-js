@@ -1,5 +1,5 @@
 import { AsyncLocalStorageContextManager } from '@opentelemetry/context-async-hooks';
-import { wrapContextManagerClass } from '@sentry/opentelemetry';
+import { wrapContextManagerClass } from '@debugg-ai/opentelemetry';
 
 /**
  * This is a custom ContextManager for OpenTelemetry, which extends the default AsyncLocalStorageContextManager.

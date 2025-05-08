@@ -14,6 +14,7 @@ if (lambdaTaskRoot) {
     // Sentry node's `getDefaultIntegrations` will load them if tracing is enabled,
     // which is the case if `tracesSampleRate` is set.
     // We can safely add all the node default integrations
+    // @ts-expect-error
     integrations: Sentry.getDefaultIntegrations(
       process.env.SENTRY_TRACES_SAMPLE_RATE
         ? {

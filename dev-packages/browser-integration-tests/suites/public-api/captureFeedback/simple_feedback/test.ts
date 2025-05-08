@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import type { FeedbackEvent } from '@sentry/core';
+import type { FeedbackEvent } from '@debugg-ai/core';
 import { sentryTest } from '../../../../utils/fixtures';
 import { getFirstSentryEnvelopeRequest } from '../../../../utils/helpers';
 

@@ -1,5 +1,5 @@
-import type { Scope } from '@sentry/core';
-import { addExceptionMechanism, withIsolationScope } from '@sentry/core';
+import type { Scope } from '@debugg-ai/core';
+import { addExceptionMechanism, withIsolationScope } from '@debugg-ai/core';
 
 /**
  * @param fn function to run

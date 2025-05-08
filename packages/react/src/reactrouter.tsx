@@ -3,8 +3,8 @@ import {
   startBrowserTracingNavigationSpan,
   startBrowserTracingPageLoadSpan,
   WINDOW,
-} from '@sentry/browser';
-import type { Client, Integration, Span, TransactionSource } from '@sentry/core';
+} from '@debugg-ai/browser';
+import type { Client, Integration, Span, TransactionSource } from '@debugg-ai/core';
 import {
   getActiveSpan,
   getCurrentScope,
@@ -13,7 +13,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
   spanToJSON,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { ReactElement } from 'react';
 import * as React from 'react';
 import { hoistNonReactStatics } from './hoist-non-react-statics';
@@ -198,9 +198,9 @@ function matchRoutes(
     const match = route.path
       ? matchPath(pathname, route)
       : branch.length
-        ? // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-          branch[branch.length - 1]!.match // use parent match
-        : computeRootMatch(pathname); // use default "root" match
+      ? // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        branch[branch.length - 1]!.match // use parent match
+      : computeRootMatch(pathname); // use default "root" match
 
     if (match) {
       branch.push({ route, match });

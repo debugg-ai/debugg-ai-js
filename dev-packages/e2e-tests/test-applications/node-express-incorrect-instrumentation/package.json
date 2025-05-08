@@ -11,7 +11,7 @@
     "test:assert": "pnpm test"
   },
   "dependencies": {
-    "@sentry/core": "latest || *",
+    "@debugg-ai/core": "latest || *",
     "@sentry/node": "latest || *",
     "@trpc/server": "10.45.2",
     "@trpc/client": "10.45.2",

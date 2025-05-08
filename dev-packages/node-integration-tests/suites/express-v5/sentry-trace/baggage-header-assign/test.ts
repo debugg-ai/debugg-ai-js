@@ -1,4 +1,4 @@
-import { parseBaggageHeader } from '@sentry/core';
+import { parseBaggageHeader } from '@debugg-ai/core';
 import { afterAll, expect, test } from 'vitest';
 import { cleanupChildProcesses, createRunner } from '../../../../utils/runner';
 import type { TestAPIResponse } from '../server';

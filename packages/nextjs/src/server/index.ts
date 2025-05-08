@@ -1,12 +1,4 @@
-import { context } from '@opentelemetry/api';
-import {
-  ATTR_HTTP_REQUEST_METHOD,
-  ATTR_HTTP_ROUTE,
-  ATTR_URL_QUERY,
-  SEMATTRS_HTTP_METHOD,
-  SEMATTRS_HTTP_TARGET,
-} from '@opentelemetry/semantic-conventions';
-import type { EventProcessor } from '@sentry/core';
+import type { EventProcessor } from '@debugg-ai/core';
 import {
   applySdkMetadata,
   extractTraceparentData,
@@ -24,10 +16,18 @@ import {
   setCapturedScopesOnSpan,
   spanToJSON,
   stripUrlQueryAndFragment,
-} from '@sentry/core';
-import type { NodeClient, NodeOptions } from '@sentry/node';
-import { getDefaultIntegrations, httpIntegration, init as nodeInit } from '@sentry/node';
-import { getScopesFromContext } from '@sentry/opentelemetry';
+} from '@debugg-ai/core';
+import type { NodeClient, NodeOptions } from '@debugg-ai/node';
+import { getDefaultIntegrations, httpIntegration, init as nodeInit } from '@debugg-ai/node';
+import { getScopesFromContext } from '@debugg-ai/opentelemetry';
+import { context } from '@opentelemetry/api';
+import {
+  ATTR_HTTP_REQUEST_METHOD,
+  ATTR_HTTP_ROUTE,
+  ATTR_URL_QUERY,
+  SEMATTRS_HTTP_METHOD,
+  SEMATTRS_HTTP_TARGET,
+} from '@opentelemetry/semantic-conventions';
 import { DEBUG_BUILD } from '../common/debug-build';
 import { devErrorSymbolicationEventProcessor } from '../common/devErrorSymbolicationEventProcessor';
 import { getVercelEnv } from '../common/getVercelEnv';
@@ -39,7 +39,7 @@ import {
 import { isBuild } from '../common/utils/isBuild';
 import { distDirRewriteFramesIntegration } from './distDirRewriteFramesIntegration';
 
-export * from '@sentry/node';
+export * from '@debugg-ai/node';
 
 export { captureUnderscoreErrorException } from '../common/pages-router-instrumentation/_error';
 
@@ -67,7 +67,7 @@ export const ErrorBoundary = (props: React.PropsWithChildren<unknown>): React.Re
 };
 
 /**
- * A passthrough redux enhancer for the server that doesn't depend on anything from the `@sentry/react` package.
+ * A passthrough redux enhancer for the server that doesn't depend on anything from the `@debugg-ai/react` package.
  */
 export function createReduxEnhancer() {
   return (createStore: unknown) => createStore;
@@ -94,6 +94,7 @@ export function showReportDialog(): void {
 /** Inits the Sentry NextJS SDK on node. */
 export function init(options: NodeOptions): NodeClient | undefined {
   if (isBuild()) {
+    // @ts-expect-error
     return;
   }
 
@@ -132,6 +133,7 @@ export function init(options: NodeOptions): NodeClient | undefined {
 
   if (sdkAlreadyInitialized()) {
     DEBUG_BUILD && logger.log('SDK already initialized');
+    // @ts-expect-error
     return;
   }
 

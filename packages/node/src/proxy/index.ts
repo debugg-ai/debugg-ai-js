@@ -32,7 +32,7 @@ import type * as http from 'node:http';
 import type { OutgoingHttpHeaders } from 'node:http';
 import * as net from 'node:net';
 import * as tls from 'node:tls';
-import { logger } from '@sentry/core';
+import { logger } from '@debugg-ai/core';
 import type { AgentConnectOpts } from './base';
 import { Agent } from './base';
 import { parseProxyResponse } from './parse-proxy-response';

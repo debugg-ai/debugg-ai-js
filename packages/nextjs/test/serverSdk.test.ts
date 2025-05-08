@@ -1,7 +1,7 @@
-import type { Integration } from '@sentry/core';
-import { GLOBAL_OBJ } from '@sentry/core';
-import { getCurrentScope } from '@sentry/node';
-import * as SentryNode from '@sentry/node';
+import type { Integration } from '@debugg-ai/core';
+import { GLOBAL_OBJ } from '@debugg-ai/core';
+import { getCurrentScope } from '@debugg-ai/node';
+import * as SentryNode from '@debugg-ai/node';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { init } from '../src/server';
 
@@ -38,11 +38,11 @@ describe('Server init()', () => {
             version: expect.any(String),
             packages: [
               {
-                name: 'npm:@sentry/nextjs',
+                name: 'npm:@debugg-ai/nextjs',
                 version: expect.any(String),
               },
               {
-                name: 'npm:@sentry/node',
+                name: 'npm:@debugg-ai/node',
                 version: expect.any(String),
               },
             ],
@@ -85,7 +85,7 @@ describe('Server init()', () => {
   });
 
   describe('integrations', () => {
-    // Options passed by `@sentry/nextjs`'s `init` to `@sentry/node`'s `init` after modifying them
+    // Options passed by `@debugg-ai/nextjs`'s `init` to `@debugg-ai/node`'s `init` after modifying them
     type ModifiedInitOptions = { integrations: Integration[]; defaultIntegrations: Integration[] };
 
     it('adds default integrations', () => {

@@ -1,4 +1,4 @@
-import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@sentry/core';
+import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@debugg-ai/core';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 import { wrapCloudEventFunction } from '../../src/gcpfunction/cloud_events';
 import type { CloudEventFunction, CloudEventFunctionWithCallback } from '../../src/gcpfunction/general';

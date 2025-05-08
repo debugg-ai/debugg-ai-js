@@ -1,5 +1,5 @@
-import type { Client, Event, EventHint, IntegrationFn } from '@sentry/core';
-import { defineIntegration, fill, logger } from '@sentry/core';
+import type { Client, Event, EventHint, IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration, fill, logger } from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../../../debug-build';
 import { copyFlagsFromScopeToEvent, insertFlagToScope } from '../../../utils/featureFlags';
 import type { UnleashClient, UnleashClientClass } from './types';
@@ -16,7 +16,7 @@ type UnleashIntegrationOptions = {
  * @example
  * ```
  * import { UnleashClient } from 'unleash-proxy-client';
- * import * as Sentry from '@sentry/browser';
+ * import * as Sentry from '@debugg-ai/browser';
  *
  * Sentry.init({
  *   dsn: '___PUBLIC_DSN___',

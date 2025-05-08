@@ -1,1 +1,1 @@
-export { captureConsoleIntegration } from '@sentry/core';
+export { captureConsoleIntegration } from '@debugg-ai/core';

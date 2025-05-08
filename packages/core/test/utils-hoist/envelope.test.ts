@@ -4,7 +4,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE,
   SentrySpan,
   spanToJSON,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { afterEach, describe, expect, it, test, vi } from 'vitest';
 import { getSentryCarrier } from '../../src/carrier';
 import type { EventEnvelope } from '../../src/types-hoist/envelope';

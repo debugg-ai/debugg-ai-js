@@ -1,4 +1,4 @@
-import type { ClientOptions, Options, TracePropagationTargets } from '@sentry/core';
+import type { ClientOptions, Options, TracePropagationTargets } from '@debugg-ai/core';
 import type { BunTransportOptions } from './transports';
 
 export interface BaseBunOptions {
@@ -29,7 +29,7 @@ export interface BaseBunOptions {
 
 /**
  * Configuration options for the Sentry Bun SDK
- * @see @sentry/core Options for more information.
+ * @see @debugg-ai/core Options for more information.
  */
 export interface BunOptions extends Options<BunTransportOptions>, BaseBunOptions {}
 

@@ -2,7 +2,7 @@ import {
   browserTracingIntegration as originalBrowserTracingIntegration,
   startBrowserTracingNavigationSpan,
 } from '@sentry/browser';
-import type { Integration, StartSpanOptions } from '@sentry/core';
+import type { Integration, StartSpanOptions } from '@debugg-ai/core';
 import { instrumentVueRouter } from './router';
 
 // The following type is an intersection of the Route type from VueRouter v2, v3, and v4.
@@ -49,6 +49,7 @@ type VueBrowserTracingIntegrationOptions = Parameters<typeof originalBrowserTrac
 export function browserTracingIntegration(options: VueBrowserTracingIntegrationOptions = {}): Integration {
   // If router is not passed, we just use the normal implementation
   if (!options.router) {
+    // @ts-expect-error
     return originalBrowserTracingIntegration(options);
   }
 
@@ -62,9 +63,11 @@ export function browserTracingIntegration(options: VueBrowserTracingIntegrationO
   return {
     ...integration,
     afterAllSetup(client) {
+      // @ts-expect-error
       integration.afterAllSetup(client);
 
       const startNavigationSpan = (options: StartSpanOptions): void => {
+        // @ts-expect-error
         startBrowserTracingNavigationSpan(client, options);
       };
 

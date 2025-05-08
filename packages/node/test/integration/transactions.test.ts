@@ -1,8 +1,8 @@
+import type { TransactionEvent } from '@debugg-ai/core';
+import { logger, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@debugg-ai/core';
 import { context, trace, TraceFlags } from '@opentelemetry/api';
 import type { SpanProcessor } from '@opentelemetry/sdk-trace-base';
-import type { TransactionEvent } from '@sentry/core';
-import { logger, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@sentry/core';
-import { SentrySpanProcessor } from '@sentry/opentelemetry';
+import { SentrySpanProcessor } from '@debugg-ai/opentelemetry';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import * as Sentry from '../../src';
 import { cleanupOtel, getProvider, mockSdkInit } from '../helpers/mockSdkInit';
@@ -650,21 +650,15 @@ describe('Integration | Transactions', () => {
 
       Sentry.startSpanManual({ name: 'inner span 2' }, innerSpan => {
         // Child span ends after 10 min
-        setTimeout(
-          () => {
-            innerSpan.end();
-          },
-          10 * 60 * 1_000,
-        );
+        setTimeout(() => {
+          innerSpan.end();
+        }, 10 * 60 * 1_000);
       });
 
       // root span ends after 99 min
-      setTimeout(
-        () => {
-          rootSpan.end();
-        },
-        99 * 10 * 1_000,
-      );
+      setTimeout(() => {
+        rootSpan.end();
+      }, 99 * 10 * 1_000);
     });
 
     // Now wait for 100 mins

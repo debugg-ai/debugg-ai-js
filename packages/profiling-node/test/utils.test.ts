@@ -1,5 +1,5 @@
-import type { Event } from '@sentry/core';
-import { addItemToEnvelope, createEnvelope, uuid4 } from '@sentry/core';
+import type { Event } from '@debugg-ai/core';
+import { addItemToEnvelope, createEnvelope, uuid4 } from '@debugg-ai/core';
 import type { RawThreadCpuProfile } from '@sentry-internal/node-cpu-profiler';
 import { describe, expect, it } from 'vitest';
 import {

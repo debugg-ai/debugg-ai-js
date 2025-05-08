@@ -6,7 +6,7 @@ import {
   getRootSpan,
   getTraceData,
   httpRequestToRequestData,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { IncomingMessage, ServerResponse } from 'http';
 import { TRANSACTION_ATTR_SENTRY_ROUTE_BACKFILL } from '../span-attributes-with-logic-attached';
 

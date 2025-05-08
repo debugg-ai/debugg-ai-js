@@ -1,4 +1,4 @@
-import { logger } from '@sentry/core';
+import { logger } from '@debugg-ai/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
 describe('preload', () => {

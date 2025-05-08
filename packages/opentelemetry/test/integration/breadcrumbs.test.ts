@@ -1,4 +1,4 @@
-import { addBreadcrumb, captureException, getClient, withIsolationScope, withScope } from '@sentry/core';
+import { addBreadcrumb, captureException, getClient, withIsolationScope, withScope } from '@debugg-ai/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { startSpan } from '../../src/trace';
 import { cleanupOtel, mockSdkInit } from '../helpers/mockSdkInit';

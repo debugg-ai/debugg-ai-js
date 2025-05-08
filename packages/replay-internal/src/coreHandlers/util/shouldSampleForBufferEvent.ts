@@ -1,4 +1,4 @@
-import type { Event } from '@sentry/core';
+import type { Event } from '@debugg-ai/core';
 import { UNABLE_TO_SEND_REPLAY } from '../../constants';
 import type { ReplayContainer } from '../../types';
 import { isSampled } from '../../util/isSampled';

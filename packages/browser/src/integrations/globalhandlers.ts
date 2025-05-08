@@ -1,4 +1,4 @@
-import type { Client, Event, IntegrationFn, Primitive, StackParser } from '@sentry/core';
+import type { Client, Event, IntegrationFn, Primitive, StackParser } from '@debugg-ai/core';
 import {
   addGlobalErrorInstrumentationHandler,
   addGlobalUnhandledRejectionInstrumentationHandler,
@@ -10,7 +10,7 @@ import {
   isString,
   logger,
   UNKNOWN_FUNCTION,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { BrowserClient } from '../client';
 import { DEBUG_BUILD } from '../debug-build';
 import { eventFromUnknownInput } from '../eventbuilder';

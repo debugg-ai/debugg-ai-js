@@ -1,6 +1,6 @@
+import type { IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, spanToJSON } from '@debugg-ai/core';
 import { TediousInstrumentation } from '@opentelemetry/instrumentation-tedious';
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, spanToJSON } from '@sentry/core';
 import { generateInstrumentOnce, instrumentWhenWrapped } from '../../otel/instrument';
 
 const TEDIUS_INSTRUMENTED_METHODS = new Set([
@@ -52,7 +52,7 @@ const _tediousIntegration = (() => {
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  *
  * Sentry.init({
  *  integrations: [Sentry.tediousIntegration()],

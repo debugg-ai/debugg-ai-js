@@ -1,6 +1,6 @@
 import { Session as InspectorSession } from 'node:inspector';
 import { parentPort, workerData } from 'node:worker_threads';
-import type { DebugImage, Event, ScopeData, Session, StackFrame } from '@sentry/core';
+import type { DebugImage, Event, ScopeData, Session, StackFrame } from '@debugg-ai/core';
 import {
   applyScopeDataToEvent,
   callFrameToStackFrame,
@@ -14,7 +14,7 @@ import {
   updateSession,
   uuid4,
   watchdogTimer,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { makeNodeTransport } from '../../transports';
 import { createGetModuleFromFilename } from '../../utils/module';
 import type { WorkerStartData } from './common';

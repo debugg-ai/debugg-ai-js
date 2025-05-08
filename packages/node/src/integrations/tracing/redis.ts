@@ -1,8 +1,4 @@
-import type { Span } from '@opentelemetry/api';
-import type { RedisResponseCustomAttributeFunction } from '@opentelemetry/instrumentation-ioredis';
-import { IORedisInstrumentation } from '@opentelemetry/instrumentation-ioredis';
-import { RedisInstrumentation } from '@opentelemetry/instrumentation-redis-4';
-import type { IntegrationFn } from '@sentry/core';
+import type { IntegrationFn } from '@debugg-ai/core';
 import {
   defineIntegration,
   SEMANTIC_ATTRIBUTE_CACHE_HIT,
@@ -12,7 +8,11 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   spanToJSON,
   truncate,
-} from '@sentry/core';
+} from '@debugg-ai/core';
+import type { Span } from '@opentelemetry/api';
+import type { RedisResponseCustomAttributeFunction } from '@opentelemetry/instrumentation-ioredis';
+import { IORedisInstrumentation } from '@opentelemetry/instrumentation-ioredis';
+import { RedisInstrumentation } from '@opentelemetry/instrumentation-redis-4';
 import { generateInstrumentOnce } from '../../otel/instrument';
 import {
   calculateCacheItemSize,
@@ -117,7 +117,7 @@ const _redisIntegration = ((options: RedisOptions = {}) => {
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  *
  * Sentry.init({
  *  integrations: [Sentry.redisIntegration()],

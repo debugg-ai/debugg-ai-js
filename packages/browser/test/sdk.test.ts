@@ -3,9 +3,9 @@
  */
 
 /* eslint-disable @typescript-eslint/unbound-method */
-import type { Integration } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
-import { createTransport, resolvedSyncPromise } from '@sentry/core';
+import type { Integration } from '@debugg-ai/core';
+import * as SentryCore from '@debugg-ai/core';
+import { createTransport, resolvedSyncPromise } from '@debugg-ai/core';
 import type { Mock } from 'vitest';
 import { afterAll, afterEach, beforeEach, describe, expect, it, test, vi } from 'vitest';
 import type { BrowserOptions } from '../src';

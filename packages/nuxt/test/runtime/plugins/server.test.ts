@@ -1,8 +1,8 @@
-import { getTraceMetaTags } from '@sentry/core';
+import { getTraceMetaTags } from '@debugg-ai/core';
 import { type Mock, afterEach, describe, expect, it, vi } from 'vitest';
 import { addSentryTracingMetaTags } from '../../../src/runtime/utils';
 
-vi.mock(import('@sentry/core'), async importOriginal => {
+vi.mock(import('@debugg-ai/core'), async importOriginal => {
   const mod = await importOriginal();
   return {
     ...mod,
@@ -21,7 +21,7 @@ describe('addSentryTracingMetaTags', () => {
       '<meta name="baggage" content="sentry-environment=production"/>',
     ].join('\n');
 
-    // return value is mocked here as return values of `getTraceMetaTags` are tested separately (in @sentry/core)
+    // return value is mocked here as return values of `getTraceMetaTags` are tested separately (in @debugg-ai/core)
     (getTraceMetaTags as Mock).mockReturnValue(mockMetaTags);
 
     const head: string[] = [];

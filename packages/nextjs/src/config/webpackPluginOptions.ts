@@ -111,7 +111,7 @@ export function getWebpackPluginOptions(
       ...sentryBuildOptions.bundleSizeOptimizations,
     },
     _metaOptions: {
-      loggerPrefixOverride: `[@sentry/nextjs - ${prefixInsert}]`,
+      loggerPrefixOverride: `[@debugg-ai/nextjs - ${prefixInsert}]`,
       telemetry: {
         metaFramework: 'nextjs',
       },

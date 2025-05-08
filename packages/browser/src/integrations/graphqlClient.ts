@@ -1,4 +1,4 @@
-import type { Client, IntegrationFn } from '@sentry/core';
+import type { Client, IntegrationFn } from '@debugg-ai/core';
 import {
   defineIntegration,
   isString,
@@ -7,7 +7,7 @@ import {
   SEMANTIC_ATTRIBUTE_URL_FULL,
   spanToJSON,
   stringMatchesSomePattern,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { FetchHint, XhrHint } from '@sentry-internal/browser-utils';
 import { getBodyString, getFetchRequestArgBody, SENTRY_XHR_DATA_KEY } from '@sentry-internal/browser-utils';
 

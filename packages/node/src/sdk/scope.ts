@@ -1,6 +1,6 @@
+import type { Scope } from '@debugg-ai/core';
 import { context } from '@opentelemetry/api';
-import type { Scope } from '@sentry/core';
-import { getScopesFromContext } from '@sentry/opentelemetry';
+import { getScopesFromContext } from '@debugg-ai/opentelemetry';
 
 /**
  * Update the active isolation scope.

@@ -1,6 +1,6 @@
-import type { ReplayRecordingData, Transport } from '@sentry/core';
-import { getClient } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { ReplayRecordingData, Transport } from '@debugg-ai/core';
+import { getClient } from '@debugg-ai/core';
+import * as SentryCore from '@debugg-ai/core';
 import type { Mocked, MockedFunction } from 'vitest';
 import { expect, vi } from 'vitest';
 import type { ReplayContainer, Session } from '../src/types';

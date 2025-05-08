@@ -1,6 +1,6 @@
 import type { SpanContext } from '@opentelemetry/api';
 import { TraceFlags } from '@opentelemetry/api';
-import { baggageHeaderToDynamicSamplingContext } from '@sentry/core';
+import { baggageHeaderToDynamicSamplingContext } from '@debugg-ai/core';
 import { SENTRY_TRACE_STATE_DSC, SENTRY_TRACE_STATE_SAMPLED_NOT_RECORDING } from '../constants';
 
 /**

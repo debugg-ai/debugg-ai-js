@@ -6,7 +6,7 @@ import type {
   HandlerDataConsole,
   HandlerDataFetch,
   IntegrationFn,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import {
   addBreadcrumb,
   addConsoleInstrumentationHandler,
@@ -17,7 +17,7 @@ import {
   getEventDescription,
   safeJoin,
   severityLevelFromString,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 interface BreadcrumbsOptions {
   console: boolean;
@@ -42,7 +42,7 @@ const _breadcrumbsIntegration = ((options: Partial<BreadcrumbsOptions> = {}) => 
   return {
     name: INTEGRATION_NAME,
     setup(client) {
-      // TODO(v10): Remove this functionality and use `consoleIntegration` from @sentry/core instead.
+      // TODO(v10): Remove this functionality and use `consoleIntegration` from @debugg-ai/core instead.
       if (_options.console) {
         addConsoleInstrumentationHandler(_getConsoleBreadcrumbHandler(client));
       }

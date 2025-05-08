@@ -1,4 +1,4 @@
-import { browserPerformanceTimeOrigin } from '@sentry/core';
+import { browserPerformanceTimeOrigin } from '@debugg-ai/core';
 import { record } from '@sentry-internal/rrweb';
 import { WINDOW } from '../constants';
 import type {

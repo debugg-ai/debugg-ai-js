@@ -1,20 +1,20 @@
-import type { EventEnvelope, EventItem } from '@sentry/core';
+import type { EventEnvelope, EventItem } from '@debugg-ai/core';
 import {
   addItemToEnvelope,
   createAttachmentEnvelopeItem,
   createEnvelope,
   createTransport,
   serializeEnvelope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import * as http from 'http';
 import { type Mock, afterEach, describe, expect, it, vi } from 'vitest';
 import { createGunzip } from 'zlib';
 import * as httpProxyAgent from '../../src/proxy';
 import { makeNodeTransport } from '../../src/transports';
 
-vi.mock('@sentry/core', async () => {
+vi.mock('@debugg-ai/core', async () => {
   // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-  const actualCore = (await vi.importActual('@sentry/core')) as typeof import('@sentry/core');
+  const actualCore = (await vi.importActual('@debugg-ai/core')) as typeof import('@debugg-ai/core');
   return {
     ...actualCore,
     createTransport: vi.fn().mockImplementation(actualCore.createTransport),
@@ -231,7 +231,7 @@ describe('makeNewHttpTransport()', () => {
     it('can be configured through option', () => {
       makeNodeTransport({
         ...defaultOptions,
-        url: 'http://9e9fd4523d784609a5fc0ebb1080592f@sentry.io:8989/mysubpath/50622',
+        url: 'http://9e9fd4523d784609a5fc0ebb1080592f@debugg.ai:8989/mysubpath/50622',
         proxy: 'http://example.com',
       });
 
@@ -243,7 +243,7 @@ describe('makeNewHttpTransport()', () => {
       process.env.http_proxy = 'http://example.com';
       makeNodeTransport({
         ...defaultOptions,
-        url: 'http://9e9fd4523d784609a5fc0ebb1080592f@sentry.io:8989/mysubpath/50622',
+        url: 'http://9e9fd4523d784609a5fc0ebb1080592f@debugg.ai:8989/mysubpath/50622',
       });
 
       expect(proxyAgentSpy).toHaveBeenCalledTimes(1);
@@ -255,7 +255,7 @@ describe('makeNewHttpTransport()', () => {
       process.env.http_proxy = 'http://foo.com';
       makeNodeTransport({
         ...defaultOptions,
-        url: 'http://9e9fd4523d784609a5fc0ebb1080592f@sentry.io:8989/mysubpath/50622',
+        url: 'http://9e9fd4523d784609a5fc0ebb1080592f@debugg.ai:8989/mysubpath/50622',
         proxy: 'http://bar.com',
       });
 
@@ -268,7 +268,7 @@ describe('makeNewHttpTransport()', () => {
       process.env.no_proxy = 'sentry.io';
       makeNodeTransport({
         ...defaultOptions,
-        url: 'http://9e9fd4523d784609a5fc0ebb1080592f@sentry.io:8989/mysubpath/50622',
+        url: 'http://9e9fd4523d784609a5fc0ebb1080592f@debugg.ai:8989/mysubpath/50622',
         proxy: 'http://example.com',
       });
 
@@ -283,7 +283,7 @@ describe('makeNewHttpTransport()', () => {
 
       makeNodeTransport({
         ...defaultOptions,
-        url: 'http://9e9fd4523d784609a5fc0ebb1080592f@sentry.io:8989/mysubpath/50622',
+        url: 'http://9e9fd4523d784609a5fc0ebb1080592f@debugg.ai:8989/mysubpath/50622',
       });
 
       expect(proxyAgentSpy).not.toHaveBeenCalled();
@@ -298,7 +298,7 @@ describe('makeNewHttpTransport()', () => {
 
       makeNodeTransport({
         ...defaultOptions,
-        url: 'http://9e9fd4523d784609a5fc0ebb1080592f@sentry.io:8989/mysubpath/50622',
+        url: 'http://9e9fd4523d784609a5fc0ebb1080592f@debugg.ai:8989/mysubpath/50622',
       });
 
       expect(proxyAgentSpy).not.toHaveBeenCalled();
@@ -422,7 +422,7 @@ describe('makeNewHttpTransport()', () => {
     const transport = makeNodeTransport({ ...defaultOptions, url: 'invalid url' });
     await transport.send(EVENT_ENVELOPE);
     expect(consoleWarnSpy).toHaveBeenCalledWith(
-      '[@sentry/node]: Invalid dsn or tunnel option, will not send any events. The tunnel option must be a full URL when used.',
+      '[@debugg-ai/node]: Invalid dsn or tunnel option, will not send any events. The tunnel option must be a full URL when used.',
     );
   });
 });

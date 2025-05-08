@@ -1,6 +1,6 @@
 import * as SentryBrowser from '@sentry/browser';
 import { getCurrentScope, getGlobalScope, getIsolationScope, SDK_VERSION } from '@sentry/browser';
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@debugg-ai/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { init as reactRouterInit } from '../../src/client';
 

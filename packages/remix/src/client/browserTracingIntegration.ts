@@ -1,4 +1,4 @@
-import type { Integration } from '@sentry/core';
+import type { Integration } from '@debugg-ai/core';
 import { browserTracingIntegration as originalBrowserTracingIntegration } from '@sentry/react';
 import type { RemixBrowserTracingIntegrationOptions } from './performance';
 import { setGlobals, startPageloadSpan } from './performance';
@@ -25,6 +25,7 @@ export function browserTracingIntegration(options: RemixBrowserTracingIntegratio
   return {
     ...browserTracingIntegrationInstance,
     afterAllSetup(client) {
+      // @ts-expect-error
       browserTracingIntegrationInstance.afterAllSetup(client);
 
       if (instrumentPageLoad) {

@@ -2,8 +2,8 @@
  * @vitest-environment jsdom
  */
 
-import type { BrowserClient } from '@sentry/browser';
-import * as Sentry from '@sentry/browser';
+import type { BrowserClient } from '@debugg-ai/browser';
+import * as Sentry from '@debugg-ai/browser';
 import { describe, expect, it, vi } from 'vitest';
 import type { JSSelfProfile } from '../../src/profiling/jsSelfProfiling';
 

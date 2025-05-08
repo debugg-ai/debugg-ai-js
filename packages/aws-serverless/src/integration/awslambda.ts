@@ -1,6 +1,6 @@
 import { AwsLambdaInstrumentation } from '@opentelemetry/instrumentation-aws-lambda';
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration, SEMANTIC_ATTRIBUTE_SENTRY_OP, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN } from '@sentry/core';
+import type { IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration, SEMANTIC_ATTRIBUTE_SENTRY_OP, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN } from '@debugg-ai/core';
 import { generateInstrumentOnce } from '@sentry/node';
 import { eventContextExtractor } from '../utils';
 

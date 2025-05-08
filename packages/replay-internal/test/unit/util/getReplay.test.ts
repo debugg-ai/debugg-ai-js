@@ -1,4 +1,4 @@
-import { getCurrentScope } from '@sentry/core';
+import { getCurrentScope } from '@debugg-ai/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { replayIntegration } from '../../../src/integration';
 import { getReplay } from '../../../src/util/getReplay';

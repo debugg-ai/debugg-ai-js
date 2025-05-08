@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import type { Measurements, Span, SpanAttributes, StartSpanOptions } from '@sentry/core';
+import type { Measurements, Span, SpanAttributes, StartSpanOptions } from '@debugg-ai/core';
 import {
   browserPerformanceTimeOrigin,
   getActiveSpan,
@@ -9,7 +9,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   setMeasurement,
   spanToJSON,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { WINDOW } from '../types';
 import { trackClsAsStandaloneSpan } from './cls';
 import {

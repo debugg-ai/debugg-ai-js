@@ -1,1 +1,1 @@
-export { dedupeIntegration } from '@sentry/core';
+export { dedupeIntegration } from '@debugg-ai/core';

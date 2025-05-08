@@ -9,7 +9,7 @@ import {
   logSpanEnd,
   logSpanStart,
   setCapturedScopesOnSpan,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { SEMANTIC_ATTRIBUTE_SENTRY_PARENT_IS_REMOTE } from './semanticAttributes';
 import { SentrySpanExporter } from './spanExporter';
 import { getScopesFromContext } from './utils/contextData';

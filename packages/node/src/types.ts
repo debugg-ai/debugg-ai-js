@@ -1,7 +1,7 @@
+import type { ClientOptions, Options, SamplingContext, Scope, Span, TracePropagationTargets } from '@debugg-ai/core';
 import type { Span as WriteableSpan } from '@opentelemetry/api';
 import type { Instrumentation } from '@opentelemetry/instrumentation';
 import type { ReadableSpan, SpanProcessor } from '@opentelemetry/sdk-trace-base';
-import type { ClientOptions, Options, SamplingContext, Scope, Span, TracePropagationTargets } from '@sentry/core';
 import type { NodeTransportOptions } from './transports';
 
 export interface BaseNodeOptions {
@@ -60,6 +60,9 @@ export interface BaseNodeOptions {
    * @default 'manual'
    */
   profileLifecycle?: 'manual' | 'trace';
+
+  /** Sets an optional human readable host name that will be used to identify the host in the DebuggAI platform across different engineers */
+  hostName?: string;
 
   /** Sets an optional server name (device name) */
   serverName?: string;
@@ -153,7 +156,7 @@ export interface BaseNodeOptions {
 
 /**
  * Configuration options for the Sentry Node SDK
- * @see @sentry/core Options for more information.
+ * @see @debugg-ai/core Options for more information.
  */
 export interface NodeOptions extends Options<NodeTransportOptions>, BaseNodeOptions {}
 

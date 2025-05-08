@@ -1,4 +1,4 @@
-import { defineIntegration } from '@sentry/core';
+import { defineIntegration } from '@debugg-ai/core';
 import { generateInstrumentOnce } from '@sentry/node';
 import { NestInstrumentation } from './sentry-nest-core-instrumentation';
 import { SentryNestEventInstrumentation } from './sentry-nest-event-instrumentation';

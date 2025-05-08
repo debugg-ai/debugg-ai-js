@@ -15,7 +15,7 @@ export type {
   Stacktrace,
   Thread,
   User,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export type { CloudflareOptions } from './client';
 
@@ -90,7 +90,7 @@ export {
   updateSpanName,
   wrapMcpServerWithSentry,
   consoleLoggingIntegration,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export * as logger from './logs/exports';
 

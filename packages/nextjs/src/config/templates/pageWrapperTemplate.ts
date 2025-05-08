@@ -8,7 +8,7 @@
 
 // @ts-expect-error See above
 import * as wrapee from '__SENTRY_WRAPPING_TARGET_FILE__';
-import * as Sentry from '@sentry/nextjs';
+import * as Sentry from '@debugg-ai/nextjs';
 import type { GetServerSideProps, GetStaticProps, NextPage as NextPageComponent } from 'next';
 
 type NextPageModule = {

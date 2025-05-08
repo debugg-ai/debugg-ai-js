@@ -2,7 +2,7 @@
  * @vitest-environment jsdom
  */
 
-import type * as Sentry from '@sentry/core';
+import type * as Sentry from '@debugg-ai/core';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import { WINDOW } from '../../../src/constants';
 import { createSession } from '../../../src/session/createSession';
@@ -10,9 +10,9 @@ import { saveSession } from '../../../src/session/saveSession';
 
 vi.mock('./../../../src/session/saveSession');
 
-vi.mock('@sentry/core', async () => {
+vi.mock('@debugg-ai/core', async () => {
   return {
-    ...((await vi.importActual('@sentry/core')) as { string: unknown }),
+    ...((await vi.importActual('@debugg-ai/core')) as { string: unknown }),
     uuid4: vi.fn(() => 'test_session_id'),
   };
 });

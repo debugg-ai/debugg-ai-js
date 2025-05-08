@@ -1,4 +1,4 @@
-import type { SpanJSON } from '@sentry/core';
+import type { SpanJSON } from '@debugg-ai/core';
 import { afterAll, expect, test } from 'vitest';
 import { assertSentryTransaction } from '../../../../utils/assertions';
 import { cleanupChildProcesses, createRunner } from '../../../../utils/runner';

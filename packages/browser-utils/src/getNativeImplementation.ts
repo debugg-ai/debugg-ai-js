@@ -1,4 +1,4 @@
-import { isNativeFunction, logger } from '@sentry/core';
+import { isNativeFunction, logger } from '@debugg-ai/core';
 import { DEBUG_BUILD } from './debug-build';
 import { WINDOW } from './types';
 

@@ -1,7 +1,7 @@
 import { createReadStream } from 'node:fs';
 import { createInterface } from 'node:readline';
-import type { Event, IntegrationFn, StackFrame } from '@sentry/core';
-import { defineIntegration, logger, LRUMap, snipLine } from '@sentry/core';
+import type { Event, IntegrationFn, StackFrame } from '@debugg-ai/core';
+import { defineIntegration, logger, LRUMap, snipLine } from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../debug-build';
 
 const LRU_FILE_CONTENTS_CACHE = new LRUMap<string, Record<number, string>>(10);
@@ -244,7 +244,6 @@ async function addSourceContext(event: Event, contextLines: number): Promise<Eve
 
         const filesToLinesOutput = filesToLines[filename];
         if (!filesToLinesOutput) filesToLines[filename] = [];
-        // @ts-expect-error this is defined above
         filesToLines[filename].push(frame.lineno);
       }
     }

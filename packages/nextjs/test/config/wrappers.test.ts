@@ -1,5 +1,5 @@
-import type { Client } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Client } from '@debugg-ai/core';
+import * as SentryCore from '@debugg-ai/core';
 import type { IncomingMessage, ServerResponse } from 'http';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 import { wrapGetInitialPropsWithSentry, wrapGetServerSidePropsWithSentry } from '../../src/common';

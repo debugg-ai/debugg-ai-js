@@ -1,5 +1,5 @@
+import { consoleSandbox, getClient, getGlobalScope, hasSpansEnabled, isEnabled } from '@debugg-ai/core';
 import { isWrapped } from '@opentelemetry/core';
-import { consoleSandbox, getClient, getGlobalScope, hasSpansEnabled, isEnabled } from '@sentry/core';
 import type { NodeClient } from '../sdk/client';
 import { isCjs } from './commonjs';
 import { createMissingInstrumentationContext } from './createMissingInstrumentationContext';

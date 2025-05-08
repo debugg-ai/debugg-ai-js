@@ -1,5 +1,5 @@
+import { defineIntegration, SEMANTIC_ATTRIBUTE_SENTRY_OP, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN } from '@debugg-ai/core';
 import { FsInstrumentation } from '@opentelemetry/instrumentation-fs';
-import { defineIntegration, SEMANTIC_ATTRIBUTE_SENTRY_OP, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN } from '@sentry/core';
 import { generateInstrumentOnce } from '../otel/instrument';
 
 const INTEGRATION_NAME = 'FileSystem';

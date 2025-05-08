@@ -5,7 +5,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
   startSpan,
   withIsolationScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { setAsyncLocalStorageAsyncContextStrategy } from './async';
 import type { CloudflareOptions } from './client';
 import { isInstrumented, markAsInstrumented } from './instrument';

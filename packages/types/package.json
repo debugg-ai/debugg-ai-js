@@ -57,7 +57,7 @@
     "yalc:publish": "yalc publish --push --sig"
   },
   "dependencies": {
-    "@sentry/core": "9.15.0"
+    "@debugg-ai/core": "1.0.8"
   },
   "volta": {
     "extends": "../../package.json"

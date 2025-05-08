@@ -1,7 +1,7 @@
 import { context } from '@opentelemetry/api';
 import { getRPCMetadata, RPCType } from '@opentelemetry/core';
 import { ATTR_HTTP_ROUTE } from '@opentelemetry/semantic-conventions';
-import { getActiveSpan, getRootSpan, getTraceMetaTags, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@sentry/core';
+import { getActiveSpan, getRootSpan, getTraceMetaTags, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@debugg-ai/core';
 import type { AppLoadContext, EntryContext } from 'react-router';
 import type { PassThrough } from 'stream';
 import { Transform } from 'stream';

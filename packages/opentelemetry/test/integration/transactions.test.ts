@@ -2,7 +2,7 @@ import type { SpanContext } from '@opentelemetry/api';
 import { context, ROOT_CONTEXT, trace, TraceFlags } from '@opentelemetry/api';
 import { TraceState } from '@opentelemetry/core';
 import type { SpanProcessor } from '@opentelemetry/sdk-trace-base';
-import type { Event, TransactionEvent } from '@sentry/core';
+import type { Event, TransactionEvent } from '@debugg-ai/core';
 import {
   addBreadcrumb,
   getClient,
@@ -12,7 +12,7 @@ import {
   setTag,
   startSpanManual,
   withIsolationScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { SENTRY_TRACE_STATE_DSC } from '../../src/constants';
 import { SentrySpanProcessor } from '../../src/spanProcessor';

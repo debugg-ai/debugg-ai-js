@@ -1,7 +1,7 @@
-import type { Integration } from '@sentry/core';
-import { getGlobalScope, getIsolationScope, logger } from '@sentry/core';
-import * as SentryReact from '@sentry/react';
-import { getClient, getCurrentScope, WINDOW } from '@sentry/react';
+import type { Integration } from '@debugg-ai/core';
+import { getGlobalScope, getIsolationScope, logger } from '@debugg-ai/core';
+import * as SentryReact from '@debugg-ai/react';
+import { getClient, getCurrentScope, WINDOW } from '@debugg-ai/react';
 import { JSDOM } from 'jsdom';
 import { afterAll, afterEach, describe, expect, it, vi } from 'vitest';
 import { breadcrumbsIntegration, browserTracingIntegration, init } from '../src/client';
@@ -57,11 +57,11 @@ describe('Client init()', () => {
             version: expect.any(String),
             packages: [
               {
-                name: 'npm:@sentry/nextjs',
+                name: 'npm:@debugg-ai/nextjs',
                 version: expect.any(String),
               },
               {
-                name: 'npm:@sentry/react',
+                name: 'npm:@debugg-ai/react',
                 version: expect.any(String),
               },
             ],
@@ -94,7 +94,7 @@ describe('Client init()', () => {
   });
 
   describe('integrations', () => {
-    // Options passed by `@sentry/nextjs`'s `init` to `@sentry/react`'s `init` after modifying them
+    // Options passed by `@debugg-ai/nextjs`'s `init` to `@debugg-ai/react`'s `init` after modifying them
     type ModifiedInitOptionsIntegrationArray = { defaultIntegrations: Integration[]; integrations: Integration[] };
 
     it('supports passing unrelated integrations through options', () => {

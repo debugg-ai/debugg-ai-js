@@ -1,5 +1,5 @@
-import type { IntegrationFn } from '@sentry/core';
-import { applyAggregateErrorsToEvent, defineIntegration } from '@sentry/core';
+import type { IntegrationFn } from '@debugg-ai/core';
+import { applyAggregateErrorsToEvent, defineIntegration } from '@debugg-ai/core';
 import { exceptionFromError } from '../eventbuilder';
 
 interface LinkedErrorsOptions {

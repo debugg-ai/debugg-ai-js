@@ -4,7 +4,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 test('sends a server action transaction on pageload', async ({ page }) => {
   const transactionPromise = waitForTransaction('solidstart-top-level-import', transactionEvent => {

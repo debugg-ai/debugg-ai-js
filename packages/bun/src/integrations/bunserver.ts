@@ -1,4 +1,4 @@
-import type { IntegrationFn, RequestEventData, SpanAttributes } from '@sentry/core';
+import type { IntegrationFn, RequestEventData, SpanAttributes } from '@debugg-ai/core';
 import {
   captureException,
   continueTrace,
@@ -11,7 +11,7 @@ import {
   setHttpStatus,
   startSpan,
   withIsolationScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { ServeOptions } from 'bun';
 
 const INTEGRATION_NAME = 'BunServer';

@@ -1,6 +1,6 @@
+import { SDK_VERSION } from '@debugg-ai/core';
 import type { InstrumentationConfig, InstrumentationModuleDefinition } from '@opentelemetry/instrumentation';
 import { InstrumentationBase, InstrumentationNodeModuleDefinition } from '@opentelemetry/instrumentation';
-import { SDK_VERSION } from '@sentry/core';
 import type { TelemetrySettings } from './types';
 
 // List of patched methods
@@ -82,7 +82,7 @@ export class SentryVercelAiInstrumentation extends InstrumentationBase {
           };
         }
 
-        // @ts-expect-error we know that the method exists
+        // we know that the method exists
         return originalMethod.apply(this, args);
       };
     }

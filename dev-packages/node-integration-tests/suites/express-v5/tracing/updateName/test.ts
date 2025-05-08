@@ -1,4 +1,4 @@
-import { SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME } from '@sentry/core';
+import { SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME } from '@debugg-ai/core';
 import { SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@sentry/node';
 import { afterAll, describe, expect, test } from 'vitest';
 import { cleanupChildProcesses, createRunner } from '../../../../utils/runner';

@@ -1,4 +1,4 @@
-import type { Breadcrumb } from '@sentry/core';
+import type { Breadcrumb } from '@debugg-ai/core';
 import type {
   HistoryData,
   MemoryData,

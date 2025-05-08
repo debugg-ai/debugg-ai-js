@@ -1,5 +1,5 @@
-import type { Transport, TransportMakeRequestResponse, TransportRequest } from '@sentry/core';
-import { createTransport, rejectedSyncPromise } from '@sentry/core';
+import type { Transport, TransportMakeRequestResponse, TransportRequest } from '@debugg-ai/core';
+import { createTransport, rejectedSyncPromise } from '@debugg-ai/core';
 import { clearCachedImplementation, getNativeImplementation } from '@sentry-internal/browser-utils';
 import type { WINDOW } from '../helpers';
 import type { BrowserTransportOptions } from './types';

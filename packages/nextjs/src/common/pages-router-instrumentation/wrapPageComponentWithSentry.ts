@@ -1,4 +1,4 @@
-import { captureException, extractTraceparentData, getCurrentScope, withIsolationScope } from '@sentry/core';
+import { captureException, extractTraceparentData, getCurrentScope, withIsolationScope } from '@debugg-ai/core';
 
 interface FunctionComponent {
   (...args: unknown[]): unknown;

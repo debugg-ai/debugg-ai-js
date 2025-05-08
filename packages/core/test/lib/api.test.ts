@@ -5,7 +5,7 @@ import type { SdkInfo } from '../../src/types-hoist/sdkinfo';
 import { makeDsn } from '../../src/utils-hoist/dsn';
 
 const ingestDsn = 'https://abc@xxxx.ingest.sentry.io:1234/subpath/123';
-const dsnPublic = 'https://abc@sentry.io:1234/subpath/123';
+const dsnPublic = 'https://abc@debugg.ai:1234/subpath/123';
 const tunnel = 'https://hello.com/world';
 const sdkInfo = { name: 'sentry.javascript.browser', version: '12.31.12' };
 
@@ -62,13 +62,13 @@ describe('API', () => {
         'with Public DSN',
         dsnPublic,
         {},
-        'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@sentry.io:1234/subpath/123',
+        'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@debugg.ai:1234/subpath/123',
       ],
       [
         'with Public DSN and dynamic options',
         dsnPublic,
         { eventId: 'abc', testy: '2' },
-        'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@sentry.io:1234/subpath/123&eventId=abc&testy=2',
+        'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@debugg.ai:1234/subpath/123&eventId=abc&testy=2',
       ],
       [
         'with Public DSN, dynamic options and user name and email',
@@ -80,7 +80,7 @@ describe('API', () => {
             name: 'yo',
           },
         },
-        'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@sentry.io:1234/subpath/123&eventId=abc&name=yo&email=email',
+        'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@debugg.ai:1234/subpath/123&eventId=abc&name=yo&email=email',
       ],
       [
         'with Public DSN and user name',
@@ -90,7 +90,7 @@ describe('API', () => {
             name: 'yo',
           },
         },
-        'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@sentry.io:1234/subpath/123&name=yo',
+        'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@debugg.ai:1234/subpath/123&name=yo',
       ],
       [
         'with Public DSN and user email',
@@ -100,7 +100,7 @@ describe('API', () => {
             email: 'email',
           },
         },
-        'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@sentry.io:1234/subpath/123&email=email',
+        'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@debugg.ai:1234/subpath/123&email=email',
       ],
       [
         'with Public DSN, dynamic options and undefined user',
@@ -109,19 +109,19 @@ describe('API', () => {
           eventId: 'abc',
           user: undefined,
         },
-        'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@sentry.io:1234/subpath/123&eventId=abc',
+        'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@debugg.ai:1234/subpath/123&eventId=abc',
       ],
       [
         'with Public DSN and undefined user',
         dsnPublic,
         { user: undefined },
-        'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@sentry.io:1234/subpath/123',
+        'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@debugg.ai:1234/subpath/123',
       ],
       [
         'with Public DSN and onClose callback',
         dsnPublic,
         { onClose: () => {} },
-        'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@sentry.io:1234/subpath/123',
+        'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@debugg.ai:1234/subpath/123',
       ],
     ])(
       '%s',

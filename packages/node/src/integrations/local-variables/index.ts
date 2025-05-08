@@ -1,4 +1,4 @@
-import type { Integration } from '@sentry/core';
+import type { Integration } from '@debugg-ai/core';
 import { NODE_VERSION } from '../../nodeVersion';
 import type { LocalVariablesIntegrationOptions } from './common';
 import { localVariablesAsyncIntegration } from './local-variables-async';

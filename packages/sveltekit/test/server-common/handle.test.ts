@@ -1,12 +1,12 @@
-import type { EventEnvelopeHeaders, Span } from '@sentry/core';
+import type { EventEnvelopeHeaders, Span } from '@debugg-ai/core';
 import {
   getRootSpan,
   getSpanDescendants,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
   spanIsSampled,
   spanToJSON,
-} from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+} from '@debugg-ai/core';
+import * as SentryCore from '@debugg-ai/core';
 import { NodeClient, setCurrentClient } from '@sentry/node';
 import type { Handle } from '@sveltejs/kit';
 import { redirect } from '@sveltejs/kit';

@@ -1,5 +1,5 @@
-import type { RequestEventData } from '@sentry/core';
-import { captureException, headersToDict, vercelWaitUntil, withScope } from '@sentry/core';
+import type { RequestEventData } from '@debugg-ai/core';
+import { captureException, headersToDict, vercelWaitUntil, withScope } from '@debugg-ai/core';
 import { flushSafelyWithTimeout } from './utils/responseEnd';
 
 type RequestInfo = {

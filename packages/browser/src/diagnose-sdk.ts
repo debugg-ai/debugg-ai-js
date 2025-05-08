@@ -1,4 +1,4 @@
-import { getClient } from '@sentry/core';
+import { getClient } from '@debugg-ai/core';
 
 /**
  * A function to diagnose why the SDK might not be successfully sending data.

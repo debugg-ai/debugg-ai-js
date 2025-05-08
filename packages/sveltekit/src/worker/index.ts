@@ -1,6 +1,6 @@
 // For use in cloudflare workers and other edge environments
 //
-// These are essentially the same as the node server exports, but using imports from @sentry/core
+// These are essentially the same as the node server exports, but using imports from @debugg-ai/core
 // instead of @sentry/node.
 //
 // This is expected to be used together with something like the @sentry/cloudflare package, to initialize Sentry

@@ -1,4 +1,4 @@
-import type { RequestEventData, Scope, SpanAttributes } from '@sentry/core';
+import type { RequestEventData, Scope, SpanAttributes } from '@debugg-ai/core';
 import {
   addNonEnumerableProperty,
   extractQueryParamsFromUrl,
@@ -7,7 +7,7 @@ import {
   stripUrlQueryAndFragment,
   vercelWaitUntil,
   winterCGRequestToRequestData,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import {
   captureException,
   continueTrace,
@@ -75,6 +75,7 @@ export const handleRequest: (options?: MiddlewareOptions) => MiddlewareResponseH
       return instrumentRequest(ctx, next, handlerOptions);
     }
     return withIsolationScope(isolationScope => {
+      // @ts-expect-error
       return instrumentRequest(ctx, next, handlerOptions, isolationScope);
     });
   };

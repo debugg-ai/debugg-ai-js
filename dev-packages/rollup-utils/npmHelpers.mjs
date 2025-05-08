@@ -151,9 +151,9 @@ export function makeOtelLoaders(outputFolder, hookVariant) {
     );
   }
 
-  const requiredDep = hookVariant === 'otel' ? '@opentelemetry/instrumentation' : '@sentry/node';
+  const requiredDep = hookVariant === 'otel' ? ['@opentelemetry/instrumentation'] : ['@sentry/node', '@debugg-ai/node'];
   const foundImportInTheMiddleDep = Object.keys(packageDotJSON.dependencies ?? {}).some(key => {
-    return key === requiredDep;
+    return requiredDep.includes(key);
   });
   if (!foundImportInTheMiddleDep) {
     throw new Error(

@@ -98,6 +98,9 @@ export function updateSession(session: Session, context: SessionContext = {}): v
   if (!session.userAgent && context.userAgent) {
     session.userAgent = context.userAgent;
   }
+  if (!session.hostName && context.hostName) {
+    session.hostName = context.hostName;
+  }
   if (typeof context.errors === 'number') {
     session.errors = context.errors;
   }
@@ -153,6 +156,7 @@ function sessionToJSON(session: Session): SerializedSession {
       release: session.release,
       environment: session.environment,
       ip_address: session.ipAddress,
+      host_name: session.hostName,
       user_agent: session.userAgent,
     },
   };

@@ -1,6 +1,6 @@
+import type { IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration } from '@debugg-ai/core';
 import { MySQLInstrumentation } from '@opentelemetry/instrumentation-mysql';
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
 import { generateInstrumentOnce } from '../../otel/instrument';
 
 const INTEGRATION_NAME = 'Mysql';
@@ -23,7 +23,7 @@ const _mysqlIntegration = (() => {
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  *
  * Sentry.init({
  *  integrations: [Sentry.mysqlIntegration()],

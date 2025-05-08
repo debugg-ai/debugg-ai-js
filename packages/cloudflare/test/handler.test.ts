@@ -2,8 +2,8 @@
 // Although this is not ideal, this is the best we can do until we have a better way to test cloudflare workers.
 
 import type { ScheduledController } from '@cloudflare/workers-types';
-import type { Event } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Event } from '@debugg-ai/core';
+import * as SentryCore from '@debugg-ai/core';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 import { CloudflareClient } from '../src/client';
 import { withSentry } from '../src/handler';

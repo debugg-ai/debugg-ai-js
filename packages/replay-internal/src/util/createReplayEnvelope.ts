@@ -1,5 +1,5 @@
-import type { DsnComponents, ReplayEnvelope, ReplayEvent, ReplayRecordingData } from '@sentry/core';
-import { createEnvelope, createEventEnvelopeHeaders, getSdkMetadataForEnvelopeHeader } from '@sentry/core';
+import type { DsnComponents, ReplayEnvelope, ReplayEvent, ReplayRecordingData } from '@debugg-ai/core';
+import { createEnvelope, createEventEnvelopeHeaders, getSdkMetadataForEnvelopeHeader } from '@debugg-ai/core';
 
 /**
  * Create a replay envelope ready to be sent.

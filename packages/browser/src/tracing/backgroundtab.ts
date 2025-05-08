@@ -1,4 +1,4 @@
-import { getActiveSpan, getRootSpan, logger, SPAN_STATUS_ERROR, spanToJSON } from '@sentry/core';
+import { getActiveSpan, getRootSpan, logger, SPAN_STATUS_ERROR, spanToJSON } from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { WINDOW } from '../helpers';
 

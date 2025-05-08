@@ -1,5 +1,5 @@
-import type { EventEnvelope, EventItem } from '@sentry/core';
-import { createEnvelope, SENTRY_BUFFER_FULL_ERROR, serializeEnvelope } from '@sentry/core';
+import type { EventEnvelope, EventItem } from '@debugg-ai/core';
+import { createEnvelope, SENTRY_BUFFER_FULL_ERROR, serializeEnvelope } from '@debugg-ai/core';
 import { afterAll, describe, expect, it, vi } from 'vitest';
 import type { VercelEdgeTransportOptions } from '../../src/transports';
 import { IsolatedPromiseBuffer, makeEdgeTransport } from '../../src/transports';

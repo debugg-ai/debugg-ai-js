@@ -1,4 +1,4 @@
-import type { ClientOptions, Options, TracePropagationTargets } from '@sentry/core';
+import type { ClientOptions, Options, TracePropagationTargets } from '@debugg-ai/core';
 import type { VercelEdgeClient } from './client';
 import type { VercelEdgeTransportOptions } from './transports';
 
@@ -59,7 +59,7 @@ export interface BaseVercelEdgeOptions {
 
 /**
  * Configuration options for the Sentry VercelEdge SDK
- * @see @sentry/core Options for more information.
+ * @see @debugg-ai/core Options for more information.
  */
 export interface VercelEdgeOptions extends Options<VercelEdgeTransportOptions>, BaseVercelEdgeOptions {}
 

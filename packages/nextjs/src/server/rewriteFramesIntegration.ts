@@ -1,9 +1,9 @@
-import type { IntegrationFn, StackFrame } from '@sentry/core';
+import type { IntegrationFn, StackFrame } from '@debugg-ai/core';
 import {
   defineIntegration,
   escapeStringForRegex,
   rewriteFramesIntegration as originalRewriteFramesIntegration,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import * as path from 'path';
 
 const globalWithInjectedValues = global as typeof global & {

@@ -10,7 +10,7 @@ import type {
   TraceContext,
   TransactionEvent,
   TransactionSource,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import {
   captureEvent,
   convertSpanLinksForEnvelope,
@@ -25,7 +25,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
   spanTimeInputToSeconds,
   timedEventsToMeasurements,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { DEBUG_BUILD } from './debug-build';
 import { SEMANTIC_ATTRIBUTE_SENTRY_PARENT_IS_REMOTE } from './semanticAttributes';
 import { getRequestSpanData } from './utils/getRequestSpanData';

@@ -1,14 +1,12 @@
-import type { Client, PropagationContext, Span } from '@sentry/core';
+import type { SpanContextData, Client, PropagationContext, Span } from '@debugg-ai/core';
 import {
-  type SpanContextData,
   getCurrentScope,
   getRootSpan,
   logger,
   SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE,
   SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE,
   SEMANTIC_LINK_ATTRIBUTE_LINK_TYPE,
-  spanToJSON,
-} from '@sentry/core';
+  spanToJSON} from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { WINDOW } from '../exports';
 
@@ -232,7 +230,7 @@ export function getPreviousTraceFromSessionStorage(): PreviousTraceInfo | undefi
 }
 
 /**
- * see {@link import('@sentry/core').spanIsSampled}
+ * see {@link import('@debugg-ai/core').spanIsSampled}
  */
 export function spanContextSampled(ctx: SpanContextData): boolean {
   return ctx.traceFlags === 0x1;

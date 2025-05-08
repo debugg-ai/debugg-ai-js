@@ -1,5 +1,5 @@
-import type { Client, Integration } from '@sentry/core';
-import { applySdkMetadata } from '@sentry/core';
+import type { Client, Integration } from '@debugg-ai/core';
+import { applySdkMetadata } from '@debugg-ai/core';
 import type { BrowserOptions } from '@sentry/svelte';
 import { getDefaultIntegrations as getDefaultSvelteIntegrations, init as initSvelteSdk, WINDOW } from '@sentry/svelte';
 import { browserTracingIntegration as svelteKitBrowserTracingIntegration } from './browserTracingIntegration';
@@ -22,12 +22,14 @@ export function init(options: BrowserOptions): Client | undefined {
     ...options,
   };
 
+  // @ts-expect-error
   applySdkMetadata(opts, 'sveltekit', ['sveltekit', 'svelte']);
 
   // 1. Switch window.fetch to our fetch proxy we injected earlier
   const actualFetch = switchToFetchProxy();
 
   // 2. Initialize the SDK which will instrument our proxy
+  // @ts-expect-error
   const client = initSvelteSdk(opts);
 
   // 3. Restore the original fetch now that our proxy is instrumented
@@ -42,10 +44,12 @@ function getDefaultIntegrations(options: BrowserOptions): Integration[] | undefi
   // This evaluates to true unless __SENTRY_TRACING__ is text-replaced with "false",
   // in which case everything inside will get tree-shaken away
   if (typeof __SENTRY_TRACING__ === 'undefined' || __SENTRY_TRACING__) {
+    // @ts-expect-error
     return [...getDefaultSvelteIntegrations(options), svelteKitBrowserTracingIntegration()];
   }
 
-  return getDefaultSvelteIntegrations(options);
+  // @ts-expect-error
+    return getDefaultSvelteIntegrations(options);
 }
 
 /**

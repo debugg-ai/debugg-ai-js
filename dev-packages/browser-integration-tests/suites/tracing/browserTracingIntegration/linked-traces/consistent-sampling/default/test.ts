@@ -4,7 +4,7 @@ import {
   parseBaggageHeader,
   SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE,
   SEMANTIC_LINK_ATTRIBUTE_LINK_TYPE,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { sentryTest } from '../../../../../../utils/fixtures';
 import {
   eventAndTraceHeaderRequestParser,

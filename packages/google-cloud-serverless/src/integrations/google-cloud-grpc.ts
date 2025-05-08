@@ -1,5 +1,5 @@
-import type { Client, IntegrationFn } from '@sentry/core';
-import { defineIntegration, fill, getClient, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN } from '@sentry/core';
+import type { Client, IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration, fill, getClient, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN } from '@debugg-ai/core';
 import { startInactiveSpan } from '@sentry/node';
 import type { EventEmitter } from 'events';
 
@@ -87,10 +87,10 @@ export function fillGrpcFunction(stub: Stub, serviceIdentifier: string, methodNa
     !funcObj.requestStream && !funcObj.responseStream
       ? 'unary call'
       : funcObj.requestStream && !funcObj.responseStream
-        ? 'client stream'
-        : !funcObj.requestStream && funcObj.responseStream
-          ? 'server stream'
-          : 'bidi stream';
+      ? 'client stream'
+      : !funcObj.requestStream && funcObj.responseStream
+      ? 'server stream'
+      : 'bidi stream';
   if (callType != 'unary call') {
     return;
   }

@@ -1,5 +1,5 @@
 import { context, trace } from '@opentelemetry/api';
-import { getCurrentScope, setAsyncContextStrategy } from '@sentry/core';
+import { getCurrentScope, setAsyncContextStrategy } from '@debugg-ai/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { getTraceData } from '../../src/utils/getTraceData';
 import { makeTraceState } from '../../src/utils/makeTraceState';

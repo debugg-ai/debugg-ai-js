@@ -8,7 +8,7 @@ import {
   startSpan,
   withIsolationScope,
   withScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { DurableObject } from 'cloudflare:workers';
 import { setAsyncLocalStorageAsyncContextStrategy } from './async';
 import type { CloudflareOptions } from './client';

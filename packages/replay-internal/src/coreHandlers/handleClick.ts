@@ -1,4 +1,4 @@
-import type { Breadcrumb } from '@sentry/core';
+import type { Breadcrumb } from '@debugg-ai/core';
 import { setTimeout } from '@sentry-internal/browser-utils';
 import { IncrementalSource, MouseInteractions, record } from '@sentry-internal/rrweb';
 import { WINDOW } from '../constants';

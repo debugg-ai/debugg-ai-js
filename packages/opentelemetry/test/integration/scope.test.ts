@@ -7,7 +7,7 @@ import {
   setTag,
   withIsolationScope,
   withScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { startSpan } from '../../src/trace';
 import { cleanupOtel, mockSdkInit } from '../helpers/mockSdkInit';

@@ -1,5 +1,5 @@
-import type { Client, Event, EventHint, IntegrationFn } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
+import type { Client, Event, EventHint, IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration } from '@debugg-ai/core';
 import { copyFlagsFromScopeToEvent, insertFlagToScope } from '../../../utils/featureFlags';
 import type { LDContext, LDEvaluationDetail, LDInspectionFlagUsedHandler } from './types';
 
@@ -10,8 +10,8 @@ import type { LDContext, LDEvaluationDetail, LDInspectionFlagUsedHandler } from 
  *
  * @example
  * ```
- * import * as Sentry from '@sentry/browser';
- * import {launchDarklyIntegration, buildLaunchDarklyFlagUsedInspector} from '@sentry/browser';
+ * import * as Sentry from '@debugg-ai/browser';
+ * import {launchDarklyIntegration, buildLaunchDarklyFlagUsedInspector} from '@debugg-ai/browser';
  * import * as LaunchDarkly from 'launchdarkly-js-client-sdk';
  *
  * Sentry.init(..., integrations: [launchDarklyIntegration()])

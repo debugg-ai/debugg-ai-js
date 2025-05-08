@@ -45,8 +45,8 @@ const buildCommonInitOptions = (options: SentryOptions): string => `dsn: ${
   environment: ${options.environment ? JSON.stringify(options.environment) : 'import.meta.env.PUBLIC_VERCEL_ENV'},
   release: ${options.release ? JSON.stringify(options.release) : 'import.meta.env.PUBLIC_VERCEL_GIT_COMMIT_SHA'},
   tracesSampleRate: ${options.tracesSampleRate ?? 1.0},${
-    options.sampleRate ? `\n  sampleRate: ${options.sampleRate},` : ''
-  }`;
+  options.sampleRate ? `\n  sampleRate: ${options.sampleRate},` : ''
+}`;
 /* eslint-enable deprecation/deprecation */
 
 /**

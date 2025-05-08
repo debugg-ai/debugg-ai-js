@@ -14,7 +14,7 @@ import {
   SEMATTRS_MESSAGING_SYSTEM,
   SEMATTRS_RPC_SERVICE,
 } from '@opentelemetry/semantic-conventions';
-import { SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@sentry/core';
+import { SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@debugg-ai/core';
 import { describe, expect, it } from 'vitest';
 import {
   descriptionForHttpMethod,

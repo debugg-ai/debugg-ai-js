@@ -1,6 +1,6 @@
 import { getActiveSpan, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, startInactiveSpan } from '@sentry/browser';
-import type { Span } from '@sentry/core';
-import { logger, timestampInSeconds } from '@sentry/core';
+import type { Span } from '@debugg-ai/core';
+import { logger, timestampInSeconds } from '@debugg-ai/core';
 import { DEFAULT_HOOKS } from './constants';
 import { DEBUG_BUILD } from './debug-build';
 import type { Hook, Operation, TracingOptions, ViewModel, Vue } from './types';

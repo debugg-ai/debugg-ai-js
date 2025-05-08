@@ -1,4 +1,4 @@
-import type { Contexts, DsnComponents, Primitive, SdkMetadata } from '@sentry/core';
+import type { Contexts, DsnComponents, Primitive, SdkMetadata } from '@debugg-ai/core';
 
 export interface AnrIntegrationOptions {
   /**

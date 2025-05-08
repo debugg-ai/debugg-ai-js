@@ -1,4 +1,4 @@
-import type { FeedbackInternalOptions } from '@sentry/core';
+import type { FeedbackInternalOptions } from '@debugg-ai/core';
 
 /**
  * Partial configuration that overrides default configuration values

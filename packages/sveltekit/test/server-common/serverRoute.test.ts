@@ -1,4 +1,4 @@
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@debugg-ai/core';
 import type { NumericRange } from '@sveltejs/kit';
 import { type RequestEvent, error, redirect } from '@sveltejs/kit';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
@@ -19,7 +19,7 @@ describe('wrapServerRouteWithSentry', () => {
       route: {
         id: '/api/users/:id',
       },
-    }) as RequestEvent;
+    } as RequestEvent);
 
   beforeEach(() => {
     vi.clearAllMocks();

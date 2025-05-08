@@ -1,10 +1,10 @@
-import * as sentryCore from '@sentry/core';
+import * as sentryCore from '@debugg-ai/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import * as nodeLogger from '../../src/logs/exports';
 
 // Mock the core functions
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@debugg-ai/core', async () => {
+  const actual = await vi.importActual('@debugg-ai/core');
   return {
     ...actual,
     _INTERNAL_captureLog: vi.fn(),

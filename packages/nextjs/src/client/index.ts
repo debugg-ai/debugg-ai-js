@@ -1,7 +1,7 @@
-import type { Client, EventProcessor, Integration } from '@sentry/core';
-import { addEventProcessor, applySdkMetadata, consoleSandbox, getGlobalScope, GLOBAL_OBJ } from '@sentry/core';
-import type { BrowserOptions } from '@sentry/react';
-import { getDefaultIntegrations as getReactDefaultIntegrations, init as reactInit } from '@sentry/react';
+import type { Client, EventProcessor, Integration } from '@debugg-ai/core';
+import { addEventProcessor, applySdkMetadata, consoleSandbox, getGlobalScope, GLOBAL_OBJ } from '@debugg-ai/core';
+import type { BrowserOptions } from '@debugg-ai/react';
+import { getDefaultIntegrations as getReactDefaultIntegrations, init as reactInit } from '@debugg-ai/react';
 import { devErrorSymbolicationEventProcessor } from '../common/devErrorSymbolicationEventProcessor';
 import { getVercelEnv } from '../common/getVercelEnv';
 import { isRedirectNavigationError } from '../common/nextNavigationErrorUtils';
@@ -10,7 +10,7 @@ import { nextjsClientStackFrameNormalizationIntegration } from './clientNormaliz
 import { INCOMPLETE_APP_ROUTER_INSTRUMENTATION_TRANSACTION_NAME } from './routing/appRouterRoutingInstrumentation';
 import { applyTunnelRouteOption } from './tunnelRoute';
 
-export * from '@sentry/react';
+export * from '@debugg-ai/react';
 export * from '../common';
 export { captureUnderscoreErrorException } from '../common/pages-router-instrumentation/_error';
 export { browserTracingIntegration } from './browserTracingIntegration';
@@ -35,7 +35,7 @@ export function init(options: BrowserOptions): Client | undefined {
     consoleSandbox(() => {
       // eslint-disable-next-line no-console
       console.warn(
-        '[@sentry/nextjs] You are calling `Sentry.init()` more than once on the client. This can happen if you have both a `sentry.client.config.ts` and a `instrumentation-client.ts` file with `Sentry.init()` calls. It is recommended to call `Sentry.init()` once in `instrumentation-client.ts`.',
+        '[@debugg-ai/nextjs] You are calling `Sentry.init()` more than once on the client. This can happen if you have both a `sentry.client.config.ts` and a `instrumentation-client.ts` file with `Sentry.init()` calls. It is recommended to call `Sentry.init()` once in `instrumentation-client.ts`.',
       );
     });
   }

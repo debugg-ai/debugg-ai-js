@@ -1,7 +1,7 @@
 import type { ChildProcess } from 'node:child_process';
 import * as diagnosticsChannel from 'node:diagnostics_channel';
 import type { Worker } from 'node:worker_threads';
-import { addBreadcrumb, captureException, defineIntegration } from '@sentry/core';
+import { addBreadcrumb, captureException, defineIntegration } from '@debugg-ai/core';
 
 interface Options {
   /**

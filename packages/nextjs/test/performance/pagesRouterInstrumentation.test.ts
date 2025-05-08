@@ -1,5 +1,5 @@
-import type { Client } from '@sentry/core';
-import { WINDOW } from '@sentry/react';
+import type { Client } from '@debugg-ai/core';
+import { WINDOW } from '@debugg-ai/react';
 import { JSDOM } from 'jsdom';
 import type { NEXT_DATA } from 'next/dist/shared/lib/utils';
 import Router from 'next/router';

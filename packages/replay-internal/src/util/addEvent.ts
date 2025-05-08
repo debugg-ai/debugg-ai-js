@@ -1,4 +1,4 @@
-import { getClient } from '@sentry/core';
+import { getClient } from '@debugg-ai/core';
 import { EventType } from '@sentry-internal/rrweb';
 import { DEBUG_BUILD } from '../debug-build';
 import { EventBufferSizeExceededError } from '../eventBuffer/error';

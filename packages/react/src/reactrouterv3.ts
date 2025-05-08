@@ -3,13 +3,13 @@ import {
   startBrowserTracingNavigationSpan,
   startBrowserTracingPageLoadSpan,
   WINDOW,
-} from '@sentry/browser';
-import type { Integration, TransactionSource } from '@sentry/core';
+} from '@debugg-ai/browser';
+import type { Integration, TransactionSource } from '@debugg-ai/core';
 import {
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { Location } from './types';
 
 // Many of the types below had to be mocked out to prevent typescript issues

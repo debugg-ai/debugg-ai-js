@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import type { LogSeverityLevel } from '@sentry/core';
+import type { LogSeverityLevel } from '@debugg-ai/core';
 import { captureLog } from '../logs/capture';
 
 const DEFAULT_CAPTURED_LEVELS: Array<LogSeverityLevel> = ['trace', 'debug', 'info', 'warn', 'error', 'fatal'];

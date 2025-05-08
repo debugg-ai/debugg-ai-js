@@ -1,5 +1,5 @@
-import { defineIntegration } from '@sentry/core';
-import { rewriteFramesIntegration } from '@sentry/react';
+import { defineIntegration } from '@debugg-ai/core';
+import { rewriteFramesIntegration } from '@debugg-ai/react';
 
 export const nextjsClientStackFrameNormalizationIntegration = defineIntegration(
   ({

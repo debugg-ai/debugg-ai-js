@@ -1,4 +1,4 @@
-import { applySdkMetadata } from '@sentry/core';
+import { applySdkMetadata } from '@debugg-ai/core';
 import type { NodeClient, NodeOptions } from '@sentry/node';
 import { init as initNodeSdk } from '@sentry/node';
 import { filterLowQualityTransactions } from './utils';
@@ -11,7 +11,9 @@ export function init(options: NodeOptions): NodeClient | undefined {
     ...options,
   };
 
+  // @ts-expect-error
   applySdkMetadata(opts, 'solidstart', ['solidstart', 'node']);
+  // @ts-expect-error
   filterLowQualityTransactions(opts);
 
   return initNodeSdk(opts);

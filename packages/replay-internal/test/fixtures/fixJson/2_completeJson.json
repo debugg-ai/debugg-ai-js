@@ -1,13 +1,13 @@
 [
   {
     "id": "123456",
-    "email": "test.user@sentry.io",
-    "name": "test.user@sentry.io",
+    "email": "test.user@debugg.ai",
+    "name": "test.user@debugg.ai",
     "user": {
       "id": "123456",
-      "name": "test.user@sentry.io",
+      "name": "test.user@debugg.ai",
       "username": "ABCDEF",
-      "email": "test.user@sentry.io",
+      "email": "test.user@debugg.ai",
       "isActive": true
     },
     "role": "member",

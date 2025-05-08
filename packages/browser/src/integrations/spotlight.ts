@@ -1,5 +1,5 @@
-import type { Client, Envelope, Event, IntegrationFn } from '@sentry/core';
-import { defineIntegration, logger, serializeEnvelope } from '@sentry/core';
+import type { Client, Envelope, Event, IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration, logger, serializeEnvelope } from '@debugg-ai/core';
 import { getNativeImplementation } from '@sentry-internal/browser-utils';
 import { DEBUG_BUILD } from '../debug-build';
 import type { WINDOW } from '../helpers';

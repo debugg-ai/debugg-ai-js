@@ -1,6 +1,6 @@
 import { trace } from '@opentelemetry/api';
 import type { BasicTracerProvider, ReadableSpan } from '@opentelemetry/sdk-trace-base';
-import type { Span } from '@sentry/core';
+import type { Span } from '@debugg-ai/core';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { withActiveSpan } from '../../src/trace';
 import { groupSpansWithParents } from '../../src/utils/groupSpansWithParents';

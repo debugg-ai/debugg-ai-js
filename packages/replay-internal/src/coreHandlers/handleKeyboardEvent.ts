@@ -1,5 +1,5 @@
-import type { Breadcrumb } from '@sentry/core';
-import { htmlTreeAsString } from '@sentry/core';
+import type { Breadcrumb } from '@debugg-ai/core';
+import { htmlTreeAsString } from '@debugg-ai/core';
 import type { ReplayContainer } from '../types';
 import { createBreadcrumb } from '../util/createBreadcrumb';
 import { getBaseDomBreadcrumb } from './handleDom';

@@ -1,6 +1,6 @@
 import type { Page } from '@playwright/test';
 import { expect } from '@playwright/test';
-import type { Event as SentryEvent, EventEnvelope, SpanEnvelope } from '@sentry/core';
+import type { Event as SentryEvent, EventEnvelope, SpanEnvelope } from '@debugg-ai/core';
 import { sentryTest } from '../../../../utils/fixtures';
 import {
   getFirstSentryEnvelopeRequest,

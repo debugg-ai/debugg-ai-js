@@ -2,8 +2,8 @@ import * as http from 'http';
 import { AddressInfo } from 'net';
 import * as path from 'path';
 import { createRequestHandler } from '@remix-run/express';
-import { logger } from '@sentry/core';
-import type { EnvelopeItemType, Event, TransactionEvent } from '@sentry/core';
+import { logger } from '@debugg-ai/core';
+import type { EnvelopeItemType, Event, TransactionEvent } from '@debugg-ai/core';
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import * as Sentry from '@sentry/node';
 import type { AxiosRequestConfig } from 'axios';
@@ -54,10 +54,7 @@ class TestEnv {
   private _axiosConfig: AxiosRequestConfig | undefined = undefined;
   private _terminator: HttpTerminator;
 
-  public constructor(
-    public readonly server: http.Server,
-    public readonly url: string,
-  ) {
+  public constructor(public readonly server: http.Server, public readonly url: string) {
     this.server = server;
     this.url = url;
     this._terminator = createHttpTerminator({ server: this.server, gracefulTerminationTimeout: 0 });
@@ -258,10 +255,7 @@ class TestEnv {
 }
 
 export class RemixTestEnv extends TestEnv {
-  private constructor(
-    public readonly server: http.Server,
-    public readonly url: string,
-  ) {
+  private constructor(public readonly server: http.Server, public readonly url: string) {
     super(server, url);
   }
 

@@ -1,4 +1,4 @@
-import type { EventProcessor } from '@sentry/core';
+import type { EventProcessor } from '@debugg-ai/core';
 import type { NodeClient } from '@sentry/node';
 import * as SentryNode from '@sentry/node';
 import { getGlobalScope, Scope, SDK_VERSION } from '@sentry/node';

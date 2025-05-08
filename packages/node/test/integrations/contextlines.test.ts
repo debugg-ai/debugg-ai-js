@@ -1,6 +1,6 @@
 import * as fs from 'node:fs';
-import type { StackFrame } from '@sentry/core';
-import { parseStackFrames } from '@sentry/core';
+import type { StackFrame } from '@debugg-ai/core';
+import { parseStackFrames } from '@debugg-ai/core';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 import {
   _contextLinesIntegration,

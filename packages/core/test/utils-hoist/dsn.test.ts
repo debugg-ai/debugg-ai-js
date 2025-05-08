@@ -112,7 +112,7 @@ describe('Dsn', () => {
 
   describe('fromString', () => {
     test('parses a valid full Dsn', () => {
-      const dsn = makeDsn('https://abc:xyz@sentry.io:1234/123');
+      const dsn = makeDsn('https://abc:xyz@debugg.ai:1234/123');
       expect(dsn?.protocol).toBe('https');
       expect(dsn?.publicKey).toBe('abc');
       expect(dsn?.pass).toBe('xyz');
@@ -123,7 +123,7 @@ describe('Dsn', () => {
     });
 
     test('parses a valid partial Dsn', () => {
-      const dsn = makeDsn('https://abc@sentry.io/123/321');
+      const dsn = makeDsn('https://abc@debugg.ai/123/321');
       expect(dsn?.protocol).toBe('https');
       expect(dsn?.publicKey).toBe('abc');
       expect(dsn?.pass).toBe('');
@@ -134,7 +134,7 @@ describe('Dsn', () => {
     });
 
     test('parses a Dsn with empty password', () => {
-      const dsn = makeDsn('https://abc:@sentry.io/123/321');
+      const dsn = makeDsn('https://abc:@debugg.ai/123/321');
       expect(dsn?.protocol).toBe('https');
       expect(dsn?.publicKey).toBe('abc');
       expect(dsn?.pass).toBe('');
@@ -145,7 +145,7 @@ describe('Dsn', () => {
     });
 
     test('with a long path', () => {
-      const dsn = makeDsn('https://abc@sentry.io/sentry/custom/installation/321');
+      const dsn = makeDsn('https://abc@debugg.ai/sentry/custom/installation/321');
       expect(dsn?.protocol).toBe('https');
       expect(dsn?.publicKey).toBe('abc');
       expect(dsn?.pass).toBe('');
@@ -156,7 +156,7 @@ describe('Dsn', () => {
     });
 
     test('with a query string', () => {
-      const dsn = makeDsn('https://abc@sentry.io/321?sample.rate=0.1&other=value');
+      const dsn = makeDsn('https://abc@debugg.ai/321?sample.rate=0.1&other=value');
       expect(dsn?.protocol).toBe('https');
       expect(dsn?.publicKey).toBe('abc');
       expect(dsn?.pass).toBe('');
@@ -172,17 +172,17 @@ describe('Dsn', () => {
     });
 
     testIf(DEBUG_BUILD)('returns undefined if mandatory fields are missing', () => {
-      expect(makeDsn('://abc@sentry.io/123')).toBeUndefined();
-      expect(makeDsn('https://@sentry.io/123')).toBeUndefined();
+      expect(makeDsn('://abc@debugg.ai/123')).toBeUndefined();
+      expect(makeDsn('https://@debugg.ai/123')).toBeUndefined();
       expect(makeDsn('https://abc@123')).toBeUndefined();
-      expect(makeDsn('https://abc@sentry.io/')).toBeUndefined();
+      expect(makeDsn('https://abc@debugg.ai/')).toBeUndefined();
       expect(consoleErrorSpy).toHaveBeenCalledTimes(4);
     });
 
     testIf(DEBUG_BUILD)('returns undefined if fields are invalid', () => {
-      expect(makeDsn('httpx://abc@sentry.io/123')).toBeUndefined();
-      expect(makeDsn('httpx://abc@sentry.io:xxx/123')).toBeUndefined();
-      expect(makeDsn('http://abc@sentry.io/abc')).toBeUndefined();
+      expect(makeDsn('httpx://abc@debugg.ai/123')).toBeUndefined();
+      expect(makeDsn('httpx://abc@debugg.ai:xxx/123')).toBeUndefined();
+      expect(makeDsn('http://abc@debugg.ai/abc')).toBeUndefined();
       expect(loggerErrorSpy).toHaveBeenCalledTimes(2);
       expect(consoleErrorSpy).toHaveBeenCalledTimes(1);
     });
@@ -190,28 +190,28 @@ describe('Dsn', () => {
 
   describe('toString', () => {
     test('excludes the password by default', () => {
-      const dsn = makeDsn('https://abc:xyz@sentry.io:1234/123');
-      expect(dsnToString(dsn!)).toBe('https://abc@sentry.io:1234/123');
+      const dsn = makeDsn('https://abc:xyz@debugg.ai:1234/123');
+      expect(dsnToString(dsn!)).toBe('https://abc@debugg.ai:1234/123');
     });
 
     test('optionally includes the password', () => {
-      const dsn = makeDsn('https://abc:xyz@sentry.io:1234/123');
-      expect(dsnToString(dsn!, true)).toBe('https://abc:xyz@sentry.io:1234/123');
+      const dsn = makeDsn('https://abc:xyz@debugg.ai:1234/123');
+      expect(dsnToString(dsn!, true)).toBe('https://abc:xyz@debugg.ai:1234/123');
     });
 
     test('renders no password if missing', () => {
-      const dsn = makeDsn('https://abc@sentry.io:1234/123');
-      expect(dsnToString(dsn!, true)).toBe('https://abc@sentry.io:1234/123');
+      const dsn = makeDsn('https://abc@debugg.ai:1234/123');
+      expect(dsnToString(dsn!, true)).toBe('https://abc@debugg.ai:1234/123');
     });
 
     test('renders no port if missing', () => {
-      const dsn = makeDsn('https://abc@sentry.io/123');
-      expect(dsnToString(dsn!)).toBe('https://abc@sentry.io/123');
+      const dsn = makeDsn('https://abc@debugg.ai/123');
+      expect(dsnToString(dsn!)).toBe('https://abc@debugg.ai/123');
     });
 
     test('renders the full path correctly', () => {
-      const dsn = makeDsn('https://abc@sentry.io/sentry/custom/installation/321');
-      expect(dsnToString(dsn!)).toBe('https://abc@sentry.io/sentry/custom/installation/321');
+      const dsn = makeDsn('https://abc@debugg.ai/sentry/custom/installation/321');
+      expect(dsnToString(dsn!)).toBe('https://abc@debugg.ai/sentry/custom/installation/321');
     });
   });
 });

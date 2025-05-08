@@ -15,7 +15,7 @@ export type {
   Stacktrace,
   Thread,
   User,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export {
   addEventProcessor,
@@ -145,7 +145,7 @@ export {
   dedupeIntegration,
   extraErrorDataIntegration,
   rewriteFramesIntegration,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export type { BunOptions } from './types';
 

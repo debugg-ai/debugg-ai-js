@@ -1,7 +1,7 @@
+import type { IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration, getClient, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN } from '@debugg-ai/core';
 import type { UndiciInstrumentationConfig } from '@opentelemetry/instrumentation-undici';
 import { UndiciInstrumentation } from '@opentelemetry/instrumentation-undici';
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration, getClient, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN } from '@sentry/core';
 import { generateInstrumentOnce } from '../../otel/instrument';
 import type { NodeClient } from '../../sdk/client';
 import type { NodeClientOptions } from '../../types';

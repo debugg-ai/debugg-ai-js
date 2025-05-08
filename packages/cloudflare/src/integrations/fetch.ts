@@ -5,7 +5,7 @@ import type {
   HandlerDataFetch,
   IntegrationFn,
   Span,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import {
   addBreadcrumb,
   addFetchInstrumentationHandler,
@@ -16,7 +16,7 @@ import {
   isSentryRequestUrl,
   LRUMap,
   stringMatchesSomePattern,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 const INTEGRATION_NAME = 'Fetch';
 

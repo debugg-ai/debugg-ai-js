@@ -1,6 +1,6 @@
 import { getDefaultIntegrations as getBrowserDefaultIntegrations, init as initBrowser } from '@sentry/browser';
-import type { Client } from '@sentry/core';
-import { applySdkMetadata } from '@sentry/core';
+import type { Client } from '@debugg-ai/core';
+import { applySdkMetadata } from '@debugg-ai/core';
 import type { SentryNuxtClientOptions } from '../common/types';
 
 /**
@@ -15,7 +15,9 @@ export function init(options: SentryNuxtClientOptions): Client | undefined {
     ...options,
   };
 
+  // @ts-expect-error
   applySdkMetadata(sentryOptions, 'nuxt', ['nuxt', 'vue']);
 
+  // @ts-expect-error
   return initBrowser(sentryOptions);
 }

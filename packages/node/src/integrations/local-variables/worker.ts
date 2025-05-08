@@ -1,7 +1,7 @@
 import type { Debugger, InspectorNotification, Runtime } from 'node:inspector';
 import { Session } from 'node:inspector/promises';
 import { workerData } from 'node:worker_threads';
-import { consoleSandbox } from '@sentry/core';
+import { consoleSandbox } from '@debugg-ai/core';
 import type { LocalVariablesWorkerArgs, PausedExceptionEvent, RateLimitIncrement, Variables } from './common';
 import { createRateLimiter, LOCAL_VARIABLES_KEY } from './common';
 

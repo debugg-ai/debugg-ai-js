@@ -1,4 +1,4 @@
-import type { Event, EventHint } from '@sentry/core';
+import type { Event, EventHint } from '@debugg-ai/core';
 
 /**
  * Returns true if we think the given event is an error originating inside of rrweb.

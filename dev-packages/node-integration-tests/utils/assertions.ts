@@ -7,8 +7,8 @@ import type {
   SerializedSession,
   SessionAggregates,
   TransactionEvent,
-} from '@sentry/core';
-import { SDK_VERSION } from '@sentry/core';
+} from '@debugg-ai/core';
+import { SDK_VERSION } from '@debugg-ai/core';
 import { expect } from 'vitest';
 
 /**

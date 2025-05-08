@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */ // TODO: We might want to split this file up
-import type { ReplayRecordingMode, Span } from '@sentry/core';
-import { getActiveSpan, getClient, getRootSpan, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, spanToJSON } from '@sentry/core';
+import type { ReplayRecordingMode, Span } from '@debugg-ai/core';
+import { getActiveSpan, getClient, getRootSpan, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, spanToJSON } from '@debugg-ai/core';
 import { EventType, record } from '@sentry-internal/rrweb';
 import {
   BUFFER_CHECKOUT_TIME,

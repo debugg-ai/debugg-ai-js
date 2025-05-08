@@ -1,12 +1,12 @@
 import type * as common from '@google-cloud/common';
-import type { Client, IntegrationFn } from '@sentry/core';
+import type { Client, IntegrationFn } from '@debugg-ai/core';
 import {
   defineIntegration,
   fill,
   getClient,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SentryNonRecordingSpan,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { startInactiveSpan } from '@sentry/node';
 
 type RequestOptions = common.DecorateRequestOptions;

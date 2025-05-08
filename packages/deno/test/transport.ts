@@ -4,8 +4,8 @@ import type {
   Transport,
   TransportMakeRequestResponse,
   TransportRequest,
-} from '@sentry/core';
-import { createTransport, parseEnvelope } from '@sentry/core';
+} from '@debugg-ai/core';
+import { createTransport, parseEnvelope } from '@debugg-ai/core';
 
 export interface TestTransportOptions extends BaseTransportOptions {
   callback: (envelope: Envelope) => void;

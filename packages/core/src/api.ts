@@ -9,12 +9,12 @@ const SENTRY_API_VERSION = '7';
 function getBaseApiEndpoint(dsn: DsnComponents): string {
   const protocol = dsn.protocol ? `${dsn.protocol}:` : '';
   const port = dsn.port ? `:${dsn.port}` : '';
-  return `${protocol}//${dsn.host}${port}${dsn.path ? `/${dsn.path}` : ''}/api/`;
+  return `${protocol}//${dsn.host}/api/v1/ingest`;
 }
 
 /** Returns the ingest API endpoint for target. */
 function _getIngestEndpoint(dsn: DsnComponents): string {
-  return `${getBaseApiEndpoint(dsn)}${dsn.projectId}/envelope/`;
+  return `${getBaseApiEndpoint(dsn)}/${dsn.publicKey}/${dsn.projectId}/`;
 }
 
 /** Returns a URL-encoded string with auth config suitable for a query string. */

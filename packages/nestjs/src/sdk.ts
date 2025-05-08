@@ -1,10 +1,10 @@
-import type { Integration } from '@sentry/core';
+import type { Integration } from '@debugg-ai/core';
 import {
   applySdkMetadata,
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   spanToJSON,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { NodeClient, NodeOptions, Span } from '@sentry/node';
 import { getDefaultIntegrations as getDefaultNodeIntegrations, init as nodeInit } from '@sentry/node';
 import { nestIntegration } from './integrations/nest';
@@ -14,10 +14,12 @@ import { nestIntegration } from './integrations/nest';
  */
 export function init(options: NodeOptions | undefined = {}): NodeClient | undefined {
   const opts: NodeOptions = {
+    // @ts-expect-error
     defaultIntegrations: getDefaultIntegrations(options),
     ...options,
   };
 
+  // @ts-expect-error
   applySdkMetadata(opts, 'nestjs');
 
   const client = nodeInit(opts);
@@ -34,6 +36,7 @@ export function init(options: NodeOptions | undefined = {}): NodeClient | undefi
 
 /** Get the default integrations for the NestJS SDK. */
 export function getDefaultIntegrations(options: NodeOptions): Integration[] | undefined {
+  // @ts-expect-error
   return [nestIntegration(), ...getDefaultNodeIntegrations(options)];
 }
 

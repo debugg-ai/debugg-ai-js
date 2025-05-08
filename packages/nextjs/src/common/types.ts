@@ -1,4 +1,4 @@
-import type { SentrySpan, WebFetchHeaders, WrappedFunction } from '@sentry/core';
+import type { SentrySpan, WebFetchHeaders, WrappedFunction } from '@debugg-ai/core';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { RequestAsyncStorage } from '../config/templates/requestAsyncStorageShim';
 

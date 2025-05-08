@@ -1,6 +1,6 @@
-import type { FeedbackFormData, FeedbackInternalOptions } from '@sentry/core';
+import type { FeedbackFormData, FeedbackInternalOptions } from '@debugg-ai/core';
 import type { VNode } from 'preact';
-import { Fragment, h } from 'preact'; // eslint-disable-line @typescript-eslint/no-unused-vars
+import { h } from 'preact'; // eslint-disable-line @typescript-eslint/no-unused-vars
 import { useCallback, useMemo, useState } from 'preact/hooks';
 import { SUCCESS_MESSAGE_TIMEOUT } from '../../constants';
 import type { Props as HeaderProps } from './DialogHeader';
@@ -43,7 +43,7 @@ export function Dialog({ open, onFormSubmitted, ...props }: Props): VNode {
   );
 
   return (
-    <Fragment>
+    <>
       {timeoutId ? (
         <div class="success__position" onClick={handleOnSuccessClick}>
           <div class="success__content">
@@ -67,6 +67,6 @@ export function Dialog({ open, onFormSubmitted, ...props }: Props): VNode {
           </div>
         </dialog>
       )}
-    </Fragment>
+    </>
   );
 }

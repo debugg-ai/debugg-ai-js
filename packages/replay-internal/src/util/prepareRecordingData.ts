@@ -1,4 +1,4 @@
-import type { ReplayRecordingData } from '@sentry/core';
+import type { ReplayRecordingData } from '@debugg-ai/core';
 
 /**
  * Prepare the recording data ready to be sent.

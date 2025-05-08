@@ -10,8 +10,8 @@ import type {
   SerializedSession,
   SessionAggregates,
   TransactionEvent,
-} from '@sentry/core';
-import { normalize } from '@sentry/core';
+} from '@debugg-ai/core';
+import { normalize } from '@debugg-ai/core';
 import { execSync, spawn, spawnSync } from 'child_process';
 import { existsSync, readFileSync, unlinkSync, writeFileSync } from 'fs';
 import { join } from 'path';

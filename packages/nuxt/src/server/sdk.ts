@@ -1,6 +1,6 @@
 import * as path from 'node:path';
-import type { Client, EventProcessor, Integration } from '@sentry/core';
-import { applySdkMetadata, flush, getGlobalScope, logger, vercelWaitUntil } from '@sentry/core';
+import type { Client, EventProcessor, Integration } from '@debugg-ai/core';
+import { applySdkMetadata, flush, getGlobalScope, logger, vercelWaitUntil } from '@debugg-ai/core';
 import {
   type NodeOptions,
   getDefaultIntegrations as getDefaultNodeIntegrations,
@@ -21,13 +21,16 @@ export function init(options: SentryNuxtServerOptions): Client | undefined {
     defaultIntegrations: getNuxtDefaultIntegrations(options),
   };
 
+  // @ts-expect-error
   applySdkMetadata(sentryOptions, 'nuxt', ['nuxt', 'node']);
 
+  // @ts-expect-error
   const client = initNode(sentryOptions);
 
   getGlobalScope().addEventProcessor(lowQualityTransactionsFilter(options));
   getGlobalScope().addEventProcessor(clientSourceMapErrorFilter(options));
 
+  // @ts-expect-error
   return client;
 }
 
@@ -78,8 +81,10 @@ export function clientSourceMapErrorFilter(options: SentryNuxtServerOptions): Ev
 
 function getNuxtDefaultIntegrations(options: NodeOptions): Integration[] {
   return [
+    // @ts-expect-error
     ...getDefaultNodeIntegrations(options).filter(integration => integration.name !== 'Http'),
     // The httpIntegration is added as defaultIntegration, so users can still overwrite it
+    // @ts-expect-error
     httpIntegration({
       instrumentation: {
         responseHook: () => {

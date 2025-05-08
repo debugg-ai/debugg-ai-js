@@ -4,8 +4,8 @@ import type {
   Event,
   ParameterizedString,
   SeverityLevel,
-} from '@sentry/core';
-import { Client, createTransport, initAndBind, resolvedSyncPromise } from '@sentry/core';
+} from '@debugg-ai/core';
+import { Client, createTransport, initAndBind, resolvedSyncPromise } from '@debugg-ai/core';
 
 export interface TestClientOptions extends ClientOptions, BrowserClientReplayOptions {}
 

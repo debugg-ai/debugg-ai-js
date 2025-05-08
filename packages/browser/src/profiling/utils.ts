@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import type { DebugImage, Envelope, Event, EventEnvelope, Profile, Span, ThreadCpuProfile } from '@sentry/core';
+import type { DebugImage, Envelope, Event, EventEnvelope, Profile, Span, ThreadCpuProfile } from '@debugg-ai/core';
 import {
   browserPerformanceTimeOrigin,
   DEFAULT_ENVIRONMENT,
@@ -10,7 +10,7 @@ import {
   spanToJSON,
   timestampInSeconds,
   uuid4,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { WINDOW } from '../helpers';
 import type { JSSelfProfile, JSSelfProfiler, JSSelfProfilerConstructor, JSSelfProfileStack } from './jsSelfProfiling';
@@ -149,8 +149,8 @@ export function createProfilePayload(
   const transactionStartMs = start_timestamp
     ? start_timestamp
     : typeof event.start_timestamp === 'number'
-      ? event.start_timestamp * 1000
-      : timestampInSeconds() * 1000;
+    ? event.start_timestamp * 1000
+    : timestampInSeconds() * 1000;
   const transactionEndMs = typeof event.timestamp === 'number' ? event.timestamp * 1000 : timestampInSeconds() * 1000;
 
   const profile: Profile = {

@@ -1,5 +1,5 @@
-import type { Breadcrumb, HandlerDataDom } from '@sentry/core';
-import { htmlTreeAsString } from '@sentry/core';
+import type { Breadcrumb, HandlerDataDom } from '@debugg-ai/core';
+import { htmlTreeAsString } from '@debugg-ai/core';
 import { record } from '@sentry-internal/rrweb';
 import type { serializedElementNodeWithId, serializedNodeWithId } from '@sentry-internal/rrweb-snapshot';
 import { NodeType } from '@sentry-internal/rrweb-snapshot';

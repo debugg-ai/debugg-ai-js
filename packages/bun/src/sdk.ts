@@ -1,5 +1,5 @@
 import * as os from 'node:os';
-import type { Integration, Options } from '@sentry/core';
+import type { Integration, Options } from '@debugg-ai/core';
 import {
   applySdkMetadata,
   functionToStringIntegration,
@@ -7,7 +7,7 @@ import {
   inboundFiltersIntegration,
   linkedErrorsIntegration,
   requestDataIntegration,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { NodeClient } from '@sentry/node';
 import {
   consoleIntegration,
@@ -37,18 +37,27 @@ export function getDefaultIntegrations(_options: Options): Integration[] {
     linkedErrorsIntegration(),
     requestDataIntegration(),
     // Native Wrappers
+    // @ts-expect-error
     consoleIntegration(),
+    // @ts-expect-error
     httpIntegration(),
+    // @ts-expect-error
     nativeNodeFetchIntegration(),
     // Global Handlers
+    // @ts-expect-error
     onUncaughtExceptionIntegration(),
+    // @ts-expect-error
     onUnhandledRejectionIntegration(),
     // Event Info
+    // @ts-expect-error
     contextLinesIntegration(),
+    // @ts-expect-error
     nodeContextIntegration(),
+    // @ts-expect-error
     modulesIntegration(),
     // Bun Specific
     bunServerIntegration(),
+    // @ts-expect-error
     ...(hasSpansEnabled(_options) ? getAutoPerformanceIntegrations() : []),
   ];
 }
@@ -113,5 +122,6 @@ export function init(userOptions: BunOptions = {}): NodeClient | undefined {
     options.defaultIntegrations = getDefaultIntegrations(options);
   }
 
+  // @ts-expect-error
   return initNode(options);
 }

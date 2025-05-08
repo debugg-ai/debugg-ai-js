@@ -140,13 +140,10 @@ export function _INTERNAL_captureLog(
     body: message,
     trace_id: traceContext?.trace_id,
     severity_number: severityNumber ?? SEVERITY_TEXT_TO_SEVERITY_NUMBER[level],
-    attributes: Object.keys(attributes).reduce(
-      (acc, key) => {
-        acc[key] = logAttributeToSerializedLogAttribute(attributes[key]);
-        return acc;
-      },
-      {} as Record<string, SerializedLogAttributeValue>,
-    ),
+    attributes: Object.keys(attributes).reduce((acc, key) => {
+      acc[key] = logAttributeToSerializedLogAttribute(attributes[key]);
+      return acc;
+    }, {} as Record<string, SerializedLogAttributeValue>),
   };
 
   const logBuffer = CLIENT_TO_LOG_BUFFER_MAP.get(client);

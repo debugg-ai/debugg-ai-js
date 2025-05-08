@@ -2,7 +2,7 @@
  * @vitest-environment jsdom
  */
 
-import type { TransactionEvent } from '@sentry/core';
+import type { TransactionEvent } from '@debugg-ai/core';
 import { act, render } from '@testing-library/svelte';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { getClient, getCurrentScope, getIsolationScope, init, startSpan } from '../src';

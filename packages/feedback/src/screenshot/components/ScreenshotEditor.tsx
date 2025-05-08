@@ -1,4 +1,4 @@
-import type { FeedbackInternalOptions, FeedbackModalIntegration } from '@sentry/core';
+import type { FeedbackInternalOptions, FeedbackModalIntegration } from '@debugg-ai/core';
 import type { ComponentType, h as hType, VNode } from 'preact';
 import { h } from 'preact'; // eslint-disable-line @typescript-eslint/no-unused-vars
 import type * as Hooks from 'preact/hooks';
@@ -318,6 +318,7 @@ export function ScreenshotEditorFactory({
             </div>
           </div>
         </div>
+        {/* @ts-expect-error */}
         <Toolbar action={action} setAction={setAction} />
       </div>
     );

@@ -1,10 +1,10 @@
 {
-  "name": "@sentry/browser",
-  "version": "9.15.0",
-  "description": "Official Sentry SDK for browsers",
-  "repository": "git://github.com/getsentry/sentry-javascript.git",
-  "homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/browser",
-  "author": "Sentry",
+  "name": "@debugg-ai/browser",
+  "version": "1.0.8",
+  "description": "Debugg.ai SDK for browsers",
+  "repository": "git://github.com/debugg-ai/debugg-ai-js.git",
+  "homepage": "https://github.com/debugg-ai/debugg-ai-js/tree/master/packages/browser",
+  "author": "Debugg.ai",
   "license": "MIT",
   "engines": {
     "node": ">=18"
@@ -43,7 +43,7 @@
     "@sentry-internal/feedback": "9.15.0",
     "@sentry-internal/replay": "9.15.0",
     "@sentry-internal/replay-canvas": "9.15.0",
-    "@sentry/core": "9.15.0"
+    "@debugg-ai/core": "1.0.8"
   },
   "devDependencies": {
     "@sentry-internal/integration-shims": "9.15.0",

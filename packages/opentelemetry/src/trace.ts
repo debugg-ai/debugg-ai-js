@@ -8,7 +8,7 @@ import type {
   Scope,
   Span as SentrySpan,
   TraceContext,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import {
   getClient,
   getCurrentScope,
@@ -21,7 +21,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   spanToJSON,
   spanToTraceContext,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { continueTraceAsRemoteSpan } from './propagator';
 import type { OpenTelemetryClient, OpenTelemetrySpanContext } from './types';
 import { getContextFromScope } from './utils/contextData';

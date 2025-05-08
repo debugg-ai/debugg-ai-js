@@ -1,4 +1,4 @@
-import type { SpanJSON } from '@sentry/core';
+import type { SpanJSON } from '@debugg-ai/core';
 import { expect, test } from 'vitest';
 import { createRunner } from '../../../utils/runner';
 

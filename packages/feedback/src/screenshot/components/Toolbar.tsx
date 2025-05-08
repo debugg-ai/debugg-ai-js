@@ -22,6 +22,7 @@ export default function ToolbarFactory({
             type="button"
             class={`editor__tool ${action === 'highlight' ? 'editor__tool--active' : ''}`}
             onClick={() => {
+              {/* @ts-expect-error */}
               setAction(action === 'highlight' ? '' : 'highlight');
             }}
           >
@@ -31,6 +32,7 @@ export default function ToolbarFactory({
             type="button"
             class={`editor__tool ${action === 'hide' ? 'editor__tool--active' : ''}`}
             onClick={() => {
+              {/* @ts-expect-error */}
               setAction(action === 'hide' ? '' : 'hide');
             }}
           >

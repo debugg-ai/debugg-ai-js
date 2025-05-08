@@ -1,4 +1,4 @@
-import { handleCallbackErrors, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SPAN_STATUS_ERROR } from '@sentry/core';
+import { handleCallbackErrors, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SPAN_STATUS_ERROR } from '@debugg-ai/core';
 import { captureException, getActiveSpan, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, spanToJSON, startSpan } from '@sentry/node';
 import { flushIfServerless, isRedirect } from './utils';
 

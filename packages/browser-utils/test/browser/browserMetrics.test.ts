@@ -1,4 +1,4 @@
-import type { Span } from '@sentry/core';
+import type { Span } from '@debugg-ai/core';
 import {
   getClient,
   getCurrentScope,
@@ -8,7 +8,7 @@ import {
   SentrySpan,
   setCurrentClient,
   spanToJSON,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from 'vitest';
 import { _addMeasureSpans, _addNavigationSpans, _addResourceSpans } from '../../src/metrics/browserMetrics';
 import { WINDOW } from '../../src/types';

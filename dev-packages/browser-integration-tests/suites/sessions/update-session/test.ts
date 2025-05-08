@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import type { SessionContext } from '@sentry/core';
+import type { SessionContext } from '@debugg-ai/core';
 import { sentryTest } from '../../../utils/fixtures';
 import { getFirstSentryEnvelopeRequest, waitForSession } from '../../../utils/helpers';
 

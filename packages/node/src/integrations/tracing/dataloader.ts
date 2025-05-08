@@ -1,11 +1,11 @@
-import { DataloaderInstrumentation } from '@opentelemetry/instrumentation-dataloader';
-import type { IntegrationFn } from '@sentry/core';
+import type { IntegrationFn } from '@debugg-ai/core';
 import {
   defineIntegration,
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   spanToJSON,
-} from '@sentry/core';
+} from '@debugg-ai/core';
+import { DataloaderInstrumentation } from '@opentelemetry/instrumentation-dataloader';
 import { generateInstrumentOnce, instrumentWhenWrapped } from '../../otel/instrument';
 
 const INTEGRATION_NAME = 'Dataloader';
@@ -62,7 +62,7 @@ const _dataloaderIntegration = (() => {
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  *
  * Sentry.init({
  *  integrations: [Sentry.dataloaderIntegration()],

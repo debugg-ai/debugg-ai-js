@@ -10,8 +10,8 @@ import {
 } from '../../../src/util/createPerformanceEntries';
 import { PerformanceEntryNavigation } from '../../fixtures/performanceEntry/navigation';
 
-vi.mock('@sentry/core', async () => ({
-  ...(await vi.importActual('@sentry/core')),
+vi.mock('@debugg-ai/core', async () => ({
+  ...(await vi.importActual('@debugg-ai/core')),
   browserPerformanceTimeOrigin: () => new Date('2023-01-01').getTime(),
 }));
 

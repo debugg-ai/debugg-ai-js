@@ -1,10 +1,10 @@
 import * as browser from '@sentry/browser';
-import * as core from '@sentry/core';
+import * as core from '@debugg-ai/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { instrumentHydratedRouter } from '../../src/client/hydratedRouter';
 
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual<any>('@sentry/core');
+vi.mock('@debugg-ai/core', async () => {
+  const actual = await vi.importActual<any>('@debugg-ai/core');
   return {
     ...actual,
     getActiveSpan: vi.fn(),

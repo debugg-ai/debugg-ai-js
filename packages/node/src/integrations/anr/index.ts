@@ -1,6 +1,6 @@
 import { types } from 'node:util';
 import { Worker } from 'node:worker_threads';
-import type { Contexts, Event, EventHint, Integration, IntegrationFn, ScopeData } from '@sentry/core';
+import type { Contexts, Event, EventHint, Integration, IntegrationFn, ScopeData } from '@debugg-ai/core';
 import {
   defineIntegration,
   getClient,
@@ -11,7 +11,7 @@ import {
   GLOBAL_OBJ,
   logger,
   mergeScopeData,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { NODE_VERSION } from '../../nodeVersion';
 import type { NodeClient } from '../../sdk/client';
 import { isDebuggerEnabled } from '../../utils/debug';
@@ -232,6 +232,7 @@ export function disableAnrDetectionForCallback<T>(callback: () => Promise<T>): P
  * Disables ANR detection for the duration of the callback
  */
 export function disableAnrDetectionForCallback<T>(callback: () => T | Promise<T>): T | Promise<T> {
+  // @ts-expect-error
   const integration = getClient()?.getIntegrationByName(INTEGRATION_NAME) as AnrInternal | undefined;
 
   if (!integration) {

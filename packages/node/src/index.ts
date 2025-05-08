@@ -60,7 +60,7 @@ export type { NodeOptions } from './types';
 export {
   // This needs exporting so the NodeClient can be used without calling init
   setOpenTelemetryContextAsyncContextStrategy as setNodeAsyncContextStrategy,
-} from '@sentry/opentelemetry';
+} from '@debugg-ai/opentelemetry';
 
 export {
   addBreadcrumb,
@@ -137,7 +137,7 @@ export {
   consoleLoggingIntegration,
   consoleIntegration,
   wrapMcpServerWithSentry,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export type {
   Breadcrumb,
@@ -156,6 +156,6 @@ export type {
   Thread,
   User,
   Span,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export { logger };

@@ -1,4 +1,4 @@
-import type { Client, IntegrationFn } from '@sentry/core';
+import type { Client, IntegrationFn } from '@debugg-ai/core';
 import {
   captureMessage,
   defineIntegration,
@@ -6,7 +6,7 @@ import {
   GLOBAL_OBJ,
   supportsReportingObserver,
   withScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 const WINDOW = GLOBAL_OBJ as typeof GLOBAL_OBJ & Window;
 
@@ -54,10 +54,7 @@ interface ReportingObserverOptions {
 
 /** This is experimental and the types are not included with TypeScript, sadly. */
 interface ReportingObserverClass {
-  new (
-    handler: (reports: Report[]) => void,
-    options: { buffered?: boolean; types?: ReportTypes[] },
-  ): {
+  new (handler: (reports: Report[]) => void, options: { buffered?: boolean; types?: ReportTypes[] }): {
     observe: () => void;
   };
 }

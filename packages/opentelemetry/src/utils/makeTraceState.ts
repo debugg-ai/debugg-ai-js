@@ -1,6 +1,6 @@
 import { TraceState } from '@opentelemetry/core';
-import type { DynamicSamplingContext } from '@sentry/core';
-import { dynamicSamplingContextToSentryBaggageHeader } from '@sentry/core';
+import type { DynamicSamplingContext } from '@debugg-ai/core';
+import { dynamicSamplingContextToSentryBaggageHeader } from '@debugg-ai/core';
 import { SENTRY_TRACE_STATE_DSC, SENTRY_TRACE_STATE_SAMPLED_NOT_RECORDING } from '../constants';
 
 /**

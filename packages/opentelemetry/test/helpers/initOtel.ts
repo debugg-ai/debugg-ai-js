@@ -7,7 +7,7 @@ import {
   ATTR_SERVICE_VERSION,
   SEMRESATTRS_SERVICE_NAMESPACE,
 } from '@opentelemetry/semantic-conventions';
-import { getClient, logger, SDK_VERSION } from '@sentry/core';
+import { getClient, logger, SDK_VERSION } from '@debugg-ai/core';
 import { wrapContextManagerClass } from '../../src/contextManager';
 import { DEBUG_BUILD } from '../../src/debug-build';
 import { SentryPropagator } from '../../src/propagator';

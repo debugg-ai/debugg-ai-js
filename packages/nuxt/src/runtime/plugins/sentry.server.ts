@@ -6,7 +6,7 @@ import {
   logger,
   vercelWaitUntil,
   withIsolationScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import * as SentryNode from '@sentry/node';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { type EventHandler, H3Error } from 'h3';

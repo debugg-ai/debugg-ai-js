@@ -1,4 +1,4 @@
-import { consoleSandbox, defineIntegration } from '@sentry/core';
+import { consoleSandbox, defineIntegration } from '@debugg-ai/core';
 
 /**
  * This is a shim for the BrowserTracing integration.

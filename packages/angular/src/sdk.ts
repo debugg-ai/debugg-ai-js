@@ -9,14 +9,14 @@ import {
   linkedErrorsIntegration,
   setContext,
 } from '@sentry/browser';
-import type { Client, Integration } from '@sentry/core';
+import type { Client, Integration } from '@debugg-ai/core';
 import {
   applySdkMetadata,
   dedupeIntegration,
   functionToStringIntegration,
   inboundFiltersIntegration,
   logger,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { IS_DEBUG_BUILD } from './flags';
 
 /**
@@ -36,11 +36,16 @@ export function getDefaultIntegrations(_options: BrowserOptions = {}): Integrati
     // eslint-disable-next-line deprecation/deprecation
     inboundFiltersIntegration(),
     functionToStringIntegration(),
+    // @ts-expect-error
     breadcrumbsIntegration(),
+    // @ts-expect-error
     globalHandlersIntegration(),
+    // @ts-expect-error
     linkedErrorsIntegration(),
     dedupeIntegration(),
+    // @ts-expect-error
     httpContextIntegration(),
+    // @ts-expect-error
     browserSessionIntegration(),
   ];
 }
@@ -54,9 +59,11 @@ export function init(options: BrowserOptions): Client | undefined {
     ...options,
   };
 
+  // @ts-expect-error
   applySdkMetadata(opts, 'angular');
 
   checkAndSetAngularVersion();
+  // @ts-expect-error
   return browserInit(opts);
 }
 

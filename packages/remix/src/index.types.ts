@@ -2,7 +2,7 @@
 
 // We export everything from both the client part of the SDK and from the server part. Some of the exports collide,
 // which is not allowed, unless we redefine the colliding exports in this file - which we do below.
-import type { Client, Integration, Options, StackParser } from '@sentry/core';
+import type { Client, Integration, Options, StackParser } from '@debugg-ai/core';
 import * as clientSdk from './index.client';
 import * as serverSdk from './index.server';
 import type { RemixOptions } from './utils/remixOptions';
@@ -26,7 +26,7 @@ export declare const logger: typeof clientSdk.logger | typeof serverSdk.logger;
 
 // This variable is not a runtime variable but just a type to tell typescript that the methods below can either come
 // from the client SDK or from the server SDK. TypeScript is smart enough to understand that these resolve to the same
-// methods from `@sentry/core`.
+// methods from `@debugg-ai/core`.
 declare const runtime: 'client' | 'server';
 
 export const close = runtime === 'client' ? clientSdk.close : serverSdk.close;

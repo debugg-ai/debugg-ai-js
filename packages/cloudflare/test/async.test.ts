@@ -6,7 +6,7 @@ import {
   Scope,
   withIsolationScope,
   withScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { AsyncLocalStorage } from 'async_hooks';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { setAsyncLocalStorageAsyncContextStrategy } from '../src/async';

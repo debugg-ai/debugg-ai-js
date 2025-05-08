@@ -1,5 +1,5 @@
-import { getCapturedScopesOnSpan, getCurrentScope } from '@sentry/core';
-import { getClient } from '@sentry/opentelemetry';
+import { getCapturedScopesOnSpan, getCurrentScope } from '@debugg-ai/core';
+import { getClient } from '@debugg-ai/opentelemetry';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { clearGlobalScope } from '../../../core/test/lib/clear-global-scope';
 import * as Sentry from '../../src/';

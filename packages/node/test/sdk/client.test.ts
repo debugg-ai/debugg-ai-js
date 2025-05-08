@@ -1,8 +1,8 @@
+import type { Event, EventHint, Log } from '@debugg-ai/core';
+import { getCurrentScope, getGlobalScope, getIsolationScope, Scope, SDK_VERSION } from '@debugg-ai/core';
 import { ProxyTracer } from '@opentelemetry/api';
 import * as opentelemetryInstrumentationPackage from '@opentelemetry/instrumentation';
-import type { Event, EventHint, Log } from '@sentry/core';
-import { getCurrentScope, getGlobalScope, getIsolationScope, Scope, SDK_VERSION } from '@sentry/core';
-import { setOpenTelemetryContextAsyncContextStrategy } from '@sentry/opentelemetry';
+import { setOpenTelemetryContextAsyncContextStrategy } from '@debugg-ai/opentelemetry';
 import * as os from 'os';
 import { afterEach, beforeEach, describe, expect, it, test, vi } from 'vitest';
 import { NodeClient } from '../../src';
@@ -37,7 +37,7 @@ describe('NodeClient', () => {
           name: 'sentry.javascript.node',
           packages: [
             {
-              name: 'npm:@sentry/node',
+              name: 'npm:@debugg-ai/node',
               version: SDK_VERSION,
             },
           ],

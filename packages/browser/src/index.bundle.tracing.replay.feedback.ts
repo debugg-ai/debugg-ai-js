@@ -1,4 +1,4 @@
-import { registerSpanErrorInstrumentation } from '@sentry/core';
+import { registerSpanErrorInstrumentation } from '@debugg-ai/core';
 import { feedbackAsyncIntegration } from './feedbackAsync';
 
 registerSpanErrorInstrumentation();
@@ -15,7 +15,7 @@ export {
   withActiveSpan,
   getSpanDescendants,
   setMeasurement,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export {
   browserTracingIntegration,

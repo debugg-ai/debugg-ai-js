@@ -59,7 +59,7 @@ const _requestDataIntegration = ((options: RequestDataIntegrationOptions = {}) =
 }) satisfies IntegrationFn;
 
 /**
- * Add data about a request to an event. Primarily for use in Node-based SDKs, but included in `@sentry/core`
+ * Add data about a request to an event. Primarily for use in Node-based SDKs, but included in `@debugg-ai/core`
  * so it can be used in cross-platform SDKs like `@sentry/nextjs`.
  */
 export const requestDataIntegration = defineIntegration(_requestDataIntegration);

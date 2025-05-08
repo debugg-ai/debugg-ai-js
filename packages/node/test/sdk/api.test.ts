@@ -1,4 +1,4 @@
-import type { Event } from '@sentry/core';
+import type { Event } from '@debugg-ai/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { getActiveSpan, getClient, startInactiveSpan, startSpan, withActiveSpan } from '../../src';
 import { cleanupOtel, mockSdkInit } from '../helpers/mockSdkInit';

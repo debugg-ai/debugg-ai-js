@@ -1,5 +1,5 @@
-import type { DynamicSamplingContext } from '@sentry/core';
-import { addEventProcessor, getClient } from '@sentry/core';
+import type { DynamicSamplingContext } from '@debugg-ai/core';
+import { addEventProcessor, getClient } from '@debugg-ai/core';
 import {
   addClickKeypressInstrumentationHandler,
   addHistoryInstrumentationHandler,

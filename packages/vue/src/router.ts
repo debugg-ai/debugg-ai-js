@@ -1,5 +1,5 @@
 import { captureException } from '@sentry/browser';
-import type { Span, SpanAttributes, StartSpanOptions, TransactionSource } from '@sentry/core';
+import type { Span, SpanAttributes, StartSpanOptions, TransactionSource } from '@debugg-ai/core';
 import {
   getActiveSpan,
   getCurrentScope,
@@ -7,7 +7,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
   spanToJSON,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 // The following type is an intersection of the Route type from VueRouter v2, v3, and v4.
 // This is not great, but kinda necessary to make it work with all versions at the same time.

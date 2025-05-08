@@ -1,6 +1,6 @@
 import { Worker } from 'node:worker_threads';
-import type { Event, EventHint, Exception, IntegrationFn } from '@sentry/core';
-import { defineIntegration, logger } from '@sentry/core';
+import type { Event, EventHint, Exception, IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration, logger } from '@debugg-ai/core';
 import type { NodeClient } from '../../sdk/client';
 import { isDebuggerEnabled } from '../../utils/debug';
 import type { FrameVariables, LocalVariablesIntegrationOptions, LocalVariablesWorkerArgs } from './common';

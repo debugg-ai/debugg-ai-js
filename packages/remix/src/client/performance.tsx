@@ -1,4 +1,4 @@
-import type { Client, StartSpanOptions } from '@sentry/core';
+import type { Client, StartSpanOptions } from '@debugg-ai/core';
 import {
   getActiveSpan,
   getCurrentScope,
@@ -7,7 +7,7 @@ import {
   logger,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { BrowserClient, browserTracingIntegration as originalBrowserTracingIntegration } from '@sentry/react';
 import { getClient, startBrowserTracingNavigationSpan, startBrowserTracingPageLoadSpan, WINDOW } from '@sentry/react';
 import * as React from 'react';
@@ -71,6 +71,7 @@ export function startPageloadSpan(client: Client): void {
     },
   };
 
+  // @ts-expect-error
   startBrowserTracingPageLoadSpan(client, spanContext);
 }
 
@@ -92,6 +93,7 @@ function startNavigationSpan(matches: RouteMatch<string>[]): void {
     },
   };
 
+  // @ts-expect-error
   startBrowserTracingNavigationSpan(client, spanContext);
 }
 

@@ -38,7 +38,7 @@ export type {
   Stacktrace,
   Thread,
   User,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export {
   addEventProcessor,
@@ -107,4 +107,4 @@ export {
   spanToTraceHeader,
   spanToBaggageHeader,
   updateSpanName,
-} from '@sentry/core';
+} from '@debugg-ai/core';

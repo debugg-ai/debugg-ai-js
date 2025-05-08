@@ -1,4 +1,4 @@
-import type { Span } from '@sentry/core';
+import type { Span } from '@debugg-ai/core';
 import {
   continueTrace,
   getCurrentScope,
@@ -12,7 +12,7 @@ import {
   startSpan,
   winterCGRequestToRequestData,
   withIsolationScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { Handle, ResolveOptions } from '@sveltejs/kit';
 import { DEBUG_BUILD } from '../common/debug-build';
 import { flushIfServerless, getTracePropagationData, sendErrorToSentry } from './utils';

@@ -1,7 +1,7 @@
 import { context, propagation, ProxyTracerProvider, trace } from '@opentelemetry/api';
 import { BasicTracerProvider } from '@opentelemetry/sdk-trace-base';
-import type { ClientOptions, Options } from '@sentry/core';
-import { flush, getClient, getCurrentScope, getGlobalScope, getIsolationScope } from '@sentry/core';
+import type { ClientOptions, Options } from '@debugg-ai/core';
+import { flush, getClient, getCurrentScope, getGlobalScope, getIsolationScope } from '@debugg-ai/core';
 import { setOpenTelemetryContextAsyncContextStrategy } from '../../src/asyncContextStrategy';
 import type { OpenTelemetryClient } from '../../src/types';
 import { clearOpenTelemetrySetupCheck } from '../../src/utils/setupCheck';

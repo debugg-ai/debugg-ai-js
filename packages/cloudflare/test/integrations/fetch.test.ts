@@ -1,7 +1,7 @@
-import type { HandlerDataFetch, Integration } from '@sentry/core';
-import * as sentryCore from '@sentry/core';
-import * as sentryUtils from '@sentry/core';
-import { createStackParser } from '@sentry/core';
+import type { HandlerDataFetch, Integration } from '@debugg-ai/core';
+import * as sentryCore from '@debugg-ai/core';
+import * as sentryUtils from '@debugg-ai/core';
+import { createStackParser } from '@debugg-ai/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { CloudflareClient } from '../../src/client';
 import { fetchIntegration } from '../../src/integrations/fetch';

@@ -12,7 +12,7 @@ import {
   vercelWaitUntil,
   winterCGRequestToRequestData,
   withIsolationScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { flushSafelyWithTimeout } from '../common/utils/responseEnd';
 import type { EdgeRouteHandler } from './types';
 

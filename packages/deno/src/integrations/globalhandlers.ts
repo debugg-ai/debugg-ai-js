@@ -1,5 +1,5 @@
-import type { Client, Event, IntegrationFn, Primitive, ServerRuntimeClient, StackParser } from '@sentry/core';
-import { captureEvent, defineIntegration, eventFromUnknownInput, flush, getClient, isPrimitive } from '@sentry/core';
+import type { Client, Event, IntegrationFn, Primitive, ServerRuntimeClient, StackParser } from '@debugg-ai/core';
+import { captureEvent, defineIntegration, eventFromUnknownInput, flush, getClient, isPrimitive } from '@debugg-ai/core';
 
 type GlobalHandlersIntegrationsOptionKeys = 'error' | 'unhandledrejection';
 

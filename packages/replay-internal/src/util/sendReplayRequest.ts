@@ -1,5 +1,5 @@
-import type { RateLimits, ReplayEvent, TransportMakeRequestResponse } from '@sentry/core';
-import { getClient, getCurrentScope, isRateLimited, resolvedSyncPromise, updateRateLimits } from '@sentry/core';
+import type { RateLimits, ReplayEvent, TransportMakeRequestResponse } from '@debugg-ai/core';
+import { getClient, getCurrentScope, isRateLimited, resolvedSyncPromise, updateRateLimits } from '@debugg-ai/core';
 import { REPLAY_EVENT_NAME, UNABLE_TO_SEND_REPLAY } from '../constants';
 import { DEBUG_BUILD } from '../debug-build';
 import type { SendReplayData } from '../types';

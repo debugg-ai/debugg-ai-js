@@ -3,7 +3,7 @@
  */
 
 import '../utils/mock-internal-setTimeout';
-import { captureException, getClient } from '@sentry/core';
+import { captureException, getClient } from '@debugg-ai/core';
 import type { MockInstance } from 'vitest';
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import {

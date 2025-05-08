@@ -5,7 +5,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
 } from '@sentry/browser';
-import type { Event } from '@sentry/core';
+import type { Event } from '@debugg-ai/core';
 import { sentryTest } from '../../../../utils/fixtures';
 import { getFirstSentryEnvelopeRequest, shouldSkipTracingTest } from '../../../../utils/helpers';
 

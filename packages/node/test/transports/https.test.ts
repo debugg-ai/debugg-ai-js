@@ -1,5 +1,5 @@
-import type { EventEnvelope, EventItem } from '@sentry/core';
-import { createEnvelope, createTransport, serializeEnvelope } from '@sentry/core';
+import type { EventEnvelope, EventItem } from '@debugg-ai/core';
+import { createEnvelope, createTransport, serializeEnvelope } from '@debugg-ai/core';
 import * as http from 'http';
 import * as https from 'https';
 import { type Mock, afterEach, describe, expect, it, vi } from 'vitest';
@@ -8,9 +8,9 @@ import { makeNodeTransport } from '../../src/transports';
 import type { HTTPModule, HTTPModuleRequestIncomingMessage } from '../../src/transports/http-module';
 import testServerCerts from './test-server-certs';
 
-vi.mock('@sentry/core', async () => {
+vi.mock('@debugg-ai/core', async () => {
   // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-  const actualCore = (await vi.importActual('@sentry/core')) as typeof import('@sentry/core');
+  const actualCore = (await vi.importActual('@debugg-ai/core')) as typeof import('@debugg-ai/core');
   return {
     ...actualCore,
     createTransport: vi.fn().mockImplementation(actualCore.createTransport),
@@ -191,7 +191,7 @@ describe('makeNewHttpsTransport()', () => {
       makeNodeTransport({
         ...defaultOptions,
         httpModule: unsafeHttpsModule,
-        url: 'https://9e9fd4523d784609a5fc0ebb1080592f@sentry.io:8989/mysubpath/50622',
+        url: 'https://9e9fd4523d784609a5fc0ebb1080592f@debugg.ai:8989/mysubpath/50622',
         proxy: 'https://example.com',
       });
 
@@ -204,7 +204,7 @@ describe('makeNewHttpsTransport()', () => {
       makeNodeTransport({
         ...defaultOptions,
         httpModule: unsafeHttpsModule,
-        url: 'https://9e9fd4523d784609a5fc0ebb1080592f@sentry.io:8989/mysubpath/50622',
+        url: 'https://9e9fd4523d784609a5fc0ebb1080592f@debugg.ai:8989/mysubpath/50622',
       });
 
       expect(proxyAgentSpy).toHaveBeenCalledTimes(1);
@@ -217,7 +217,7 @@ describe('makeNewHttpsTransport()', () => {
       makeNodeTransport({
         ...defaultOptions,
         httpModule: unsafeHttpsModule,
-        url: 'https://9e9fd4523d784609a5fc0ebb1080592f@sentry.io:8989/mysubpath/50622',
+        url: 'https://9e9fd4523d784609a5fc0ebb1080592f@debugg.ai:8989/mysubpath/50622',
       });
 
       expect(proxyAgentSpy).toHaveBeenCalledTimes(1);
@@ -230,7 +230,7 @@ describe('makeNewHttpsTransport()', () => {
       makeNodeTransport({
         ...defaultOptions,
         httpModule: unsafeHttpsModule,
-        url: 'https://9e9fd4523d784609a5fc0ebb1080592f@sentry.io:8989/mysubpath/50622',
+        url: 'https://9e9fd4523d784609a5fc0ebb1080592f@debugg.ai:8989/mysubpath/50622',
         proxy: 'https://bar.com',
       });
 
@@ -244,7 +244,7 @@ describe('makeNewHttpsTransport()', () => {
       makeNodeTransport({
         ...defaultOptions,
         httpModule: unsafeHttpsModule,
-        url: 'https://9e9fd4523d784609a5fc0ebb1080592f@sentry.io:8989/mysubpath/50622',
+        url: 'https://9e9fd4523d784609a5fc0ebb1080592f@debugg.ai:8989/mysubpath/50622',
         proxy: 'https://example.com',
       });
 
@@ -260,7 +260,7 @@ describe('makeNewHttpsTransport()', () => {
       makeNodeTransport({
         ...defaultOptions,
         httpModule: unsafeHttpsModule,
-        url: 'https://9e9fd4523d784609a5fc0ebb1080592f@sentry.io:8989/mysubpath/50622',
+        url: 'https://9e9fd4523d784609a5fc0ebb1080592f@debugg.ai:8989/mysubpath/50622',
       });
 
       expect(proxyAgentSpy).not.toHaveBeenCalled();
@@ -276,7 +276,7 @@ describe('makeNewHttpsTransport()', () => {
       makeNodeTransport({
         ...defaultOptions,
         httpModule: unsafeHttpsModule,
-        url: 'https://9e9fd4523d784609a5fc0ebb1080592f@sentry.io:8989/mysubpath/50622',
+        url: 'https://9e9fd4523d784609a5fc0ebb1080592f@debugg.ai:8989/mysubpath/50622',
       });
 
       expect(proxyAgentSpy).not.toHaveBeenCalled();

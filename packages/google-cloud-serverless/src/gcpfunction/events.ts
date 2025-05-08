@@ -3,7 +3,7 @@ import {
   logger,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { captureException, flush, getCurrentScope, startSpanManual } from '@sentry/node';
 import { DEBUG_BUILD } from '../debug-build';
 import { domainify, markEventUnhandled, proxyFunction } from '../utils';
@@ -52,6 +52,7 @@ function _wrapEventFunction<F extends EventFunction | EventFunctionWithCallback>
 
         const newCallback = domainify((...args: unknown[]) => {
           if (args[0] !== null && args[0] !== undefined) {
+            // @ts-expect-error
             captureException(args[0], scope => markEventUnhandled(scope));
           }
           span.end();
@@ -72,6 +73,7 @@ function _wrapEventFunction<F extends EventFunction | EventFunctionWithCallback>
           return handleCallbackErrors(
             () => (fn as EventFunctionWithCallback)(data, context, newCallback),
             err => {
+              // @ts-expect-error
               captureException(err, scope => markEventUnhandled(scope));
             },
           );

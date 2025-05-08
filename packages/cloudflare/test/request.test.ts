@@ -1,8 +1,8 @@
 // Note: These tests run the handler in Node.js, which has some differences to the cloudflare workers runtime.
 // Although this is not ideal, this is the best we can do until we have a better way to test cloudflare workers.
 
-import type { Event } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Event } from '@debugg-ai/core';
+import * as SentryCore from '@debugg-ai/core';
 import { beforeAll, beforeEach, describe, expect, test, vi } from 'vitest';
 import { setAsyncLocalStorageAsyncContextStrategy } from '../src/async';
 import type { CloudflareOptions } from '../src/client';

@@ -1,4 +1,4 @@
-import { consoleSandbox } from '@sentry/core';
+import { consoleSandbox } from '@debugg-ai/core';
 import { captureException } from '@sentry/svelte';
 import type { HandleClientError } from '@sveltejs/kit';
 

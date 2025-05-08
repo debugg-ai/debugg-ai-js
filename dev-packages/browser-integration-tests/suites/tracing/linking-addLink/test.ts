@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import type { SpanJSON, TransactionEvent } from '@sentry/core';
+import type { SpanJSON, TransactionEvent } from '@debugg-ai/core';
 import { sentryTest } from '../../../utils/fixtures';
 import { envelopeRequestParser, shouldSkipTracingTest, waitForTransactionRequest } from '../../../utils/helpers';
 

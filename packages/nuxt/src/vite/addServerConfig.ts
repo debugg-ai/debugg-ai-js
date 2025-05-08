@@ -1,6 +1,6 @@
 import { existsSync } from 'node:fs';
 import { createResolver } from '@nuxt/kit';
-import { logger } from '@sentry/core';
+import { logger } from '@debugg-ai/core';
 import * as fs from 'fs';
 import type { Nitro } from 'nitropack';
 import type { InputPluginOption } from 'rollup';
@@ -56,10 +56,10 @@ export function addSentryTopImport(moduleOptions: SentryNuxtModuleOptions, nitro
     const entryFileName = fileNameFromCommand
       ? fileNameFromCommand
       : typeof nitro.options.rollupConfig?.output.entryFileNames === 'string'
-        ? nitro.options.rollupConfig?.output.entryFileNames
-        : presetsWithServerFile.includes(nitro.options.preset)
-          ? 'server.mjs'
-          : 'index.mjs';
+      ? nitro.options.rollupConfig?.output.entryFileNames
+      : presetsWithServerFile.includes(nitro.options.preset)
+      ? 'server.mjs'
+      : 'index.mjs';
 
     const serverDirResolver = createResolver(nitro.options.output.serverDir);
     const entryFilePath = serverDirResolver.resolve(entryFileName);

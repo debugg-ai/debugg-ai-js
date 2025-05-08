@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 import { waitForTransaction } from '@sentry-internal/test-utils';
-import { SpanJSON } from '@sentry/core';
+import { SpanJSON } from '@debugg-ai/core';
 
 test('Waits for sse streaming when creating spans', async ({ page }) => {
   await page.goto('/sse');

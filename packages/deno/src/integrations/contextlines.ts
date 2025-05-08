@@ -1,5 +1,5 @@
-import type { Event, IntegrationFn, StackFrame } from '@sentry/core';
-import { addContextToFrame, defineIntegration, LRUMap } from '@sentry/core';
+import type { Event, IntegrationFn, StackFrame } from '@debugg-ai/core';
+import { addContextToFrame, defineIntegration, LRUMap } from '@debugg-ai/core';
 
 const INTEGRATION_NAME = 'ContextLines';
 const FILE_CONTENT_CACHE = new LRUMap<string, string | null>(100);

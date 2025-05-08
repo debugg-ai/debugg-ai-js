@@ -1,4 +1,4 @@
-import { getCurrentScope, getIsolationScope, SentrySpan, setCurrentClient, spanToJSON } from '@sentry/core';
+import { getCurrentScope, getIsolationScope, SentrySpan, setCurrentClient, spanToJSON } from '@debugg-ai/core';
 import { beforeEach, describe, expect, it, test } from 'vitest';
 import { extractNetworkProtocol, startAndEndSpan } from '../../src/metrics/utils';
 import { getDefaultClientOptions, TestClient } from '../utils/TestClient';

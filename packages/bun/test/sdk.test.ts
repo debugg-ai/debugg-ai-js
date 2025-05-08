@@ -1,4 +1,4 @@
-import type { BaseTransportOptions, Envelope, Event, Transport, TransportMakeRequestResponse } from '@sentry/core';
+import type { BaseTransportOptions, Envelope, Event, Transport, TransportMakeRequestResponse } from '@debugg-ai/core';
 import { describe, expect, test } from 'bun:test';
 import type { NodeClient } from '../src/index';
 import { init } from '../src/index';

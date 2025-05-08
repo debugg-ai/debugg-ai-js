@@ -9,7 +9,7 @@ import type {
   FetchBreadcrumbHint,
   SentryWrappedXMLHttpRequest,
   XhrBreadcrumbHint,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { SENTRY_XHR_DATA_KEY } from '@sentry-internal/browser-utils';
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { NETWORK_BODY_MAX_SIZE } from '../../../src/constants';

@@ -1,6 +1,6 @@
 // React Router v7 uses the same integration as v6
-import type { browserTracingIntegration } from '@sentry/browser';
-import type { Integration } from '@sentry/core';
+import type { browserTracingIntegration } from '@debugg-ai/browser';
+import type { Integration } from '@debugg-ai/core';
 import type { ReactRouterOptions } from './reactrouterv6-compat-utils';
 import {
   createReactRouterV6CompatibleTracingIntegration,

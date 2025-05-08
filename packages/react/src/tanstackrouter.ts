@@ -3,13 +3,13 @@ import {
   startBrowserTracingNavigationSpan,
   startBrowserTracingPageLoadSpan,
   WINDOW,
-} from '@sentry/browser';
-import type { Integration } from '@sentry/core';
+} from '@debugg-ai/browser';
+import type { Integration } from '@debugg-ai/core';
 import {
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { VendoredTanstackRouter, VendoredTanstackRouterRouteMatch } from './vendor/tanstackrouter-types';
 
 /**

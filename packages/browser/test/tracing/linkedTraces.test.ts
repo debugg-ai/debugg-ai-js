@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import { addChildSpanToSpan, SentrySpan, spanToJSON, timestampInSeconds } from '@sentry/core';
+import type { Span } from '@debugg-ai/core';
+import { addChildSpanToSpan, SentrySpan, spanToJSON, timestampInSeconds } from '@debugg-ai/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { BrowserClient } from '../../src';
 import type { PreviousTraceInfo } from '../../src/tracing/linkedTraces';

@@ -1,4 +1,4 @@
-import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@sentry/core';
+import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@debugg-ai/core';
 import * as SentrySvelte from '@sentry/svelte';
 import type { Load } from '@sveltejs/kit';
 import { redirect } from '@sveltejs/kit';
@@ -9,8 +9,8 @@ const mockCaptureException = vi.spyOn(SentrySvelte, 'captureException').mockImpl
 
 const mockStartSpan = vi.fn();
 
-vi.mock('@sentry/core', async () => {
-  const original = (await vi.importActual('@sentry/core')) as any;
+vi.mock('@debugg-ai/core', async () => {
+  const original = (await vi.importActual('@debugg-ai/core')) as any;
   return {
     ...original,
     startSpan: (...args: unknown[]) => {

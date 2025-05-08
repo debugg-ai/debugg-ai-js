@@ -1,4 +1,4 @@
-import type { RequestEventData, WebFetchHeaders } from '@sentry/core';
+import type { RequestEventData, WebFetchHeaders } from '@debugg-ai/core';
 import {
   captureException,
   getActiveSpan,
@@ -17,7 +17,7 @@ import {
   winterCGHeadersToDict,
   withIsolationScope,
   withScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { GenerationFunctionContext } from '../common/types';
 import { isNotFoundNavigationError, isRedirectNavigationError } from './nextNavigationErrorUtils';
 import { TRANSACTION_ATTR_SENTRY_TRACE_BACKFILL } from './span-attributes-with-logic-attached';

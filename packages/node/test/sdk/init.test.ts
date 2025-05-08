@@ -1,6 +1,6 @@
-import type { Integration } from '@sentry/core';
-import { logger } from '@sentry/core';
-import * as SentryOpentelemetry from '@sentry/opentelemetry';
+import type { Integration } from '@debugg-ai/core';
+import { logger } from '@debugg-ai/core';
+import * as SentryOpentelemetry from '@debugg-ai/opentelemetry';
 import { type Mock, type MockInstance, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { getClient } from '../../src/';
 import * as auto from '../../src/integrations/tracing';

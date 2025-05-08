@@ -1,4 +1,4 @@
-import { uuid4 } from '@sentry/core';
+import { uuid4 } from '@debugg-ai/core';
 import type { Sampled, Session } from '../types';
 
 /**

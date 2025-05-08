@@ -1,4 +1,4 @@
-import type { Integration, Options } from '@sentry/core';
+import type { Integration, Options } from '@debugg-ai/core';
 import {
   consoleIntegration,
   consoleSandbox,
@@ -12,13 +12,13 @@ import {
   propagationContextFromHeaders,
   requestDataIntegration,
   stackParserFromStackParserOptions,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import {
   enhanceDscWithOpenTelemetryRootSpanName,
   openTelemetrySetupCheck,
   setOpenTelemetryContextAsyncContextStrategy,
   setupEventContextTrace,
-} from '@sentry/opentelemetry';
+} from '@debugg-ai/opentelemetry';
 import { DEBUG_BUILD } from '../debug-build';
 import { childProcessIntegration } from '../integrations/childProcess';
 import { nodeContextIntegration } from '../integrations/context';

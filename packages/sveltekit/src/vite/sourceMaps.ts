@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import { consoleSandbox, escapeStringForRegex, uuid4 } from '@sentry/core';
+import { consoleSandbox, escapeStringForRegex, uuid4 } from '@debugg-ai/core';
 import { getSentryRelease } from '@sentry/node';
 import type { SentryVitePluginOptions } from '@sentry/vite-plugin';
 import { sentryVitePlugin } from '@sentry/vite-plugin';

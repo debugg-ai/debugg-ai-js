@@ -49,7 +49,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@sentry/core": "9.15.0"
+    "@debugg-ai/core": "1.0.8"
   },
   "peerDependencies": {
     "@cloudflare/workers-types": "^4.x"

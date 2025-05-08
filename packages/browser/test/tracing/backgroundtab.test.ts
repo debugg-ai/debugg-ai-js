@@ -2,7 +2,7 @@
  * @vitest-environment jsdom
  */
 
-import { getCurrentScope, setCurrentClient } from '@sentry/core';
+import { getCurrentScope, setCurrentClient } from '@debugg-ai/core';
 import { JSDOM } from 'jsdom';
 import { TextDecoder, TextEncoder } from 'util';
 import { afterAll, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

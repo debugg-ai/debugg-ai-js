@@ -1,9 +1,9 @@
 import type { ClientRequest, IncomingMessage, RequestOptions, ServerResponse } from 'node:http';
+import type { Span } from '@debugg-ai/core';
+import { defineIntegration, getClient } from '@debugg-ai/core';
 import { diag } from '@opentelemetry/api';
 import type { HttpInstrumentationConfig } from '@opentelemetry/instrumentation-http';
 import { HttpInstrumentation } from '@opentelemetry/instrumentation-http';
-import type { Span } from '@sentry/core';
-import { defineIntegration, getClient } from '@sentry/core';
 import { generateInstrumentOnce } from '../../otel/instrument';
 import type { NodeClient } from '../../sdk/client';
 import type { HTTPModuleRequestIncomingMessage } from '../../transports/http-module';

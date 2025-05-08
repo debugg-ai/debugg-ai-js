@@ -4,7 +4,7 @@ import {
   setAsyncLocalStorageAsyncContextStrategy,
   wrapRequestHandler,
 } from '@sentry/cloudflare';
-import { addNonEnumerableProperty } from '@sentry/core';
+import { addNonEnumerableProperty } from '@debugg-ai/core';
 import type { Handle } from '@sveltejs/kit';
 import { rewriteFramesIntegration } from '../server-common/rewriteFramesIntegration';
 

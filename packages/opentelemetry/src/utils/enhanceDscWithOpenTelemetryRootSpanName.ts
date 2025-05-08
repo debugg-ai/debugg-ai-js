@@ -1,5 +1,5 @@
-import type { Client } from '@sentry/core';
-import { hasSpansEnabled, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, spanToJSON } from '@sentry/core';
+import type { Client } from '@debugg-ai/core';
+import { hasSpansEnabled, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, spanToJSON } from '@debugg-ai/core';
 import { getSamplingDecision } from './getSamplingDecision';
 import { parseSpanDescription } from './parseSpanDescription';
 import { spanHasName } from './spanTypes';

@@ -1,4 +1,4 @@
-import { consoleSandbox } from '@sentry/core';
+import { consoleSandbox } from '@debugg-ai/core';
 import { sentryVitePlugin } from '@sentry/vite-plugin';
 import type { AstroConfig, AstroIntegration } from 'astro';
 import * as fs from 'fs';

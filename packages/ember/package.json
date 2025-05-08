@@ -33,7 +33,7 @@
     "@babel/core": "^7.24.4",
     "@embroider/macros": "^1.16.0",
     "@sentry/browser": "9.15.0",
-    "@sentry/core": "9.15.0",
+    "@debugg-ai/core": "1.0.8",
     "ember-auto-import": "^2.7.2",
     "ember-cli-babel": "^8.2.0",
     "ember-cli-htmlbars": "^6.1.1",

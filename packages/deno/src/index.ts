@@ -15,7 +15,7 @@ export type {
   Stacktrace,
   Thread,
   User,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export type { DenoOptions } from './types';
 
@@ -86,7 +86,7 @@ export {
   spanToBaggageHeader,
   updateSpanName,
   wrapMcpServerWithSentry,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export { DenoClient } from './client';
 

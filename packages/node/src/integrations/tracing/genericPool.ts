@@ -1,6 +1,6 @@
+import type { IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, spanToJSON } from '@debugg-ai/core';
 import { GenericPoolInstrumentation } from '@opentelemetry/instrumentation-generic-pool';
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, spanToJSON } from '@sentry/core';
 import { generateInstrumentOnce, instrumentWhenWrapped } from '../../otel/instrument';
 
 const INTEGRATION_NAME = 'GenericPool';
@@ -44,7 +44,7 @@ const _genericPoolIntegration = (() => {
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  *
  * Sentry.init({
  *  integrations: [Sentry.genericPoolIntegration()],

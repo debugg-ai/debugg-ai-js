@@ -1,6 +1,6 @@
 import * as http from 'node:http';
-import type { Client, Envelope, IntegrationFn } from '@sentry/core';
-import { defineIntegration, logger, serializeEnvelope } from '@sentry/core';
+import type { Client, Envelope, IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration, logger, serializeEnvelope } from '@debugg-ai/core';
 
 type SpotlightConnectionOptions = {
   /**

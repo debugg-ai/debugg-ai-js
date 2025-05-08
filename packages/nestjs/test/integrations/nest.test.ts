@@ -1,4 +1,4 @@
-import * as core from '@sentry/core';
+import * as core from '@debugg-ai/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { isPatched } from '../../src/integrations/helpers';
 import { SentryNestEventInstrumentation } from '../../src/integrations/sentry-nest-event-instrumentation';

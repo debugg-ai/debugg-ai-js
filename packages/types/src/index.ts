@@ -174,358 +174,358 @@ import type {
   WrappedFunction as WrappedFunction_imported,
   XhrBreadcrumbData as XhrBreadcrumbData_imported,
   XhrBreadcrumbHint as XhrBreadcrumbHint_imported,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Attachment = Attachment_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Breadcrumb = Breadcrumb_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type BreadcrumbHint = BreadcrumbHint_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type FetchBreadcrumbData = FetchBreadcrumbData_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type XhrBreadcrumbData = XhrBreadcrumbData_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type FetchBreadcrumbHint = FetchBreadcrumbHint_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type XhrBreadcrumbHint = XhrBreadcrumbHint_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 // eslint-disable-next-line deprecation/deprecation
 export type Client<O extends ClientOptions = ClientOptions<BaseTransportOptions>> = Client_imported<O>;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ClientReport = ClientReport_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Outcome = Outcome_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type EventDropReason = EventDropReason_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Context = Context_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Contexts = Contexts_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type DeviceContext = DeviceContext_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type OsContext = OsContext_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type AppContext = AppContext_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type CultureContext = CultureContext_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type TraceContext = TraceContext_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type CloudResourceContext = CloudResourceContext_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type MissingInstrumentationContext = MissingInstrumentationContext_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type DataCategory = DataCategory_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type DsnComponents = DsnComponents_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type DsnLike = DsnLike_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type DsnProtocol = DsnProtocol_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type DebugImage = DebugImage_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type DebugMeta = DebugMeta_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type AttachmentItem = AttachmentItem_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type BaseEnvelopeHeaders = BaseEnvelopeHeaders_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type BaseEnvelopeItemHeaders = BaseEnvelopeItemHeaders_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ClientReportEnvelope = ClientReportEnvelope_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ClientReportItem = ClientReportItem_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type DynamicSamplingContext = DynamicSamplingContext_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Envelope = Envelope_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type EnvelopeItemType = EnvelopeItemType_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type EnvelopeItem = EnvelopeItem_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type EventEnvelope = EventEnvelope_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type EventEnvelopeHeaders = EventEnvelopeHeaders_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type EventItem = EventItem_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ReplayEnvelope = ReplayEnvelope_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type FeedbackItem = FeedbackItem_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SessionEnvelope = SessionEnvelope_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SessionItem = SessionItem_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type UserFeedbackItem = UserFeedbackItem_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type CheckInItem = CheckInItem_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type CheckInEnvelope = CheckInEnvelope_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ProfileItem = ProfileItem_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ProfileChunkEnvelope = ProfileChunkEnvelope_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ProfileChunkItem = ProfileChunkItem_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SpanEnvelope = SpanEnvelope_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SpanItem = SpanItem_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ExtendedError = ExtendedError_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Event = Event_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type EventHint = EventHint_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type EventType = EventType_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ErrorEvent = ErrorEvent_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type TransactionEvent = TransactionEvent_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type EventProcessor = EventProcessor_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Exception = Exception_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Extra = Extra_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Extras = Extras_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Integration = Integration_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 // eslint-disable-next-line deprecation/deprecation
 export type IntegrationFn<IntegrationType = Integration> = IntegrationFn_imported<IntegrationType>;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Mechanism = Mechanism_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ExtractedNodeRequestData = ExtractedNodeRequestData_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type HttpHeaderValue = HttpHeaderValue_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Primitive = Primitive_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type WorkerLocation = WorkerLocation_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 // eslint-disable-next-line deprecation/deprecation
 export type ClientOptions<TO extends BaseTransportOptions = BaseTransportOptions> = ClientOptions_imported<TO>;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 // eslint-disable-next-line deprecation/deprecation
 export type Options<TO extends BaseTransportOptions = BaseTransportOptions> = Options_imported<TO>;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Package = Package_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type PolymorphicEvent = PolymorphicEvent_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type PolymorphicRequest = PolymorphicRequest_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ThreadId = ThreadId_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type FrameId = FrameId_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type StackId = StackId_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ThreadCpuSample = ThreadCpuSample_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ThreadCpuStack = ThreadCpuStack_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ThreadCpuFrame = ThreadCpuFrame_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ThreadCpuProfile = ThreadCpuProfile_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ContinuousThreadCpuProfile = ContinuousThreadCpuProfile_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Profile = Profile_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ProfileChunk = ProfileChunk_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ReplayEvent = ReplayEvent_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ReplayRecordingData = ReplayRecordingData_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ReplayRecordingMode = ReplayRecordingMode_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type FeedbackEvent = FeedbackEvent_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type FeedbackFormData = FeedbackFormData_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type FeedbackInternalOptions = FeedbackInternalOptions_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type FeedbackModalIntegration = FeedbackModalIntegration_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type FeedbackScreenshotIntegration = FeedbackScreenshotIntegration_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SendFeedback = SendFeedback_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SendFeedbackParams = SendFeedbackParams_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type UserFeedback = UserFeedback_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type QueryParams = QueryParams_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type RequestEventData = RequestEventData_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SanitizedRequestData = SanitizedRequestData_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Runtime = Runtime_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type CaptureContext = CaptureContext_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Scope = Scope_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ScopeContext = ScopeContext_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ScopeData = ScopeData_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SdkInfo = SdkInfo_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SdkMetadata = SdkMetadata_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SessionAggregates = SessionAggregates_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type AggregationCounts = AggregationCounts_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Session = Session_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SessionContext = SessionContext_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SessionStatus = SessionStatus_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SerializedSession = SerializedSession_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SeverityLevel = SeverityLevel_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Span = Span_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SentrySpanArguments = SentrySpanArguments_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SpanOrigin = SpanOrigin_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SpanAttributeValue = SpanAttributeValue_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SpanAttributes = SpanAttributes_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SpanTimeInput = SpanTimeInput_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SpanJSON = SpanJSON_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SpanContextData = SpanContextData_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type TraceFlag = TraceFlag_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SpanStatus = SpanStatus_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type TimedEvent = TimedEvent_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type StackFrame = StackFrame_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Stacktrace = Stacktrace_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type StackParser = StackParser_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type StackLineParser = StackLineParser_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type StackLineParserFn = StackLineParserFn_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type PropagationContext = PropagationContext_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type TracePropagationTargets = TracePropagationTargets_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SerializedTraceData = SerializedTraceData_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type StartSpanOptions = StartSpanOptions_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type TraceparentData = TraceparentData_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type TransactionSource = TransactionSource_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type CustomSamplingContext = CustomSamplingContext_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SamplingContext = SamplingContext_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type DurationUnit = DurationUnit_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type InformationUnit = InformationUnit_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type FractionUnit = FractionUnit_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type MeasurementUnit = MeasurementUnit_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type NoneUnit = NoneUnit_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Measurements = Measurements_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Thread = Thread_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Transport = Transport_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type TransportRequest = TransportRequest_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type TransportMakeRequestResponse = TransportMakeRequestResponse_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type InternalBaseTransportOptions = InternalBaseTransportOptions_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type BaseTransportOptions = BaseTransportOptions_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type TransportRequestExecutor = TransportRequestExecutor_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type User = User_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type WebFetchHeaders = WebFetchHeaders_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type WebFetchRequest = WebFetchRequest_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 // eslint-disable-next-line @typescript-eslint/ban-types
 export type WrappedFunction<T extends Function = Function> = WrappedFunction_imported<T>;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type HandlerDataFetch = HandlerDataFetch_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type HandlerDataXhr = HandlerDataXhr_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type HandlerDataDom = HandlerDataDom_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type HandlerDataConsole = HandlerDataConsole_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type HandlerDataHistory = HandlerDataHistory_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type HandlerDataError = HandlerDataError_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type HandlerDataUnhandledRejection = HandlerDataUnhandledRejection_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ConsoleLevel = ConsoleLevel_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SentryXhrData = SentryXhrData_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SentryWrappedXMLHttpRequest = SentryWrappedXMLHttpRequest_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type BrowserClientReplayOptions = BrowserClientReplayOptions_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type BrowserClientProfilingOptions = BrowserClientProfilingOptions_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type CheckIn = CheckIn_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type MonitorConfig = MonitorConfig_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type FinishedCheckIn = FinishedCheckIn_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type InProgressCheckIn = InProgressCheckIn_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type SerializedCheckIn = SerializedCheckIn_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ParameterizedString = ParameterizedString_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ContinuousProfiler<T extends Client_imported> = ContinuousProfiler_imported<T>;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ProfilingIntegration<T extends Client_imported> = ProfilingIntegration_imported<T>;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type Profiler = Profiler_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ViewHierarchyData = ViewHierarchyData_imported;
-/** @deprecated This type has been moved to `@sentry/core`. */
+/** @deprecated This type has been moved to `@debugg-ai/core`. */
 export type ViewHierarchyWindow = ViewHierarchyWindow_imported;

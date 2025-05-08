@@ -1,5 +1,5 @@
+import { stringMatchesSomePattern } from '@debugg-ai/core';
 import commonjs from '@rollup/plugin-commonjs';
-import { stringMatchesSomePattern } from '@sentry/core';
 import * as chalk from 'chalk';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -173,7 +173,7 @@ export default function wrappingLoader(
       }
       templateCode = templateCode.replace(
         /__SENTRY_NEXTJS_REQUEST_ASYNC_STORAGE_SHIM__/g,
-        '@sentry/nextjs/async-storage-shim',
+        '@debugg-ai/nextjs/async-storage-shim',
       );
     }
 
@@ -230,7 +230,7 @@ export default function wrappingLoader(
     .catch(err => {
       // eslint-disable-next-line no-console
       console.warn(
-        `[@sentry/nextjs] Could not instrument ${this.resourcePath}. An error occurred while auto-wrapping:\n${err}`,
+        `[@debugg-ai/nextjs] Could not instrument ${this.resourcePath}. An error occurred while auto-wrapping:\n${err}`,
       );
       this.callback(null, userCode, userModuleSourceMap);
     });

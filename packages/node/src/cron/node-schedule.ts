@@ -1,4 +1,4 @@
-import { withMonitor } from '@sentry/core';
+import { withMonitor } from '@debugg-ai/core';
 import { replaceCronNames } from './common';
 
 export interface NodeSchedule {
@@ -13,7 +13,7 @@ export interface NodeSchedule {
  * Instruments the `node-schedule` library to send a check-in event to Sentry for each job execution.
  *
  * ```ts
- * import * as Sentry from '@sentry/node';
+ * import * as Sentry from '@debugg-ai/node';
  * import * as schedule from 'node-schedule';
  *
  * const scheduleWithCheckIn = Sentry.cron.instrumentNodeSchedule(schedule);

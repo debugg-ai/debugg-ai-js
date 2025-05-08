@@ -1,5 +1,5 @@
 import { browserTracingIntegration as originalBrowserTracingIntegration } from '@sentry/browser';
-import type { Integration } from '@sentry/core';
+import type { Integration } from '@debugg-ai/core';
 import { instrumentHydratedRouter } from './hydratedRouter';
 
 /**
@@ -16,6 +16,7 @@ export function reactRouterTracingIntegration(): Integration {
     ...browserTracingIntegrationInstance,
     name: 'ReactRouterTracingIntegration',
     afterAllSetup(client) {
+      // @ts-expect-error
       browserTracingIntegrationInstance.afterAllSetup(client);
       instrumentHydratedRouter();
     },

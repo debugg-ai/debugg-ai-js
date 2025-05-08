@@ -1,8 +1,5 @@
 import type * as http from 'node:http';
-import type { Span } from '@opentelemetry/api';
-import type { ExpressRequestInfo } from '@opentelemetry/instrumentation-express';
-import { ExpressInstrumentation } from '@opentelemetry/instrumentation-express';
-import type { IntegrationFn } from '@sentry/core';
+import type { IntegrationFn } from '@debugg-ai/core';
 import {
   captureException,
   defineIntegration,
@@ -12,7 +9,10 @@ import {
   logger,
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   spanToJSON,
-} from '@sentry/core';
+} from '@debugg-ai/core';
+import type { Span } from '@opentelemetry/api';
+import type { ExpressRequestInfo } from '@opentelemetry/instrumentation-express';
+import { ExpressInstrumentation } from '@opentelemetry/instrumentation-express';
 import { DEBUG_BUILD } from '../../debug-build';
 import { generateInstrumentOnce } from '../../otel/instrument';
 import { addOriginToSpan } from '../../utils/addOriginToSpan';
@@ -91,7 +91,7 @@ const _expressIntegration = (() => {
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  *
  * Sentry.init({
  *   integrations: [Sentry.expressIntegration()],
@@ -176,7 +176,7 @@ function expressRequestHandler(): ExpressMiddleware {
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  * const express = require("express");
  *
  * const app = express();

@@ -187,5 +187,6 @@ const extractLayerPathSegment = (arg: LayerPathSegment) => {
     return arg.toString();
   }
 
+  // @ts-expect-error
   return;
 };

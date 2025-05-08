@@ -1,5 +1,5 @@
-import type { Integration } from '@sentry/core';
-import { applySdkMetadata, logger } from '@sentry/core';
+import type { Integration } from '@debugg-ai/core';
+import { applySdkMetadata, logger } from '@debugg-ai/core';
 import type { NodeClient, NodeOptions } from '@sentry/node';
 import { getDefaultIntegrations as getDefaultNodeIntegrations, init as nodeInit, isInitialized } from '@sentry/node';
 import { DEBUG_BUILD } from '../utils/debug-build';
@@ -23,6 +23,7 @@ export function getRemixDefaultIntegrations(options: RemixOptions): Integration[
 
 /** Initializes Sentry Remix SDK on Node. */
 export function init(options: RemixOptions): NodeClient | undefined {
+  // @ts-expect-error
   applySdkMetadata(options, 'remix', ['remix', 'node']);
 
   if (isInitialized()) {

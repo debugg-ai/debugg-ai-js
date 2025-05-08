@@ -3,8 +3,8 @@ import type { ErrorHandler as AngularErrorHandler, OnDestroy } from '@angular/co
 import { Inject, Injectable } from '@angular/core';
 import type { ReportDialogOptions } from '@sentry/browser';
 import * as Sentry from '@sentry/browser';
-import type { Event } from '@sentry/core';
-import { consoleSandbox, isString } from '@sentry/core';
+import type { Event } from '@debugg-ai/core';
+import { consoleSandbox, isString } from '@debugg-ai/core';
 import { runOutsideAngular } from './zone';
 
 /**
@@ -126,6 +126,7 @@ class SentryErrorHandler implements AngularErrorHandler, OnDestroy {
       const client = Sentry.getClient();
 
       if (client && !this._removeAfterSendEventListener) {
+        // @ts-expect-error
         this._removeAfterSendEventListener = client.on('afterSendEvent', (event: Event) => {
           if (!event.type && event.event_id) {
             runOutsideAngular(() => {

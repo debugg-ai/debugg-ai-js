@@ -1,4 +1,4 @@
-import type { Client, HandlerDataXhr, SentryWrappedXMLHttpRequest, Span, WebFetchHeaders } from '@sentry/core';
+import type { Client, HandlerDataXhr, SentryWrappedXMLHttpRequest, Span, WebFetchHeaders } from '@debugg-ai/core';
 import {
   addFetchEndInstrumentationHandler,
   addFetchInstrumentationHandler,
@@ -18,7 +18,7 @@ import {
   startInactiveSpan,
   stringMatchesSomePattern,
   stripUrlQueryAndFragment,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { XhrHint } from '@sentry-internal/browser-utils';
 import {
   addPerformanceInstrumentationHandler,

@@ -1,5 +1,5 @@
-import type { ProfileChunk, ProfilingIntegration, Transport } from '@sentry/core';
-import { createEnvelope, getMainCarrier, GLOBAL_OBJ, logger } from '@sentry/core';
+import type { ProfileChunk, ProfilingIntegration, Transport } from '@debugg-ai/core';
+import { createEnvelope, getMainCarrier, GLOBAL_OBJ, logger } from '@debugg-ai/core';
 import * as Sentry from '@sentry/node';
 import type { NodeClientOptions } from '@sentry/node/build/types/types';
 import { CpuProfilerBindings } from '@sentry-internal/node-cpu-profiler';

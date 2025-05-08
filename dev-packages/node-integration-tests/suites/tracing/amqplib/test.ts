@@ -1,4 +1,4 @@
-import type { TransactionEvent } from '@sentry/core';
+import type { TransactionEvent } from '@debugg-ai/core';
 import { afterAll, describe, expect } from 'vitest';
 import { cleanupChildProcesses, createEsmAndCjsTests } from '../../../utils/runner';
 

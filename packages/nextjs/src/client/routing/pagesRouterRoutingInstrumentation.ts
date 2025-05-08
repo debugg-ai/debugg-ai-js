@@ -1,4 +1,4 @@
-import type { Client, TransactionSource } from '@sentry/core';
+import type { Client, TransactionSource } from '@debugg-ai/core';
 import {
   browserPerformanceTimeOrigin,
   logger,
@@ -7,8 +7,8 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
   stripUrlQueryAndFragment,
-} from '@sentry/core';
-import { startBrowserTracingNavigationSpan, startBrowserTracingPageLoadSpan, WINDOW } from '@sentry/react';
+} from '@debugg-ai/core';
+import { startBrowserTracingNavigationSpan, startBrowserTracingPageLoadSpan, WINDOW } from '@debugg-ai/react';
 import type { NEXT_DATA } from 'next/dist/shared/lib/utils';
 import RouterImport from 'next/router';
 import type { ParsedUrlQuery } from 'querystring';
@@ -176,6 +176,7 @@ function getNextRouteFromPathname(pathname: string): string | undefined {
 
   // Page route should in 99.999% of the cases be defined by now but just to be sure we make a check here
   if (!pageRoutes) {
+    // @ts-expect-error
     return;
   }
 

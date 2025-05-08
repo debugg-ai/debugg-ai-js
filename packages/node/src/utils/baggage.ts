@@ -1,4 +1,4 @@
-import { objectToBaggageHeader, parseBaggageHeader } from '@sentry/core';
+import { objectToBaggageHeader, parseBaggageHeader } from '@debugg-ai/core';
 
 /**
  * Merge two baggage headers into one, where the existing one takes precedence.

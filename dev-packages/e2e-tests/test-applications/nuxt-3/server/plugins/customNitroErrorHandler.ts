@@ -1,4 +1,4 @@
-import { Context, GLOBAL_OBJ, flush, logger, vercelWaitUntil } from '@sentry/core';
+import { Context, GLOBAL_OBJ, flush, logger, vercelWaitUntil } from '@debugg-ai/core';
 import * as SentryNode from '@sentry/node';
 import { H3Error } from 'h3';
 import type { CapturedErrorContext } from 'nitropack';

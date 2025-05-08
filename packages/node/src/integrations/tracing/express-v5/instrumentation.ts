@@ -114,6 +114,7 @@ export class ExpressInstrumentationV5 extends InstrumentationBase<ExpressInstrum
     return function (original: express.Router['use']) {
       return function use(this: express.Application, ...args: Parameters<typeof original>) {
         const route = original.apply(this, args);
+        // @ts-expect-error
         const layer = this.stack[this.stack.length - 1] as ExpressLayer;
         instrumentation._applyPatch(layer, getLayerPath(args));
         return route;

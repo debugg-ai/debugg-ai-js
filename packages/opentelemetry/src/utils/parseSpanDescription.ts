@@ -13,7 +13,7 @@ import {
   SEMATTRS_MESSAGING_SYSTEM,
   SEMATTRS_RPC_SERVICE,
 } from '@opentelemetry/semantic-conventions';
-import type { SpanAttributes, TransactionSource } from '@sentry/core';
+import type { SpanAttributes, TransactionSource } from '@debugg-ai/core';
 import {
   getSanitizedUrlString,
   parseUrl,
@@ -22,7 +22,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
   stripUrlQueryAndFragment,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { SEMANTIC_ATTRIBUTE_SENTRY_GRAPHQL_OPERATION } from '../semanticAttributes';
 import type { AbstractSpan } from '../types';
 import { getSpanKind } from './getSpanKind';

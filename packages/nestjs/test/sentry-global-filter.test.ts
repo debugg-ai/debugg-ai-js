@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/unbound-method */
 import type { ArgumentsHost } from '@nestjs/common';
 import { HttpException, HttpStatus, Logger } from '@nestjs/common';
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@debugg-ai/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import * as Helpers from '../src/helpers';
 import { SentryGlobalFilter } from '../src/setup';
@@ -10,7 +10,7 @@ vi.mock('../src/helpers', () => ({
   isExpectedError: vi.fn(),
 }));
 
-vi.mock('@sentry/core', () => ({
+vi.mock('@debugg-ai/core', () => ({
   captureException: vi.fn().mockReturnValue('mock-event-id'),
   getIsolationScope: vi.fn(),
   getDefaultIsolationScope: vi.fn(),

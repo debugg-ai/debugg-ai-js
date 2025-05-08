@@ -4,7 +4,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
   SentrySpan,
   spanToJSON,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { describe, it } from 'vitest';
 import { browserTracingIntegration, init, TraceDirective } from '../src/index';
 import { _updateSpanAttributesForParametrizedUrl, getParameterizedRouteFromSnapshot } from '../src/tracing';

@@ -1,4 +1,4 @@
-import { defineIntegration, escapeStringForRegex, rewriteFramesIntegration } from '@sentry/core';
+import { defineIntegration, escapeStringForRegex, rewriteFramesIntegration } from '@debugg-ai/core';
 import * as path from 'path';
 
 export const distDirRewriteFramesIntegration = defineIntegration(({ distDirName }: { distDirName: string }) => {

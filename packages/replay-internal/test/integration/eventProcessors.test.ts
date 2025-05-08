@@ -3,8 +3,8 @@
  */
 
 import '../utils/mock-internal-setTimeout';
-import type { Event } from '@sentry/core';
-import { getClient, getCurrentScope } from '@sentry/core';
+import type { Event } from '@debugg-ai/core';
+import { getClient, getCurrentScope } from '@debugg-ai/core';
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { BASE_TIMESTAMP } from '..';
 import { resetSdkMock } from '../mocks/resetSdkMock';

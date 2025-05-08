@@ -14,8 +14,8 @@ import type {
   Event,
   IntegrationFn,
   OsContext,
-} from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
+} from '@debugg-ai/core';
+import { defineIntegration } from '@debugg-ai/core';
 
 export const readFileAsync = promisify(readFile);
 export const readDirAsync = promisify(readdir);
@@ -175,6 +175,7 @@ function getCultureContext(): CultureContext | undefined {
   try {
     if (typeof process.versions.icu !== 'string') {
       // Node was built without ICU support
+      // @ts-expect-error
       return;
     }
 
@@ -195,7 +196,7 @@ function getCultureContext(): CultureContext | undefined {
   } catch (err) {
     //
   }
-
+  // @ts-expect-error
   return;
 }
 

@@ -1,5 +1,5 @@
-import type { IntegrationFn } from '@sentry/core';
-import { createStackParser, defineIntegration, dirname, nodeStackLineParser } from '@sentry/core';
+import type { IntegrationFn } from '@debugg-ai/core';
+import { createStackParser, defineIntegration, dirname, nodeStackLineParser } from '@debugg-ai/core';
 
 const INTEGRATION_NAME = 'NormalizePaths';
 

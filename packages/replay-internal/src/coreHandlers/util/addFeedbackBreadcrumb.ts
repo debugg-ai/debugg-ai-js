@@ -1,4 +1,4 @@
-import type { FeedbackEvent } from '@sentry/core';
+import type { FeedbackEvent } from '@debugg-ai/core';
 import { EventType } from '@sentry-internal/rrweb';
 import type { ReplayBreadcrumbFrameEvent, ReplayContainer } from '../../types';
 

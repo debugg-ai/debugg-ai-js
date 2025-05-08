@@ -1,11 +1,11 @@
 import * as os from 'node:os';
+import type { DynamicSamplingContext, Scope, ServerRuntimeClientOptions, TraceContext } from '@debugg-ai/core';
+import { _INTERNAL_flushLogsBuffer, applySdkMetadata, logger, SDK_VERSION, ServerRuntimeClient } from '@debugg-ai/core';
 import type { Tracer } from '@opentelemetry/api';
 import { trace } from '@opentelemetry/api';
 import { registerInstrumentations } from '@opentelemetry/instrumentation';
 import type { BasicTracerProvider } from '@opentelemetry/sdk-trace-base';
-import type { DynamicSamplingContext, Scope, ServerRuntimeClientOptions, TraceContext } from '@sentry/core';
-import { _INTERNAL_flushLogsBuffer, applySdkMetadata, logger, SDK_VERSION, ServerRuntimeClient } from '@sentry/core';
-import { getTraceContextForScope } from '@sentry/opentelemetry';
+import { getTraceContextForScope } from '@debugg-ai/opentelemetry';
 import { isMainThread, threadId } from 'worker_threads';
 import { DEBUG_BUILD } from '../debug-build';
 import type { NodeClientOptions } from '../types';
@@ -67,7 +67,7 @@ export class NodeClient extends ServerRuntimeClient<NodeClientOptions> {
       return this._tracer;
     }
 
-    const name = '@sentry/node';
+    const name = '@debugg-ai/node';
     const version = SDK_VERSION;
     const tracer = trace.getTracer(name, version);
     this._tracer = tracer;

@@ -1,7 +1,7 @@
 import type { Context as OtelContext, TextMapGetter } from '@opentelemetry/api';
 import { context as otelContext, propagation } from '@opentelemetry/api';
-import type { Scope } from '@sentry/core';
-import { addExceptionMechanism, isString } from '@sentry/core';
+import type { Scope } from '@debugg-ai/core';
+import { addExceptionMechanism, isString } from '@debugg-ai/core';
 import type { APIGatewayProxyEventHeaders, Handler } from 'aws-lambda';
 
 type HandlerEvent = Parameters<Handler<{ headers?: Record<string, string> }>>[0];

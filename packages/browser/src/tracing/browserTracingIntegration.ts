@@ -1,5 +1,12 @@
 /* eslint-disable max-lines */
-import type { Client, IntegrationFn, Span, StartSpanOptions, TransactionSource, WebFetchHeaders } from '@sentry/core';
+import type {
+  Client,
+  IntegrationFn,
+  Span,
+  StartSpanOptions,
+  TransactionSource,
+  WebFetchHeaders,
+} from '@debugg-ai/core';
 import {
   addNonEnumerableProperty,
   browserPerformanceTimeOrigin,
@@ -21,7 +28,7 @@ import {
   spanToJSON,
   startIdleSpan,
   TRACING_DEFAULTS,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import {
   addHistoryInstrumentationHandler,
   addPerformanceEntries,

@@ -1,4 +1,4 @@
-import { parseSemver } from '@sentry/core';
+import { parseSemver } from '@debugg-ai/core';
 import { it, test } from 'vitest';
 
 const NODE_VERSION = parseSemver(process.versions.node).major;

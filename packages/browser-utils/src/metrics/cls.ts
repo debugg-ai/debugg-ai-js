@@ -1,4 +1,4 @@
-import type { SpanAttributes } from '@sentry/core';
+import type { SpanAttributes } from '@debugg-ai/core';
 import {
   browserPerformanceTimeOrigin,
   getActiveSpan,
@@ -13,7 +13,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   spanToJSON,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { addClsInstrumentationHandler } from './instrument';
 import { msToSec, startStandaloneWebVitalSpan } from './utils';

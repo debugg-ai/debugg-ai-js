@@ -1,4 +1,4 @@
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@debugg-ai/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { ResponseMiddlewareResponse } from '../../src/server';
 import { sentryBeforeResponseMiddleware } from '../../src/server';

@@ -1,4 +1,4 @@
-import type { Breadcrumb, FetchBreadcrumbData } from '@sentry/core';
+import type { Breadcrumb, FetchBreadcrumbData } from '@debugg-ai/core';
 import type { FetchHint, NetworkMetaWarning } from '@sentry-internal/browser-utils';
 import { getBodyString, getFetchRequestArgBody, setTimeout } from '@sentry-internal/browser-utils';
 import { DEBUG_BUILD } from '../../debug-build';

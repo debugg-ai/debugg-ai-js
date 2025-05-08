@@ -1,6 +1,6 @@
 /* eslint-disable complexity */
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration, SEMANTIC_ATTRIBUTE_SENTRY_OP, spanToJSON } from '@sentry/core';
+import type { IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration, SEMANTIC_ATTRIBUTE_SENTRY_OP, spanToJSON } from '@debugg-ai/core';
 import { generateInstrumentOnce } from '../../../otel/instrument';
 import { addOriginToSpan } from '../../../utils/addOriginToSpan';
 import { SentryVercelAiInstrumentation } from './instrumentation';
@@ -162,7 +162,7 @@ const _vercelAIIntegration = (() => {
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  *
  * Sentry.init({
  *  integrations: [Sentry.vercelAIIntegration()],

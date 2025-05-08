@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import type { Event, IntegrationFn, Profile, ProfileChunk, ProfilingIntegration, Span } from '@sentry/core';
+import type { Event, IntegrationFn, Profile, ProfileChunk, ProfilingIntegration, Span } from '@debugg-ai/core';
 import {
   consoleSandbox,
   defineIntegration,
@@ -11,7 +11,7 @@ import {
   LRUMap,
   spanToJSON,
   uuid4,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { NodeClient, NodeOptions } from '@sentry/node';
 import { type RawThreadCpuProfile, CpuProfilerBindings, ProfileFormat } from '@sentry-internal/node-cpu-profiler';
 import { DEBUG_BUILD } from './debug-build';
@@ -349,6 +349,7 @@ class ContinuousProfiler {
         return;
       }
 
+      // @ts-expect-error
       const profiledTransactionEvents = findProfiledTransactionsFromEnvelope(envelope);
       if (!profiledTransactionEvents.length) {
         return;
@@ -375,7 +376,7 @@ class ContinuousProfiler {
           continue;
         }
 
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        // @ts-ignore
         const profile = createProfilingEvent(this._client!, cpuProfile, profiledTransaction);
         if (!profile) return;
 
@@ -394,6 +395,7 @@ class ContinuousProfiler {
         });
       }
 
+      // @ts-expect-error profile does not inherit from Event
       addProfilesToEnvelope(envelope, profilesToAddToEnvelope);
     });
   }
@@ -470,6 +472,7 @@ class ContinuousProfiler {
 
     DEBUG_BUILD && logger.log(`[Profiling] Profile chunk ${this._chunkData.id} sent to Sentry.`);
     const chunk = createProfilingChunkEvent(
+      // @ts-expect-error
       this._client,
       this._client.getOptions(),
       profile,
@@ -631,6 +634,7 @@ class ContinuousProfiler {
 }
 
 /** Exported only for tests. */
+// @ts-expect-error
 export const _nodeProfilingIntegration = ((): ProfilingIntegration<NodeClient> => {
   if (![16, 18, 20, 22].includes(NODE_MAJOR)) {
     consoleSandbox(() => {
@@ -647,6 +651,7 @@ export const _nodeProfilingIntegration = ((): ProfilingIntegration<NodeClient> =
   return {
     name: 'ProfilingIntegration',
     _profiler: new ContinuousProfiler(),
+    // @ts-expect-error
     setup(client: NodeClient) {
       DEBUG_BUILD && logger.log('[Profiling] Profiling integration setup.');
       this._profiler.initialize(client);

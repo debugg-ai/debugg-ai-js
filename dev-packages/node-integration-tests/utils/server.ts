@@ -1,5 +1,5 @@
-import type { Envelope } from '@sentry/core';
-import { parseEnvelope } from '@sentry/core';
+import type { Envelope } from '@debugg-ai/core';
+import { parseEnvelope } from '@debugg-ai/core';
 import express from 'express';
 import type { AddressInfo } from 'net';
 

@@ -5,8 +5,8 @@
  * Add the integration hook to your OpenFeature object.
  *   - OpenFeature.getClient().addHooks(new OpenFeatureIntegrationHook());
  */
-import type { Client, Event, EventHint, IntegrationFn } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
+import type { Client, Event, EventHint, IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration } from '@debugg-ai/core';
 import { copyFlagsFromScopeToEvent, insertFlagToScope } from '../../../utils/featureFlags';
 import type { EvaluationDetails, HookContext, HookHints, JsonValue, OpenFeatureHook } from './types';
 

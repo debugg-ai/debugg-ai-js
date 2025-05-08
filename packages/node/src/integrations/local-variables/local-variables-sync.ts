@@ -1,6 +1,6 @@
 import type { Debugger, InspectorNotification, Runtime, Session } from 'node:inspector';
-import type { Event, Exception, IntegrationFn, StackFrame, StackParser } from '@sentry/core';
-import { defineIntegration, getClient, logger, LRUMap } from '@sentry/core';
+import type { Event, Exception, IntegrationFn, StackFrame, StackParser } from '@debugg-ai/core';
+import { defineIntegration, getClient, logger, LRUMap } from '@debugg-ai/core';
 import { NODE_MAJOR } from '../../nodeVersion';
 import type { NodeClient } from '../../sdk/client';
 import { isDebuggerEnabled } from '../../utils/debug';
@@ -16,6 +16,7 @@ import { createRateLimiter, functionNamesMatch } from './common';
 /** Creates a unique hash from stack frames */
 export function hashFrames(frames: StackFrame[] | undefined): string | undefined {
   if (frames === undefined) {
+    // @ts-expect-error
     return;
   }
 

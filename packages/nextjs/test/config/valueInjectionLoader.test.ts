@@ -25,7 +25,7 @@ const loaderThis = {
 describe('valueInjectionLoader', () => {
   it('should correctly insert values for basic config', () => {
     const userCode = `
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@debugg-ai/nextjs';
       Sentry.init();
     `;
 
@@ -38,7 +38,7 @@ describe('valueInjectionLoader', () => {
   it('should correctly insert values with directive', () => {
     const userCode = `
       "use client"
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@debugg-ai/nextjs';
       Sentry.init();
     `;
 
@@ -51,7 +51,7 @@ describe('valueInjectionLoader', () => {
   it('should correctly insert values with directive and semicolon', () => {
     const userCode = `
       "use client";
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@debugg-ai/nextjs';
       Sentry.init();
     `;
 
@@ -65,7 +65,7 @@ describe('valueInjectionLoader', () => {
     const userCode = `
       // test
       "use client";
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@debugg-ai/nextjs';
       Sentry.init();
     `;
 
@@ -79,7 +79,7 @@ describe('valueInjectionLoader', () => {
     const userCode = `
       /* test */
       "use client";
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@debugg-ai/nextjs';
       Sentry.init();
     `;
 
@@ -95,7 +95,7 @@ describe('valueInjectionLoader', () => {
         test
       */
       "use client";
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@debugg-ai/nextjs';
       Sentry.init();
     `;
 
@@ -118,7 +118,7 @@ describe('valueInjectionLoader', () => {
 
 
 
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@debugg-ai/nextjs';
       Sentry.init();
     `;
 
@@ -135,7 +135,7 @@ describe('valueInjectionLoader', () => {
 
 
 
-      import * as Sentry from '@sentry/nextjs';
+      import * as Sentry from '@debugg-ai/nextjs';
       Sentry.init();
     `;
 

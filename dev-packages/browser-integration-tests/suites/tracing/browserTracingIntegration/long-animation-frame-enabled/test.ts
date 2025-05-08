@@ -1,7 +1,7 @@
 import type { Route } from '@playwright/test';
 import { expect } from '@playwright/test';
 import { SEMANTIC_ATTRIBUTE_SENTRY_OP, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN } from '@sentry/browser';
-import type { Event } from '@sentry/core';
+import type { Event } from '@debugg-ai/core';
 import { sentryTest } from '../../../../utils/fixtures';
 import { getFirstSentryEnvelopeRequest, shouldSkipTracingTest } from '../../../../utils/helpers';
 

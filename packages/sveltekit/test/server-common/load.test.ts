@@ -1,10 +1,10 @@
-import type { Event } from '@sentry/core';
+import type { Event } from '@debugg-ai/core';
 import {
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
-} from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+} from '@debugg-ai/core';
+import * as SentryCore from '@debugg-ai/core';
 import { getCurrentScope, getIsolationScope, NodeClient, setCurrentClient } from '@sentry/node';
 import type { Load, ServerLoad } from '@sveltejs/kit';
 import { error, redirect } from '@sveltejs/kit';
@@ -16,8 +16,8 @@ const mockCaptureException = vi.spyOn(SentryCore, 'captureException').mockImplem
 
 const mockStartSpan = vi.fn();
 
-vi.mock('@sentry/core', async () => {
-  const original = (await vi.importActual('@sentry/core')) as any;
+vi.mock('@debugg-ai/core', async () => {
+  const original = (await vi.importActual('@debugg-ai/core')) as any;
   return {
     ...original,
     startSpan: (...args: unknown[]) => {

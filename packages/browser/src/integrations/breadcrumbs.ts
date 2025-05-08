@@ -14,7 +14,7 @@ import type {
   IntegrationFn,
   XhrBreadcrumbData,
   XhrBreadcrumbHint,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import {
   addBreadcrumb,
   addConsoleInstrumentationHandler,
@@ -29,7 +29,7 @@ import {
   parseUrl,
   safeJoin,
   severityLevelFromString,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { FetchHint, XhrHint } from '@sentry-internal/browser-utils';
 import {
   addClickKeypressInstrumentationHandler,
@@ -73,7 +73,7 @@ const _breadcrumbsIntegration = ((options: Partial<BreadcrumbsOptions> = {}) => 
   return {
     name: INTEGRATION_NAME,
     setup(client) {
-      // TODO(v10): Remove this functionality and use `consoleIntegration` from @sentry/core instead.
+      // TODO(v10): Remove this functionality and use `consoleIntegration` from @debugg-ai/core instead.
       if (_options.console) {
         addConsoleInstrumentationHandler(_getConsoleBreadcrumbHandler(client));
       }

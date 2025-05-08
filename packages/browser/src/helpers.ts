@@ -1,4 +1,4 @@
-import type { Mechanism, WrappedFunction } from '@sentry/core';
+import type { Mechanism, WrappedFunction } from '@debugg-ai/core';
 import {
   addExceptionMechanism,
   addExceptionTypeValue,
@@ -8,7 +8,7 @@ import {
   GLOBAL_OBJ,
   markFunctionWrapped,
   withScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export const WINDOW = GLOBAL_OBJ as typeof GLOBAL_OBJ & Window;
 

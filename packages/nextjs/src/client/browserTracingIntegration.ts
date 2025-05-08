@@ -1,5 +1,5 @@
-import type { Integration } from '@sentry/core';
-import { browserTracingIntegration as originalBrowserTracingIntegration } from '@sentry/react';
+import type { Integration } from '@debugg-ai/core';
+import { browserTracingIntegration as originalBrowserTracingIntegration } from '@debugg-ai/react';
 import { nextRouterInstrumentNavigation, nextRouterInstrumentPageLoad } from './routing/nextRoutingInstrumentation';
 
 /**

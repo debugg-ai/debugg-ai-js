@@ -1,5 +1,5 @@
-import type { BaseTransportOptions, Transport, TransportMakeRequestResponse, TransportRequest } from '@sentry/core';
-import { consoleSandbox, createTransport, logger, rejectedSyncPromise, suppressTracing } from '@sentry/core';
+import type { BaseTransportOptions, Transport, TransportMakeRequestResponse, TransportRequest } from '@debugg-ai/core';
+import { consoleSandbox, createTransport, logger, rejectedSyncPromise, suppressTracing } from '@debugg-ai/core';
 
 export interface DenoTransportOptions extends BaseTransportOptions {
   /** Custom headers for the transport. Used by the XHRTransport and FetchTransport */

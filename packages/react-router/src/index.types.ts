@@ -1,6 +1,6 @@
 /* eslint-disable import/export */
 
-import type { Integration, Options, StackParser } from '@sentry/core';
+import type { Integration, Options, StackParser } from '@debugg-ai/core';
 import type * as clientSdk from './client';
 import type * as serverSdk from './server';
 

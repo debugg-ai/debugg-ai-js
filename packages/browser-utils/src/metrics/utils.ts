@@ -1,5 +1,5 @@
-import type { Integration, SentrySpan, Span, SpanAttributes, SpanTimeInput, StartSpanOptions } from '@sentry/core';
-import { getClient, getCurrentScope, spanToJSON, startInactiveSpan, withActiveSpan } from '@sentry/core';
+import type { Integration, SentrySpan, Span, SpanAttributes, SpanTimeInput, StartSpanOptions } from '@debugg-ai/core';
+import { getClient, getCurrentScope, spanToJSON, startInactiveSpan, withActiveSpan } from '@debugg-ai/core';
 import { WINDOW } from '../types';
 
 /**

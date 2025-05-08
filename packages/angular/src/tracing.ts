@@ -20,8 +20,8 @@ import {
   startBrowserTracingNavigationSpan,
   startInactiveSpan,
 } from '@sentry/browser';
-import type { Integration, Span } from '@sentry/core';
-import { logger, stripUrlQueryAndFragment, timestampInSeconds } from '@sentry/core';
+import type { Integration, Span } from '@debugg-ai/core';
+import { logger, stripUrlQueryAndFragment, timestampInSeconds } from '@debugg-ai/core';
 import type { Observable } from 'rxjs';
 import { Subscription } from 'rxjs';
 import { filter, tap } from 'rxjs/operators';
@@ -45,6 +45,7 @@ export function browserTracingIntegration(
     instrumentationInitialized = true;
   }
 
+  // @ts-expect-error
   return originalBrowserTracingIntegration({
     ...options,
     instrumentNavigation: false,

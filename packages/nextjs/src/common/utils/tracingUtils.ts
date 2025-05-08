@@ -1,5 +1,5 @@
-import type { PropagationContext } from '@sentry/core';
-import { getActiveSpan, getRootSpan, GLOBAL_OBJ, logger, Scope, spanToJSON, startNewTrace } from '@sentry/core';
+import type { PropagationContext } from '@debugg-ai/core';
+import { getActiveSpan, getRootSpan, GLOBAL_OBJ, logger, Scope, spanToJSON, startNewTrace } from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { TRANSACTION_ATTR_SHOULD_DROP_TRANSACTION } from '../span-attributes-with-logic-attached';
 

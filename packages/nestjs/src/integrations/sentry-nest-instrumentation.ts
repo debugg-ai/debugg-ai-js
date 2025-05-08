@@ -5,7 +5,7 @@ import {
   InstrumentationNodeModuleDefinition,
   InstrumentationNodeModuleFile,
 } from '@opentelemetry/instrumentation';
-import type { Span } from '@sentry/core';
+import type { Span } from '@debugg-ai/core';
 import {
   getActiveSpan,
   isThenable,
@@ -14,7 +14,7 @@ import {
   startSpan,
   startSpanManual,
   withActiveSpan,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { getMiddlewareSpanOptions, getNextProxy, instrumentObservable, isPatched } from './helpers';
 import type { CallHandler, CatchTarget, InjectableTarget, MinimalNestJsExecutionContext, Observable } from './types';
 

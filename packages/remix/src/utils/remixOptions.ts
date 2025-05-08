@@ -1,4 +1,4 @@
-import type { Options } from '@sentry/core';
+import type { Options } from '@debugg-ai/core';
 import type { NodeOptions } from '@sentry/node';
 import type { BrowserOptions } from '@sentry/react';
 

@@ -1,9 +1,14 @@
-import type { ClientOptions, Context } from '@sentry/core';
-import { captureException, getClient, getTraceMetaTags, logger } from '@sentry/core';
+import type { ClientOptions, Context } from '@debugg-ai/core';
+import { captureException, getClient, getTraceMetaTags, logger } from '@debugg-ai/core';
 import type { VueOptions } from '@sentry/vue/src/types';
-import type { CapturedErrorContext } from 'nitropack';
+import type { H3Event } from 'h3';
 import type { NuxtRenderHTMLContext } from 'nuxt/app';
 import type { ComponentPublicInstance } from 'vue';
+
+interface CapturedErrorContext {
+  event?: H3Event;
+  tags?: string[];
+}
 
 /**
  *  Extracts the relevant context information from the error context (H3Event in Nitro Error)

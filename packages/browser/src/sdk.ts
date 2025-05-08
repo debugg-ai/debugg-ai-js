@@ -1,4 +1,4 @@
-import type { Client, Integration, Options, ReportDialogOptions } from '@sentry/core';
+import type { Client, Integration, Options, ReportDialogOptions } from '@debugg-ai/core';
 import {
   consoleSandbox,
   dedupeIntegration,
@@ -13,7 +13,7 @@ import {
   logger,
   stackParserFromStackParserOptions,
   supportsFetch,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { BrowserClientOptions, BrowserOptions } from './client';
 import { BrowserClient } from './client';
 import { DEBUG_BUILD } from './debug-build';
@@ -136,7 +136,7 @@ declare const __SENTRY_RELEASE__: string | undefined;
  *
  * ```
  *
- * import { init } from '@sentry/browser';
+ * import { init } from '@debugg-ai/browser';
  *
  * init({
  *   dsn: '__DSN__',
@@ -147,7 +147,7 @@ declare const __SENTRY_RELEASE__: string | undefined;
  * @example
  * ```
  *
- * import { addBreadcrumb } from '@sentry/browser';
+ * import { addBreadcrumb } from '@debugg-ai/browser';
  * addBreadcrumb({
  *   message: 'My Breadcrumb',
  *   // ...
@@ -158,7 +158,7 @@ declare const __SENTRY_RELEASE__: string | undefined;
  *
  * ```
  *
- * import * as Sentry from '@sentry/browser';
+ * import * as Sentry from '@debugg-ai/browser';
  * Sentry.captureMessage('Hello, world!');
  * Sentry.captureException(new Error('Good bye'));
  * Sentry.captureEvent({

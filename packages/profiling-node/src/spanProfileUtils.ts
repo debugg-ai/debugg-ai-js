@@ -1,6 +1,6 @@
 /* eslint-disable deprecation/deprecation */
-import type { CustomSamplingContext, Span } from '@sentry/core';
-import { logger, spanIsSampled, spanToJSON, uuid4 } from '@sentry/core';
+import type { CustomSamplingContext, Span } from '@debugg-ai/core';
+import { logger, spanIsSampled, spanToJSON, uuid4 } from '@debugg-ai/core';
 import type { NodeClient } from '@sentry/node';
 import { type RawThreadCpuProfile, CpuProfilerBindings } from '@sentry-internal/node-cpu-profiler';
 import { DEBUG_BUILD } from './debug-build';

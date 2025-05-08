@@ -3,7 +3,7 @@
 // We export everything from both the client part of the SDK and from the server part.
 // Some of the exports collide, which is not allowed, unless we redefine the colliding
 // exports in this file - which we do below.
-import type { Client, Integration, Options, StackParser } from '@sentry/core';
+import type { Client, Integration, Options, StackParser } from '@debugg-ai/core';
 import type { HandleClientError, HandleServerError } from '@sveltejs/kit';
 import type * as clientSdk from './client';
 import type * as serverSdk from './server';
@@ -11,6 +11,7 @@ import type * as serverSdk from './server';
 export * from './client';
 export * from './vite';
 export * from './server';
+// @ts-expect-error
 export * from './worker';
 
 // Use the ./server version of some functions that are also exported from ./worker

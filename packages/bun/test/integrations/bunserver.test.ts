@@ -1,4 +1,4 @@
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@debugg-ai/core';
 import { afterEach, beforeAll, beforeEach, describe, expect, spyOn, test } from 'bun:test';
 import { instrumentBunServe } from '../../src/integrations/bunserver';
 

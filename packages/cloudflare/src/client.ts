@@ -1,5 +1,5 @@
-import type { ClientOptions, Options, ServerRuntimeClientOptions } from '@sentry/core';
-import { applySdkMetadata, ServerRuntimeClient } from '@sentry/core';
+import type { ClientOptions, Options, ServerRuntimeClientOptions } from '@debugg-ai/core';
+import { applySdkMetadata, ServerRuntimeClient } from '@debugg-ai/core';
 import type { CloudflareTransportOptions } from './transport';
 
 /**
@@ -35,7 +35,7 @@ interface BaseCloudflareOptions {}
 /**
  * Configuration options for the Sentry Cloudflare SDK
  *
- * @see @sentry/core Options for more information.
+ * @see @debugg-ai/core Options for more information.
  */
 export interface CloudflareOptions extends Options<CloudflareTransportOptions>, BaseCloudflareOptions {}
 

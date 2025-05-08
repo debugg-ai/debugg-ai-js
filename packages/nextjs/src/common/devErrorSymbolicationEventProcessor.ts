@@ -1,5 +1,5 @@
-import type { Event, EventHint } from '@sentry/core';
-import { GLOBAL_OBJ, logger, parseSemver, suppressTracing } from '@sentry/core';
+import type { Event, EventHint } from '@debugg-ai/core';
+import { GLOBAL_OBJ, logger, parseSemver, suppressTracing } from '@debugg-ai/core';
 import type { StackFrame } from 'stacktrace-parser';
 import * as stackTraceParser from 'stacktrace-parser';
 import { DEBUG_BUILD } from './debug-build';

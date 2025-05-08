@@ -15,7 +15,7 @@ export type {
   Stacktrace,
   Thread,
   User,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export type { VercelEdgeOptions } from './types';
 
@@ -88,7 +88,7 @@ export {
   spanToTraceHeader,
   spanToBaggageHeader,
   wrapMcpServerWithSentry,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export { VercelEdgeClient } from './client';
 export { getDefaultIntegrations, init } from './sdk';

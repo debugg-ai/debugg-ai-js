@@ -1,4 +1,4 @@
-import type { Event, SeverityLevel } from '@sentry/core';
+import type { Event, SeverityLevel } from '@debugg-ai/core';
 
 export function Transaction(traceId?: string, obj?: Partial<Event>): any {
   const timestamp = Date.now() / 1000;
@@ -158,7 +158,7 @@ export function Transaction(traceId?: string, obj?: Partial<Event>): any {
     },
     user: {
       ip_address: '0.0.0.0',
-      email: 'billy@sentry.io',
+      email: 'billy@debugg.ai',
       id: '1',
       name: 'Billy Vong',
     },

@@ -1,5 +1,5 @@
-import type { Breadcrumb } from '@sentry/core';
-import { normalize } from '@sentry/core';
+import type { Breadcrumb } from '@debugg-ai/core';
+import { normalize } from '@debugg-ai/core';
 import { EventType } from '@sentry-internal/rrweb';
 import type { ReplayContainer } from '../../types';
 

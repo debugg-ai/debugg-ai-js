@@ -1,4 +1,4 @@
-import type { Integration } from '@sentry/core';
+import type { Integration } from '@debugg-ai/core';
 import { instrumentOtelHttp } from '../http';
 import { amqplibIntegration, instrumentAmqplib } from './amqplib';
 import { connectIntegration, instrumentConnect } from './connect';

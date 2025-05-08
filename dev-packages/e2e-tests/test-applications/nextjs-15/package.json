@@ -30,7 +30,7 @@
     "@sentry-internal/replay-canvas": "latest || *",
     "@sentry-internal/browser-utils": "latest || *",
     "@sentry/browser": "latest || *",
-    "@sentry/core": "latest || *",
+    "@debugg-ai/core": "latest || *",
     "@sentry/nextjs": "latest || *",
     "@sentry/node": "latest || *",
     "@sentry/opentelemetry": "latest || *",

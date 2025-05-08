@@ -32,7 +32,6 @@ export function makeSucrasePlugin(options = {}, sucraseOptions = {}) {
       // We use a custom forked version of sucrase,
       // where there is a new option `disableES2019Transforms`
       disableESTransforms: false,
-      disableES2019Transforms: true,
       ...sucraseOptions,
     },
   );

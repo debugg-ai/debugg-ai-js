@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
-import type { Envelope, EnvelopeItem, Event, SerializedSession } from '@sentry/core';
-import { parseEnvelope } from '@sentry/core';
+import type { Envelope, EnvelopeItem, Event, SerializedSession } from '@debugg-ai/core';
+import { parseEnvelope } from '@debugg-ai/core';
 import * as fs from 'fs';
 import * as http from 'http';
 import type { AddressInfo } from 'net';

@@ -5,7 +5,7 @@ import {
   InstrumentationNodeModuleDefinition,
   InstrumentationNodeModuleFile,
 } from '@opentelemetry/instrumentation';
-import { captureException, SDK_VERSION, startSpan } from '@sentry/core';
+import { captureException, SDK_VERSION, startSpan } from '@debugg-ai/core';
 import { getEventSpanOptions } from './helpers';
 import type { OnEventTarget } from './types';
 
@@ -63,8 +63,8 @@ export class SentryNestEventInstrumentation extends InstrumentationBase {
         const eventName = Array.isArray(event)
           ? event.join(',')
           : typeof event === 'string' || typeof event === 'symbol'
-            ? event.toString()
-            : '<unknown_event>';
+          ? event.toString()
+          : '<unknown_event>';
 
         // Get the original decorator result
         const decoratorResult = original(event, options);

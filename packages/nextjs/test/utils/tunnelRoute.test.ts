@@ -1,4 +1,4 @@
-import type { BrowserOptions } from '@sentry/react';
+import type { BrowserOptions } from '@debugg-ai/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { applyTunnelRouteOption } from '../../src/client/tunnelRoute';
 

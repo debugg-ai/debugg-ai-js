@@ -9,8 +9,8 @@ import {
   getReportDialogEndpoint,
   lastEventId,
   SDK_VERSION,
-} from '@sentry/core';
-import * as utils from '@sentry/core';
+} from '@debugg-ai/core';
+import * as utils from '@debugg-ai/core';
 import type { Mock } from 'vitest';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
@@ -32,12 +32,12 @@ import {
 import { getDefaultBrowserClientOptions } from './helper/browser-client-options';
 import { makeSimpleTransport } from './mocks/simpletransport';
 
-const dsn = 'https://53039209a22b4ec1bcc296a3c9fdecd6@sentry.io/4291';
+const dsn = 'https://53039209a22b4ec1bcc296a3c9fdecd6@debugg.ai/4291';
 
 // eslint-disable-next-line no-var
 declare var global: any;
 
-vi.mock('@sentry/core', async requireActual => {
+vi.mock('@debugg-ai/core', async requireActual => {
   return {
     ...((await requireActual()) as any),
     getReportDialogEndpoint: vi.fn(),
@@ -380,7 +380,7 @@ describe('SentryBrowser initialization', () => {
       const sdkData = getClient()?.getOptions()._metadata?.sdk || {};
 
       expect(sdkData.name).toBe('sentry.javascript.browser');
-      expect(sdkData.packages?.[0]?.name).toBe('npm:@sentry/browser');
+      expect(sdkData.packages?.[0]?.name).toBe('npm:@debugg-ai/browser');
       expect(sdkData.packages?.[0]?.version).toBe(SDK_VERSION);
       expect(sdkData.version).toBe(SDK_VERSION);
     });
@@ -391,7 +391,7 @@ describe('SentryBrowser initialization', () => {
 
       const sdkData = getClient()?.getOptions()._metadata?.sdk || {};
 
-      expect(sdkData.packages?.[0]?.name).toBe('loader:@sentry/browser');
+      expect(sdkData.packages?.[0]?.name).toBe('loader:@debugg-ai/browser');
       delete global.SENTRY_SDK_SOURCE;
     });
 
@@ -401,7 +401,7 @@ describe('SentryBrowser initialization', () => {
 
       const sdkData = getClient()?.getOptions()._metadata?.sdk || {};
 
-      expect(sdkData.packages?.[0]?.name).toBe('cdn:@sentry/browser');
+      expect(sdkData.packages?.[0]?.name).toBe('cdn:@debugg-ai/browser');
       expect(utils.getSDKSource).toBeCalledTimes(1);
       spy.mockRestore();
     });
@@ -413,7 +413,7 @@ describe('SentryBrowser initialization', () => {
       const sdkData = client.getOptions()._metadata?.sdk as any;
 
       expect(sdkData.name).toBe('sentry.javascript.browser');
-      expect(sdkData.packages[0]?.name).toBe('npm:@sentry/browser');
+      expect(sdkData.packages[0]?.name).toBe('npm:@debugg-ai/browser');
       expect(sdkData.packages[0]?.version).toBe(SDK_VERSION);
       expect(sdkData.version).toBe(SDK_VERSION);
     });

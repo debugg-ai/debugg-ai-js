@@ -10,7 +10,7 @@ import {
   spanToJSON,
   stripUrlQueryAndFragment,
   vercelWaitUntil,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { VercelEdgeOptions } from '@sentry/vercel-edge';
 import { getDefaultIntegrations, init as vercelEdgeInit } from '@sentry/vercel-edge';
 import { isBuild } from '../common/utils/isBuild';

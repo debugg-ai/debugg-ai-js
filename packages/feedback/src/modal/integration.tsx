@@ -1,5 +1,5 @@
-import type { FeedbackFormData, FeedbackModalIntegration, IntegrationFn, User } from '@sentry/core';
-import { getClient, getCurrentScope, getGlobalScope, getIsolationScope } from '@sentry/core';
+import type { FeedbackFormData, FeedbackModalIntegration, IntegrationFn, User } from '@debugg-ai/core';
+import { getClient, getCurrentScope, getGlobalScope, getIsolationScope } from '@debugg-ai/core';
 import { h, render } from 'preact';
 import * as hooks from 'preact/hooks';
 import { DOCUMENT } from '../constants';

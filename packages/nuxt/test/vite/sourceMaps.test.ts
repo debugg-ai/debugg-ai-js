@@ -8,7 +8,7 @@ import {
   validateNitroSourceMapSettings,
 } from '../../src/vite/sourceMaps';
 
-vi.mock('@sentry/core', () => ({
+vi.mock('@debugg-ai/core', () => ({
   consoleSandbox: (callback: () => void) => callback(),
 }));
 

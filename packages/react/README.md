@@ -1,117 +1,222 @@
-<p align="center">
-  <a href="https://sentry.io/?utm_source=github&utm_medium=logo" target="_blank">
-    <img src="https://sentry-brand.storage.googleapis.com/sentry-wordmark-dark-280x84.png" alt="Sentry" width="280" height="84">
-  </a>
-</p>
+<!-- Replace with your own logo -->
+<!-- ![DebuggAI logo](media/header-comm.jpg) -->
 
-# Official Sentry SDK for ReactJS
+</div>
 
-## Links
+<h1 align="center">DebuggAI (@debugg-ai/node)</h1>
 
-- [Official SDK Docs](https://docs.sentry.io/platforms/javascript/guides/react/)
+Debugg AI's Node sdk for enabling your personal AI QA engineer
 
-## General
+<div align="center">
 
-This package is a wrapper around `@sentry/browser`, with added functionality related to React. All methods available in
-`@sentry/browser` can be imported from `@sentry/react`.
+DebuggAI super‑charges engineers with an AI‑powered custom QA Engineer personalized to every user that _finds_ and _fixes_ bugs while your app runs locally, in production, or in CI. DebuggAI's Agent works with you in the background to generate, run, and improve your test suites to ensure that every PR is ready to go. Stop waiting for problems to pop up and build robust code without the big headache of managing your tests.
 
-To use this SDK, call `Sentry.init(options)` before you mount your React component.
+</div>
 
-```javascript
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import * as Sentry from '@sentry/react';
+<div align="center">
 
-Sentry.init({
-  dsn: '__DSN__',
-  // ...
-});
+<a href="https://docs.debugg.ai" target="_blank">
+  <img src="https://img.shields.io/badge/docs-debuggai-%235D0E41" height="22" />
+</a>
+<a href="https://discord.gg/frJsD2Vx" target="_blank">
+  <img src="https://img.shields.io/badge/discord-join-debuggai.svg?labelColor=191937&color=6F6FF7&logo=discord" height="22" />
+</a>
 
-// ...
+</div>
 
-const container = document.getElementById(“app”);
-const root = createRoot(container);
-root.render(<App />);
+---
 
-// also works with hydrateRoot
-// const domNode = document.getElementById('root');
-// const root = hydrateRoot(domNode, reactNode);
-// root.render(<App />);
-```
+## ✨ Why DebuggAI?
 
-### React 19
+Most AI coding tools focus on **writing** code. DebuggAI focuses on the other 50 % of an engineer’s life: **getting it to run.**
 
-Starting with React 19, the `createRoot` and `hydrateRoot` methods expose error hooks that can be used to capture errors
-automatically. Use the `Sentry.reactErrorHandler` function to capture errors in the error hooks you are interested in.
+- **AI Test Suites** — We let you focus on the code while our QA engineering agent handles the rest. DebuggAI builds & runs test suites in the background to ensure old code continues to run and new code avoids possible edge cases BEFORE it gets to a PR, or worse to your users.
+- **1‑line monitoring SDK** — drop‑in client (Node, Python, Go) that captures rich runtime context remotely similar to DebuggAI or Datadog
+- **AI Debug** — Errors are instantly sent to failure lines in your IDE so you can see what happened and why, making solving it easy.
+- **Instant Fix Suggestions** — one‑click patches and PRs generated from stack‑trace + context
+- **Source‑map de‑minification** — readable traces even for bundled / minified front‑end code
+- **Branch‑aware log search** — slice errors by branch, release, or feature flag to zero in fast
 
-```js
-const container = document.getElementById(“app”);
-const root = createRoot(container, {
-  // Callback called when an error is thrown and not caught by an Error Boundary.
-  onUncaughtError: Sentry.reactErrorHandler((error, errorInfo) => {
-    console.warn('Uncaught error', error, errorInfo.componentStack);
-  }),
-  // Callback called when React catches an error in an Error Boundary.
-  onCaughtError: Sentry.reactErrorHandler(),
-  // Callback called when React automatically recovers from errors.
-  onRecoverableError: Sentry.reactErrorHandler(),
-});
-root.render(<App />);
-```
+---
 
-If you want more finely grained control over error handling, we recommend only adding the `onUncaughtError` and
-`onRecoverableError` hooks and using an `ErrorBoundary` component instead of the `onCaughtError` hook.
+## 📺 Demo - Get Instant Insight Into Runtime Issues
 
-### ErrorBoundary
+### 🔍 Typical workflows:
 
-`@sentry/react` exports an ErrorBoundary component that will automatically send Javascript errors from inside a
-component tree to Sentry, and set a fallback UI.
+1. You use your favorite AI agent to write code
+2. You run your app and it crashes (ah whyyyyy!)
+3. DebuggAI sees the error, grabs the full stack trace + context, and uses it to generate a solution & show you EXACTLY where to look
+4. You review the solution, edit it locally if needed, and apply it
 
-> app.js
+### 🔍 How it works
 
-```javascript
-import React from 'react';
-import * as Sentry from '@sentry/react';
+![DebuggAI Demo](https://debuggai.s3.us-east-2.amazonaws.com/trimmed-screen%20%281%29.gif)
 
-function FallbackComponent() {
-  return <div>An error has occurred</div>;
-}
+---
 
-class App extends React.Component {
-  render() {
-    return (
-      <Sentry.ErrorBoundary fallback={FallbackComponent} showDialog>
-        <OtherComponents />
-      </Sentry.ErrorBoundary>
-    );
-  }
-}
+## 🖥️ Core IDE Features
 
-export default App;
-```
+| Feature                      | Description                                                                       |
+| ---------------------------- | --------------------------------------------------------------------------------- |
+| **Inline Issue Highlighter** | See issues in realtime in your IDE, with full stack traces and suggested fixes    |
+| **AI Test Generator**        | Go from 0 to 100% test coverage for files with a single command                   |
+| **Test iteration**           | Run & Improve tests in the background while you code                              |
+| **Future Proof**             | Continually add new tests as new errors arise to ensure your code is future proof |
 
-### Profiler
+---
 
-`@sentry/react` exports a Profiler component that leverages the tracing features to add React-related spans to
-transactions. If tracing is not enabled, the Profiler component will not work. The Profiler tracks component mount,
-render duration and updates.
+## 🚀 Getting Started
 
-> app.js
+1. **Install the extension**
 
-```javascript
-import React from 'react';
-import * as Sentry from '@sentry/react';
+   - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=debugg-ai.debuggai)
+   - Jetbrains coming soon
 
-class App extends React.Component {
-  render() {
-    return (
-      <FancyComponent>
-        <InsideComponent someProp={2} />
-        <AnotherComponent />
-      </FancyComponent>
-    );
-  }
-}
+2. **Create a project**
 
-export default Sentry.withProfiler(App);
-```
+   - [Sign up & create a project in the DebuggAI app](https://app.debugg.ai)
+
+     ![Create a project](https://debuggai.s3.us-east-2.amazonaws.com/issues-page.png)
+
+3. **Add the Node Logging SDK** (using `npm` or `yarn`)
+
+   ```bash
+   npm install @debugg-ai/node
+
+   # Or yarn
+   yarn add @debugg-ai/node
+   ```
+
+4. **Initialize** (one line):
+
+   - Get the initialization code from the DebuggAI app
+
+     ![Get the initialization code](https://static-debugg-ai.s3.us-east-2.amazonaws.com/debugg-ai-init-code.png)
+
+     ## Usage
+
+     This package is a wrapper around `@debugg-ai/browser`, with added functionality related to React. All methods available in
+     `@debugg-ai/browser` can be imported from `@debugg-ai/react`.
+
+     To use this SDK, call `DebuggAI.init(options)` before you mount your React component.
+
+     ```javascript
+     import React from 'react';
+     import { createRoot } from 'react-dom/client';
+     import * as DebuggAI from '@debugg-ai/react';
+
+     DebuggAI.init({
+       dsn: '__DSN__',
+       hostName: 'your-host-name'
+       // ...
+     });
+
+     // ...
+
+     const container = document.getElementById(“app”);
+     const root = createRoot(container);
+     root.render(<App />);
+
+     // also works with hydrateRoot
+     // const domNode = document.getElementById('root');
+     // const root = hydrateRoot(domNode, reactNode);
+     // root.render(<App />);
+     ```
+
+     ### React 19
+
+     Starting with React 19, the `createRoot` and `hydrateRoot` methods expose error hooks that can be used to capture errors
+     automatically. Use the `DebuggAI.reactErrorHandler` function to capture errors in the error hooks you are interested in.
+
+     ```js
+     const container = document.getElementById(“app”);
+     const root = createRoot(container, {
+       // Callback called when an error is thrown and not caught by an Error Boundary.
+       onUncaughtError: DebuggAI.reactErrorHandler((error, errorInfo) => {
+         console.warn('Uncaught error', error, errorInfo.componentStack);
+       }),
+       // Callback called when React catches an error in an Error Boundary.
+       onCaughtError: DebuggAI.reactErrorHandler(),
+       // Callback called when React automatically recovers from errors.
+       onRecoverableError: DebuggAI.reactErrorHandler(),
+     });
+     root.render(<App />);
+     ```
+
+     If you want more finely grained control over error handling, we recommend only adding the `onUncaughtError` and
+     `onRecoverableError` hooks and using an `ErrorBoundary` component instead of the `onCaughtError` hook.
+
+     ### ErrorBoundary
+
+     `@debugg-ai/react` exports an ErrorBoundary component that will automatically send Javascript errors from inside a
+     component tree to DebuggAI, and set a fallback UI.
+
+     > app.js
+
+     ```javascript
+     import React from 'react';
+     import * as DebuggAI from '@debugg-ai/react';
+
+     function FallbackComponent() {
+       return <div>An error has occurred</div>;
+     }
+
+     class App extends React.Component {
+       render() {
+         return (
+           <DebuggAI.ErrorBoundary fallback={FallbackComponent} showDialog>
+             <OtherComponents />
+           </DebuggAI.ErrorBoundary>
+         );
+       }
+     }
+
+     export default App;
+     ```
+
+5. **Trigger an error** – head back to the IDE and watch DebuggAI suggest a fix ⚡
+
+Full walkthrough ▶ [docs.debugg.ai/getting-started](https://docs.debugg.ai)
+
+---
+
+## 🛠️ Configuration
+
+You can log in to your DebuggAI account directly in the extension, and then it will automatically connect to your project.
+
+---
+
+## Contact & Support
+
+If you have any questions or need personalized support:
+
+- **Email**: support@debugg.ai
+- **Discord**: Join our Discord community at [DebuggAI Discord Server](https://discord.gg/frJsD2Vx)
+- **Documentation**: [Official DebuggAI Docs](https://docs.debugg.ai)
+
+---
+
+## 🤝  Interested in Contributing?
+
+We're looking to expand the DebuggAI team!
+
+If you're interested in joining the team or contributing to the project, please reach out to us at [hello@debugg.ai](mailto:hello@debugg.ai).
+
+---
+
+## 📜 License & Credits
+
+- **Code:** [MIT](LICENSE) © 2025 Debugg, Inc.
+- **Foundation:** proudly built on open-source technology, see note below.
+
+---
+
+## Attribution
+
+We at Debugg AI want to thank the open-source community for their contributions. Particularly DebuggAI for the work on this SDK. DebuggAI is building the first fully AI QA Engineer that can automatically generate test suites and highlight issues in your app, but DebuggAI continues to be a great option for Application Monitoring. Use both for the best results!
+
+---
+
+<div align="center">
+  <sub>Made with ❤️ and too many stack traces in San Francisco.</sub>
+</div>

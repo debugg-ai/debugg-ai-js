@@ -5,13 +5,13 @@ import {
   spanToJSON,
   startBrowserTracingNavigationSpan,
 } from '@sentry/browser';
-import type { Client, Integration, Span } from '@sentry/core';
+import type { Client, Integration, Span } from '@debugg-ai/core';
 import {
   getClient,
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type {
   BeforeLeaveEventArgs,
   HashRouter,
@@ -40,6 +40,7 @@ function handleNavigation(location: string): void {
   const { name } = metaData?.sdk || {};
   const framework = name?.includes('solidstart') ? 'solidstart' : 'solid';
 
+  // @ts-expect-error
   startBrowserTracingNavigationSpan(client, {
     name: location,
     attributes: {
@@ -116,6 +117,7 @@ export function solidRouterBrowserTracingIntegration(
   return {
     ...integration,
     afterAllSetup(client) {
+      // @ts-expect-error
       integration.afterAllSetup(client);
 
       if (instrumentNavigation) {

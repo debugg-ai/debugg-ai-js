@@ -1,6 +1,6 @@
 import { format } from 'node:util';
-import type { Log, LogSeverityLevel, ParameterizedString } from '@sentry/core';
-import { _INTERNAL_captureLog } from '@sentry/core';
+import type { Log, LogSeverityLevel, ParameterizedString } from '@debugg-ai/core';
+import { _INTERNAL_captureLog } from '@debugg-ai/core';
 
 export type CaptureLogArgs =
   | [message: ParameterizedString, attributes?: Log['attributes']]

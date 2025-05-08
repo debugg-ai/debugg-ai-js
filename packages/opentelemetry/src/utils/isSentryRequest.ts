@@ -1,5 +1,5 @@
 import { ATTR_URL_FULL, SEMATTRS_HTTP_URL } from '@opentelemetry/semantic-conventions';
-import { getClient, isSentryRequestUrl } from '@sentry/core';
+import { getClient, isSentryRequestUrl } from '@debugg-ai/core';
 import type { AbstractSpan } from '../types';
 import { spanHasAttributes } from './spanTypes';
 

@@ -1,16 +1,16 @@
 import * as api from '@opentelemetry/api';
-import type { SerializedTraceData, Span } from '@sentry/core';
+import type { SerializedTraceData, Span } from '@debugg-ai/core';
 import {
   dynamicSamplingContextToSentryBaggageHeader,
   generateSentryTraceHeader,
   getCapturedScopesOnSpan,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { getInjectionData } from '../propagator';
 import { getContextFromScope } from './contextData';
 
 /**
  * Otel-specific implementation of `getTraceData`.
- * @see `@sentry/core` version of `getTraceData` for more information
+ * @see `@debugg-ai/core` version of `getTraceData` for more information
  */
 export function getTraceData({ span }: { span?: Span } = {}): SerializedTraceData {
   let ctx = api.context.active();

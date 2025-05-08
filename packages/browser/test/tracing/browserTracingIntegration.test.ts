@@ -2,7 +2,7 @@
  * @vitest-environment jsdom
  */
 
-import type { Span, StartSpanOptions } from '@sentry/core';
+import type { Span, StartSpanOptions } from '@debugg-ai/core';
 import {
   getActiveSpan,
   getCurrentScope,
@@ -17,7 +17,7 @@ import {
   spanToJSON,
   startInactiveSpan,
   TRACING_DEFAULTS,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { JSDOM } from 'jsdom';
 import { TextDecoder, TextEncoder } from 'util';
 import { afterAll, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';

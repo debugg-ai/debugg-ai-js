@@ -1,5 +1,5 @@
-import type { ErrorEvent, Event } from '@sentry/core';
-import { getLocationHref } from '@sentry/core';
+import type { ErrorEvent, Event } from '@debugg-ai/core';
+import { getLocationHref } from '@debugg-ai/core';
 import type { ReplayContainer } from '../types';
 import { createBreadcrumb } from '../util/createBreadcrumb';
 import { isErrorEvent } from '../util/eventUtils';

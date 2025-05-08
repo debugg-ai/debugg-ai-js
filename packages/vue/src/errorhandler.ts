@@ -1,4 +1,4 @@
-import { captureException } from '@sentry/core';
+import { captureException } from '@debugg-ai/core';
 import type { ViewModel, Vue, VueOptions } from './types';
 import { formatComponentName, generateComponentTrace } from './vendor/components';
 

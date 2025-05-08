@@ -1,5 +1,5 @@
-import type { ServerRuntimeClientOptions } from '@sentry/core';
-import { SDK_VERSION, ServerRuntimeClient } from '@sentry/core';
+import type { ServerRuntimeClientOptions } from '@debugg-ai/core';
+import { SDK_VERSION, ServerRuntimeClient } from '@debugg-ai/core';
 import type { DenoClientOptions } from './types';
 
 function getHostName(): string | undefined {

@@ -1,4 +1,4 @@
-import type { WebFetchHeaders } from '@sentry/core';
+import type { WebFetchHeaders } from '@debugg-ai/core';
 
 export interface RequestAsyncStorage {
   getStore: () =>

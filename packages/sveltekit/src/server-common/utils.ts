@@ -1,4 +1,4 @@
-import { captureException, flush, logger, objectify } from '@sentry/core';
+import { captureException, flush, logger, objectify } from '@debugg-ai/core';
 import type { RequestEvent } from '@sveltejs/kit';
 import { DEBUG_BUILD } from '../common/debug-build';
 import { isHttpError, isRedirect } from '../common/utils';

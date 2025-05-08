@@ -1,8 +1,8 @@
 import type * as http from 'node:http';
 import type * as https from 'node:https';
+import { flush, logger, vercelWaitUntil } from '@debugg-ai/core';
 import { VERSION } from '@opentelemetry/core';
 import { InstrumentationBase, InstrumentationNodeModuleDefinition } from '@opentelemetry/instrumentation';
-import { flush, logger, vercelWaitUntil } from '@sentry/core';
 import { DEBUG_BUILD } from '../../debug-build';
 import { stealthWrap } from './utils';
 

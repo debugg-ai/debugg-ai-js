@@ -1,5 +1,5 @@
-import type { ServerRuntimeClientOptions } from '@sentry/core';
-import { applySdkMetadata, ServerRuntimeClient } from '@sentry/core';
+import type { ServerRuntimeClientOptions } from '@debugg-ai/core';
+import { applySdkMetadata, ServerRuntimeClient } from '@debugg-ai/core';
 import * as os from 'os';
 import type { BunClientOptions } from './types';
 

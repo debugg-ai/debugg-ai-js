@@ -8,7 +8,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
   setCurrentClient,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { render } from '@testing-library/react';
 import * as React from 'react';
 import type { RouteObject } from 'react-router-6';
@@ -46,7 +46,7 @@ const mockRootSpan = {
   },
 };
 
-vi.mock('@sentry/browser', async requireActual => {
+vi.mock('@debugg-ai/browser', async requireActual => {
   const actual = (await requireActual()) as any;
   return {
     ...actual,
@@ -61,7 +61,7 @@ vi.mock('@sentry/browser', async requireActual => {
   };
 });
 
-vi.mock('@sentry/core', async requireActual => {
+vi.mock('@debugg-ai/core', async requireActual => {
   return {
     ...(await requireActual()),
     getRootSpan: () => {

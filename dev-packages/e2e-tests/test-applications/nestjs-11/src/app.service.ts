@@ -1,7 +1,7 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
 import { Cron, SchedulerRegistry } from '@nestjs/schedule';
-import type { MonitorConfig } from '@sentry/core';
+import type { MonitorConfig } from '@debugg-ai/core';
 import * as Sentry from '@sentry/nestjs';
 import { SentryCron, SentryTraced } from '@sentry/nestjs';
 

@@ -1,5 +1,5 @@
 import type { ExecutionContext, IncomingRequestCfProperties } from '@cloudflare/workers-types';
-import type { SpanAttributes } from '@sentry/core';
+import type { SpanAttributes } from '@debugg-ai/core';
 import {
   captureException,
   continueTrace,
@@ -13,7 +13,7 @@ import {
   startSpan,
   stripUrlQueryAndFragment,
   withIsolationScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { CloudflareOptions } from './client';
 import { addCloudResourceContext, addCultureContext, addRequest } from './scope-utils';
 import { init } from './sdk';

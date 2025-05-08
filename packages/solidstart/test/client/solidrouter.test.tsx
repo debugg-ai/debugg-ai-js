@@ -6,7 +6,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
   setCurrentClient,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { MemoryHistory } from '@solidjs/router';
 import { createMemoryHistory, MemoryRouter, Navigate, Route } from '@solidjs/router';
 import { render } from '@solidjs/testing-library';

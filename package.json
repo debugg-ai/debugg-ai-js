@@ -110,6 +110,7 @@
     "@rollup/pluginutils": "^5.1.0",
     "@size-limit/file": "~11.1.6",
     "@size-limit/webpack": "~11.1.6",
+    "@types/bson": "^4.2.4",
     "@types/jsdom": "^21.1.6",
     "@types/node": "^18.19.1",
     "@vitest/coverage-v8": "^2.1.8",
@@ -144,10 +145,11 @@
     "gauge/strip-ansi": "6.0.1",
     "wide-align/string-width": "4.2.3",
     "cliui/wrap-ansi": "7.0.0",
-    "**/sucrase": "getsentry/sucrase#es2020-polyfills"
+    "**/sucrase": "getsentry/sucrase#es2020-polyfills",
+    "@protobuf-ts/plugin-framework/typescript": "~5.0.0"
   },
   "version": "0.0.0",
-  "name": "sentry-javascript",
+  "name": "debugg-ai-js",
   "prettier": {
     "arrowParens": "avoid",
     "printWidth": 120,

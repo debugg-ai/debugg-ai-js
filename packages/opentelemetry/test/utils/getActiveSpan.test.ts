@@ -1,6 +1,6 @@
 import { trace } from '@opentelemetry/api';
 import type { BasicTracerProvider } from '@opentelemetry/sdk-trace-base';
-import { getRootSpan } from '@sentry/core';
+import { getRootSpan } from '@debugg-ai/core';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { getActiveSpan } from '../../src/utils/getActiveSpan';
 import { setupOtel } from '../helpers/initOtel';

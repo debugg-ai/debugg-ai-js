@@ -8,8 +8,8 @@ import type {
   TransportMakeRequestResponse,
   TransportRequest,
   TransportRequestExecutor,
-} from '@sentry/core';
-import { consoleSandbox, createTransport, suppressTracing } from '@sentry/core';
+} from '@debugg-ai/core';
+import { consoleSandbox, createTransport, suppressTracing } from '@debugg-ai/core';
 import { HttpsProxyAgent } from '../proxy';
 import type { HTTPModule } from './http-module';
 
@@ -54,7 +54,7 @@ export function makeNodeTransport(options: NodeTransportOptions): Transport {
     consoleSandbox(() => {
       // eslint-disable-next-line no-console
       console.warn(
-        '[@sentry/node]: Invalid dsn or tunnel option, will not send any events. The tunnel option must be a full URL when used.',
+        '[@debugg-ai/node]: Invalid dsn or tunnel option, will not send any events. The tunnel option must be a full URL when used.',
       );
     });
     return createTransport(options, () => Promise.resolve({}));

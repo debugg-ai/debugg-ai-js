@@ -6,7 +6,7 @@ import type {
   SeverityLevel,
   StackFrame,
   StackParser,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import {
   addExceptionMechanism,
   addExceptionTypeValue,
@@ -21,7 +21,7 @@ import {
   isPlainObject,
   normalizeToSize,
   resolvedSyncPromise,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 type Prototype = { constructor: (...args: unknown[]) => unknown };
 

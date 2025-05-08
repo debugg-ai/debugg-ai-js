@@ -1,4 +1,4 @@
-import { addBreadcrumb, addNonEnumerableProperty, getClient, getCurrentScope, getGlobalScope } from '@sentry/core';
+import { addBreadcrumb, addNonEnumerableProperty, getClient, getCurrentScope, getGlobalScope } from '@debugg-ai/core';
 import type { Ref } from 'vue';
 
 // Inline Pinia types

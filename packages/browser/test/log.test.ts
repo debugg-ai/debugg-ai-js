@@ -2,16 +2,16 @@
  * @vitest-environment jsdom
  */
 
-import * as sentryCore from '@sentry/core';
-import { getCurrentScope, getGlobalScope, getIsolationScope } from '@sentry/core';
+import * as sentryCore from '@debugg-ai/core';
+import { getCurrentScope, getGlobalScope, getIsolationScope } from '@debugg-ai/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { init, logger } from '../src';
 import { makeSimpleTransport } from './mocks/simpletransport';
 
-const dsn = 'https://53039209a22b4ec1bcc296a3c9fdecd6@sentry.io/4291';
+const dsn = 'https://53039209a22b4ec1bcc296a3c9fdecd6@debugg.ai/4291';
 
 // Mock the core functions
-vi.mock('@sentry/core', async requireActual => {
+vi.mock('@debugg-ai/core', async requireActual => {
   return {
     ...((await requireActual()) as any),
     _INTERNAL_captureLog: vi.fn(),

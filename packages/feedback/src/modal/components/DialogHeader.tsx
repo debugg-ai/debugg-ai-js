@@ -1,4 +1,4 @@
-import type { FeedbackInternalOptions } from '@sentry/core';
+import type { FeedbackInternalOptions } from '@debugg-ai/core';
 import type { VNode } from 'preact';
 import { h } from 'preact'; // eslint-disable-line @typescript-eslint/no-unused-vars
 import { useMemo } from 'preact/hooks';

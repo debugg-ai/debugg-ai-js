@@ -1,4 +1,4 @@
-import { setContext } from '@sentry/core';
+import { setContext } from '@debugg-ai/core';
 import { setTimeout } from '@sentry-internal/browser-utils';
 import { RETRY_BASE_INTERVAL, RETRY_MAX_COUNT, UNABLE_TO_SEND_REPLAY } from '../constants';
 import type { SendReplayData } from '../types';

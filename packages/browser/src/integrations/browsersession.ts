@@ -1,4 +1,4 @@
-import { captureSession, defineIntegration, logger, startSession } from '@sentry/core';
+import { captureSession, defineIntegration, logger, startSession } from '@debugg-ai/core';
 import { addHistoryInstrumentationHandler } from '@sentry-internal/browser-utils';
 import { DEBUG_BUILD } from '../debug-build';
 import { WINDOW } from '../helpers';

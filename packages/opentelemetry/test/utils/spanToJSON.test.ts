@@ -6,7 +6,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE,
   spanToJSON,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { setupOtel } from '../helpers/initOtel';
 import { cleanupOtel } from '../helpers/mockSdkInit';

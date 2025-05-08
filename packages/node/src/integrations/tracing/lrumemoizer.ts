@@ -1,6 +1,6 @@
+import type { IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration } from '@debugg-ai/core';
 import { LruMemoizerInstrumentation } from '@opentelemetry/instrumentation-lru-memoizer';
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
 import { generateInstrumentOnce } from '../../otel/instrument';
 
 const INTEGRATION_NAME = 'LruMemoizer';
@@ -23,7 +23,7 @@ const _lruMemoizerIntegration = (() => {
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  *
  * Sentry.init({
  *  integrations: [Sentry.lruMemoizerIntegration()],

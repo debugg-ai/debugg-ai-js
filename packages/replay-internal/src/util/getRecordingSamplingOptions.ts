@@ -1,4 +1,4 @@
-import { GLOBAL_OBJ } from '@sentry/core';
+import { GLOBAL_OBJ } from '@debugg-ai/core';
 
 const NAVIGATOR = GLOBAL_OBJ.navigator;
 

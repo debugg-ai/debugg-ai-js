@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { TRACEPARENT_REGEXP } from '@sentry/core';
+import { TRACEPARENT_REGEXP } from '@debugg-ai/core';
 import { sentryTest } from '../../../../utils/fixtures';
 import { shouldSkipTracingTest } from '../../../../utils/helpers';
 

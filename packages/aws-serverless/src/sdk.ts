@@ -1,10 +1,10 @@
-import type { Integration, Options, Scope, Span } from '@sentry/core';
+import type { Integration, Options, Scope, Span } from '@debugg-ai/core';
 import {
   applySdkMetadata,
   logger,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { NodeClient, NodeOptions } from '@sentry/node';
 import {
   captureException,
@@ -67,6 +67,7 @@ export interface WrapperOptions {
 // NOTE: in awslambda-auto.ts, we also call the original `getDefaultIntegrations` from `@sentry/node` to load performance integrations.
 // If at some point we need to filter a node integration out for good, we need to make sure to also filter it out there.
 export function getDefaultIntegrations(_options: Options): Integration[] {
+  // @ts-expect-error
   return [...getDefaultIntegrationsWithoutPerformance(), awsIntegration(), awsLambdaIntegration()];
 }
 
@@ -77,12 +78,15 @@ export function getDefaultIntegrations(_options: Options): Integration[] {
  */
 export function init(options: NodeOptions = {}): NodeClient | undefined {
   const opts = {
+    // @ts-expect-error
     defaultIntegrations: getDefaultIntegrations(options),
     ...options,
   };
 
+  // @ts-expect-error
   applySdkMetadata(opts, 'aws-serverless');
 
+  // @ts-expect-error
   return initWithoutDefaultIntegrations(opts);
 }
 
@@ -297,6 +301,7 @@ export function wrapHandler<TEvent, TResult>(
 
       let rv: TResult;
       try {
+        // @ts-expect-error
         enhanceScopeWithEnvironmentData(scope, context, START_TIME);
 
         rv = await asyncHandler(event, context);
@@ -305,10 +310,12 @@ export function wrapHandler<TEvent, TResult>(
         if (options.captureAllSettledReasons && Array.isArray(rv) && isPromiseAllSettledResult(rv)) {
           const reasons = getRejectedReasons(rv);
           reasons.forEach(exception => {
+            // @ts-expect-error
             captureException(exception, scope => markEventUnhandled(scope));
           });
         }
       } catch (e) {
+        // @ts-expect-error
         captureException(e, scope => markEventUnhandled(scope));
         throw e;
       } finally {
@@ -341,6 +348,7 @@ export function wrapHandler<TEvent, TResult>(
             },
           },
           span => {
+            // @ts-expect-error
             enhanceScopeWithTransactionData(getCurrentScope(), context);
 
             return processResult(span);

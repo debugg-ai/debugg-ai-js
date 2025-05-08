@@ -165,4 +165,4 @@ export function fatal(...args: CaptureLogArgs): void {
   captureLog('fatal', ...args);
 }
 
-export { fmt } from '@sentry/core';
+export { fmt } from '@debugg-ai/core';

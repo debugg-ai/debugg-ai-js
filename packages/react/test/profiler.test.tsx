@@ -1,8 +1,8 @@
 /**
  * @vitest-environment jsdom
  */
-import type { StartSpanOptions } from '@sentry/core';
-import { SentrySpan } from '@sentry/core';
+import type { StartSpanOptions } from '@debugg-ai/core';
+import { SentrySpan } from '@debugg-ai/core';
 import { render } from '@testing-library/react';
 import { renderHook } from '@testing-library/react-hooks';
 import * as React from 'react';
@@ -21,7 +21,7 @@ class MockSpan extends SentrySpan {
 
 let activeSpan: Record<string, any>;
 
-vi.mock('@sentry/browser', async requireActual => ({
+vi.mock('@debugg-ai/browser', async requireActual => ({
   ...(await requireActual()),
   getActiveSpan: () => activeSpan,
   startInactiveSpan: (ctx: StartSpanOptions) => {

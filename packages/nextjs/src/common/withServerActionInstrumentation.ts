@@ -1,4 +1,4 @@
-import type { RequestEventData } from '@sentry/core';
+import type { RequestEventData } from '@debugg-ai/core';
 import {
   captureException,
   continueTrace,
@@ -12,7 +12,7 @@ import {
   startSpan,
   vercelWaitUntil,
   withIsolationScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { DEBUG_BUILD } from './debug-build';
 import { isNotFoundNavigationError, isRedirectNavigationError } from './nextNavigationErrorUtils';
 import { flushSafelyWithTimeout } from './utils/responseEnd';

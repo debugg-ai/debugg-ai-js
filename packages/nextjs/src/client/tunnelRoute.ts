@@ -1,5 +1,5 @@
-import { dsnFromString, GLOBAL_OBJ, logger } from '@sentry/core';
-import type { BrowserOptions } from '@sentry/react';
+import { dsnFromString, GLOBAL_OBJ, logger } from '@debugg-ai/core';
+import type { BrowserOptions } from '@debugg-ai/react';
 import { DEBUG_BUILD } from '../common/debug-build';
 
 const globalWithInjectedValues = GLOBAL_OBJ as typeof GLOBAL_OBJ & {

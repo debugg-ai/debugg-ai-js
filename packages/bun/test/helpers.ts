@@ -1,4 +1,4 @@
-import { createTransport, resolvedSyncPromise } from '@sentry/core';
+import { createTransport, resolvedSyncPromise } from '@debugg-ai/core';
 import type { BunClientOptions } from '../src/types';
 
 export function getDefaultBunClientOptions(options: Partial<BunClientOptions> = {}): BunClientOptions {

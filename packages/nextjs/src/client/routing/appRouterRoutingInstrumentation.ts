@@ -1,12 +1,12 @@
-import type { Client, Span } from '@sentry/core';
+import type { Client, Span } from '@debugg-ai/core';
 import {
   browserPerformanceTimeOrigin,
   GLOBAL_OBJ,
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
-} from '@sentry/core';
-import { startBrowserTracingNavigationSpan, startBrowserTracingPageLoadSpan, WINDOW } from '@sentry/react';
+} from '@debugg-ai/core';
+import { startBrowserTracingNavigationSpan, startBrowserTracingPageLoadSpan, WINDOW } from '@debugg-ai/react';
 
 export const INCOMPLETE_APP_ROUTER_INSTRUMENTATION_TRANSACTION_NAME = 'incomplete-app-router-transaction';
 
@@ -153,7 +153,7 @@ export function appRouterInstrumentNavigation(client: Client): void {
                 patchRouter(client, newValue, currentRouterPatchingNavigationSpanRef);
               }
 
-              // @ts-expect-error we cannot possibly type this
+              // we cannot possibly type this
               target[p] = newValue;
               return true;
             },

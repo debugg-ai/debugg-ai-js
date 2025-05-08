@@ -1,4 +1,4 @@
-import type { ErrorEvent, Event, TransactionEvent, TransportMakeRequestResponse } from '@sentry/core';
+import type { ErrorEvent, Event, TransactionEvent, TransportMakeRequestResponse } from '@debugg-ai/core';
 import { setTimeout } from '@sentry-internal/browser-utils';
 import type { ReplayContainer } from '../types';
 import { isErrorEvent, isTransactionEvent } from '../util/eventUtils';

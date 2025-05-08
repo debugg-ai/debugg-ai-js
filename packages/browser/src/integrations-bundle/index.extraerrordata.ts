@@ -1,1 +1,1 @@
-export { extraErrorDataIntegration } from '@sentry/core';
+export { extraErrorDataIntegration } from '@debugg-ai/core';

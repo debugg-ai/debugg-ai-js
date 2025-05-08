@@ -1,4 +1,4 @@
-import * as SentryBrowser from '@sentry/browser';
+import * as SentryBrowser from '@debugg-ai/browser';
 import { version } from 'react';
 import { describe, expect, it, vi } from 'vitest';
 import { init } from '../src/sdk';

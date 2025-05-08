@@ -1,5 +1,5 @@
-import type { Client, Integration } from '@sentry/core';
-import { applySdkMetadata } from '@sentry/core';
+import type { Client, Integration } from '@debugg-ai/core';
+import { applySdkMetadata } from '@debugg-ai/core';
 import type { BrowserOptions } from '@sentry/solid';
 import {
   browserTracingIntegration,
@@ -19,8 +19,10 @@ export function init(options: BrowserOptions): Client | undefined {
     ...options,
   };
 
+  // @ts-expect-error
   applySdkMetadata(opts, 'solidstart', ['solidstart', 'solid']);
 
+  // @ts-expect-error
   return initSolidSDK(opts);
 }
 
@@ -38,5 +40,6 @@ function getDefaultIntegrations(options: BrowserOptions): Integration[] {
     integrations.push(browserTracingIntegration());
   }
 
+  // @ts-expect-error
   return integrations;
 }

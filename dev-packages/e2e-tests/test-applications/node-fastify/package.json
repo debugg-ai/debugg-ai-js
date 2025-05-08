@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@sentry/node": "latest || *",
-    "@sentry/core": "latest || *",
+    "@debugg-ai/core": "latest || *",
     "@sentry/opentelemetry": "latest || *",
     "@types/node": "^18.19.1",
     "fastify": "4.23.2",

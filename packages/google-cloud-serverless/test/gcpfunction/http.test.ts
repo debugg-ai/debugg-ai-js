@@ -1,5 +1,5 @@
-import type { Integration } from '@sentry/core';
-import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@sentry/core';
+import type { Integration } from '@debugg-ai/core';
+import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@debugg-ai/core';
 import { type MockInstance, beforeEach, describe, expect, test, vi } from 'vitest';
 import type { HttpFunction, Request, Response } from '../../src/gcpfunction/general';
 import { wrapHttpFunction } from '../../src/gcpfunction/http';

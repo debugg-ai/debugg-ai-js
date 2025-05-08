@@ -1,5 +1,5 @@
-import type { BaseTransportOptions, Envelope, OfflineStore, OfflineTransportOptions, Transport } from '@sentry/core';
-import { makeOfflineTransport, parseEnvelope, serializeEnvelope } from '@sentry/core';
+import type { BaseTransportOptions, Envelope, OfflineStore, OfflineTransportOptions, Transport } from '@debugg-ai/core';
+import { makeOfflineTransport, parseEnvelope, serializeEnvelope } from '@debugg-ai/core';
 import { WINDOW } from '../helpers';
 import { makeFetchTransport } from './fetch';
 

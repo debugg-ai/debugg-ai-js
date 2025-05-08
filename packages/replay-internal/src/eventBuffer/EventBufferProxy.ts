@@ -1,4 +1,4 @@
-import type { ReplayRecordingData } from '@sentry/core';
+import type { ReplayRecordingData } from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../debug-build';
 import type { AddEventResult, EventBuffer, EventBufferType, RecordingEvent } from '../types';
 import { logger } from '../util/logger';

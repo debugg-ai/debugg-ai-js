@@ -1,5 +1,5 @@
-import type { Client, IntegrationFn, SeverityLevel } from '@sentry/core';
-import { captureException, consoleSandbox, defineIntegration, getClient } from '@sentry/core';
+import type { Client, IntegrationFn, SeverityLevel } from '@debugg-ai/core';
+import { captureException, consoleSandbox, defineIntegration, getClient } from '@debugg-ai/core';
 import { logAndExitProcess } from '../utils/errorhandling';
 
 type UnhandledRejectionMode = 'none' | 'warn' | 'strict';

@@ -3,8 +3,8 @@ import type {
   HandlerDataFetch,
   SentryWrappedXMLHttpRequest,
   XhrBreadcrumbHint,
-} from '@sentry/core';
-import { GLOBAL_OBJ } from '@sentry/core';
+} from '@debugg-ai/core';
+import { GLOBAL_OBJ } from '@debugg-ai/core';
 
 export const WINDOW = GLOBAL_OBJ as typeof GLOBAL_OBJ &
   // document is not available in all browser environments (webworkers). We make it optional so you have to explicitly check for it

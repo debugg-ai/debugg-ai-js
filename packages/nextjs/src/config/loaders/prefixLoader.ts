@@ -1,4 +1,4 @@
-import { escapeStringForRegex } from '@sentry/core';
+import { escapeStringForRegex } from '@debugg-ai/core';
 import * as fs from 'fs';
 import * as path from 'path';
 import type { LoaderThis } from './types';

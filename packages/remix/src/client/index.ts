@@ -1,4 +1,4 @@
-import { logger } from '@sentry/core';
+import { logger } from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../utils/debug-build';
 
 export * from '@sentry/react';

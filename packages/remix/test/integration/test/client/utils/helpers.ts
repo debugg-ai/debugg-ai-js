@@ -1,7 +1,7 @@
 // Inlined copy from dev-packages/browser-integration-tests/utils/helpers
 
 import type { Page, Request } from '@playwright/test';
-import { parseEnvelope } from '@sentry/core';
+import { parseEnvelope } from '@debugg-ai/core';
 import type {
   Envelope,
   EnvelopeItem,
@@ -11,7 +11,7 @@ import type {
   EventEnvelopeHeaders,
   SessionContext,
   TransactionEvent,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export const envelopeUrlRegex = /\.sentry\.io\/api\/\d+\/envelope\//;
 
@@ -137,13 +137,10 @@ export const countEnvelopes = async (
 
     page.on('request', requestHandler);
 
-    setTimeout(
-      () => {
-        page.off('request', requestHandler);
-        resolve(reqCount);
-      },
-      options?.timeout || 1000,
-    );
+    setTimeout(() => {
+      page.off('request', requestHandler);
+      resolve(reqCount);
+    }, options?.timeout || 1000);
   });
 
   if (options?.url) {

@@ -1,4 +1,4 @@
-import type { TransactionSource } from '@sentry/core';
+import type { TransactionSource } from '@debugg-ai/core';
 import {
   captureException,
   getActiveSpan,
@@ -12,7 +12,7 @@ import {
   vercelWaitUntil,
   winterCGRequestToRequestData,
   withIsolationScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { EdgeRouteHandler } from '../edge/types';
 import { flushSafelyWithTimeout } from './utils/responseEnd';
 

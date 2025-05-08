@@ -1,5 +1,5 @@
-import type { Event } from '@sentry/core';
-import { createStackParser, nodeStackLineParser } from '@sentry/core';
+import type { Event } from '@debugg-ai/core';
+import { createStackParser, nodeStackLineParser } from '@debugg-ai/core';
 import { assertEquals } from 'https://deno.land/std@0.202.0/assert/assert_equals.ts';
 import { assertSnapshot } from 'https://deno.land/std@0.202.0/testing/snapshot.ts';
 import { DenoClient, getCurrentScope, getDefaultIntegrations } from '../build/esm/index.js';

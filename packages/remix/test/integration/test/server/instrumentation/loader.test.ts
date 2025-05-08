@@ -1,4 +1,4 @@
-import { Event } from '@sentry/core';
+import { Event } from '@debugg-ai/core';
 import { describe, expect, it } from 'vitest';
 import { RemixTestEnv, assertSentryEvent, assertSentryTransaction } from '../utils/helpers';
 

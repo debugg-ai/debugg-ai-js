@@ -18,8 +18,8 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
   startInactiveSpan,
 } from '@sentry/browser';
-import type { Span } from '@sentry/core';
-import { addIntegration, browserPerformanceTimeOrigin, GLOBAL_OBJ, timestampInSeconds } from '@sentry/core';
+import type { Span } from '@debugg-ai/core';
+import { addIntegration, browserPerformanceTimeOrigin, GLOBAL_OBJ, timestampInSeconds } from '@debugg-ai/core';
 import type { ExtendedBackburner } from '@sentry/ember/runloop';
 import type { EmberRouterMain, EmberSentryConfig, GlobalConfig, OwnConfig } from '../types';
 

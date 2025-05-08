@@ -1,4 +1,4 @@
-import { type Package } from '@sentry/core';
+import { type Package } from '@debugg-ai/core';
 import fs from 'fs';
 import HtmlWebpackPlugin, { createHtmlTagObject } from 'html-webpack-plugin';
 import path from 'path';

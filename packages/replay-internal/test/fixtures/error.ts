@@ -1,4 +1,4 @@
-import type { Event } from '@sentry/core';
+import type { Event } from '@debugg-ai/core';
 
 export function Error(obj?: Event): any {
   const timestamp = Date.now() / 1000;
@@ -72,7 +72,7 @@ export function Error(obj?: Event): any {
     }, // }}}
     user: {
       ip_address: '0.0.0.0',
-      email: 'billy@sentry.io',
+      email: 'billy@debugg.ai',
       id: '1',
       name: 'Billy Vong',
     },

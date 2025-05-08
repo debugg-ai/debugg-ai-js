@@ -1,4 +1,4 @@
-import { GLOBAL_OBJ } from '@sentry/core';
+import { GLOBAL_OBJ } from '@debugg-ai/core';
 
 // exporting a separate copy of `WINDOW` rather than exporting the one from `@sentry/browser`
 // prevents the browser package from being bundled in the CDN bundle, and avoids a

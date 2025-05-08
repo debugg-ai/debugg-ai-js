@@ -1,4 +1,4 @@
-import { addNonEnumerableProperty, getTraceMetaTags } from '@sentry/core';
+import { addNonEnumerableProperty, getTraceMetaTags } from '@debugg-ai/core';
 import type { ResponseMiddleware } from '@solidjs/start/middleware';
 import type { FetchEvent } from '@solidjs/start/server';
 

@@ -1,4 +1,4 @@
-import { captureException, withMonitor } from '@sentry/core';
+import { captureException, withMonitor } from '@debugg-ai/core';
 import { replaceCronNames } from './common';
 
 export type CronJobParams = {
@@ -57,7 +57,7 @@ const ERROR_TEXT = 'Automatic instrumentation of CronJob only supports crontab s
  * Instruments the `cron` library to send a check-in event to Sentry for each job execution.
  *
  * ```ts
- * import * as Sentry from '@sentry/node';
+ * import * as Sentry from '@debugg-ai/node';
  * import { CronJob } from 'cron';
  *
  * const CronJobWithCheckIn = Sentry.cron.instrumentCron(CronJob, 'my-cron-job');

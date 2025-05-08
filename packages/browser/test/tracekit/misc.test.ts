@@ -46,7 +46,7 @@ describe('Tracekit - Misc Tests', () => {
         '   at Replayer.play(../node_modules/@sentry-internal/rrweb/es/rrweb/packages/rrweb/src/replay/index.js:220:26)\n' +
         '   at Replayer.pause(../node_modules/@sentry-internal/rrweb/es/rrweb/packages/rrweb/src/replay/index.js:235:18)\n' +
         '   at playTimer.current(./app/components/replays/replayContext.tsx:397:62)\n' +
-        '   at sentryWrapped(../node_modules/@sentry/browser/esm/helpers.js:90:17)',
+        '   at sentryWrapped(../node_modules/@debugg-ai/browser/esm/helpers.js:90:17)',
     };
     const ex = exceptionFromError(parser, SECURITY_ERROR);
 

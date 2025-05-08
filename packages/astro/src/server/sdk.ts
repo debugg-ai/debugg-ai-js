@@ -1,4 +1,4 @@
-import { applySdkMetadata } from '@sentry/core';
+import { applySdkMetadata } from '@debugg-ai/core';
 import type { NodeClient, NodeOptions } from '@sentry/node';
 import { init as initNodeSdk } from '@sentry/node';
 
@@ -11,6 +11,7 @@ export function init(options: NodeOptions): NodeClient | undefined {
     ...options,
   };
 
+  // @ts-expect-error
   applySdkMetadata(opts, 'astro', ['astro', 'node']);
 
   return initNodeSdk(opts);

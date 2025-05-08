@@ -1,7 +1,4 @@
-import { VERSION } from '@opentelemetry/core';
-import type { InstrumentationConfig } from '@opentelemetry/instrumentation';
-import { InstrumentationBase } from '@opentelemetry/instrumentation';
-import type { SanitizedRequestData } from '@sentry/core';
+import type { SanitizedRequestData } from '@debugg-ai/core';
 import {
   addBreadcrumb,
   getBreadcrumbLogLevelFromHttpStatusCode,
@@ -10,8 +7,11 @@ import {
   getTraceData,
   LRUMap,
   parseUrl,
-} from '@sentry/core';
-import { shouldPropagateTraceForUrl } from '@sentry/opentelemetry';
+} from '@debugg-ai/core';
+import { VERSION } from '@opentelemetry/core';
+import type { InstrumentationConfig } from '@opentelemetry/instrumentation';
+import { InstrumentationBase } from '@opentelemetry/instrumentation';
+import { shouldPropagateTraceForUrl } from '@debugg-ai/opentelemetry';
 import * as diagch from 'diagnostics_channel';
 import { NODE_MAJOR, NODE_MINOR } from '../../nodeVersion';
 import { mergeBaggageHeaders } from '../../utils/baggage';
@@ -132,6 +132,7 @@ export class SentryNodeFetchInstrumentation extends InstrumentationBase<SentryNo
     // Which we do not have in this case
     // The propagator _may_ overwrite this, but this should be fine as it is the same data
     const tracePropagationTargets = getClient()?.getOptions().tracePropagationTargets;
+
     const addedHeaders = shouldPropagateTraceForUrl(url, tracePropagationTargets, this._propagationDecisionMap)
       ? getTraceData()
       : undefined;

@@ -9,7 +9,7 @@ import {
   startSpan,
   withIsolationScope,
   withScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { TextDecoder, TextEncoder } from 'util';
 import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { sendFeedback } from '../../src/core/sendFeedback';

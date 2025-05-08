@@ -3,8 +3,8 @@
  */
 
 import '../utils/mock-internal-setTimeout';
-import type { Transport, TransportMakeRequestResponse } from '@sentry/core';
-import { getClient } from '@sentry/core';
+import type { Transport, TransportMakeRequestResponse } from '@debugg-ai/core';
+import { getClient } from '@debugg-ai/core';
 import type { MockedFunction } from 'vitest';
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { DEFAULT_FLUSH_MIN_DELAY } from '../../src/constants';

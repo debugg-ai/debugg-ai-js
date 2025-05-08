@@ -1,4 +1,4 @@
-import { consoleSandbox } from '@sentry/core';
+import { consoleSandbox } from '@debugg-ai/core';
 import * as fs from 'fs';
 import * as path from 'path';
 import type { Plugin, UserConfig } from 'vite';

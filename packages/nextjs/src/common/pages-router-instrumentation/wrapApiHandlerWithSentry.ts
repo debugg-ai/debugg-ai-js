@@ -12,7 +12,7 @@ import {
   startSpanManual,
   vercelWaitUntil,
   withIsolationScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { NextApiRequest } from 'next';
 import type { AugmentedNextApiResponse, NextApiHandler } from '../types';
 import { flushSafelyWithTimeout } from '../utils/responseEnd';

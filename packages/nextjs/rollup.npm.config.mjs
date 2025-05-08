@@ -63,7 +63,7 @@ export default [
           exports: 'named',
         },
         external: [
-          '@sentry/nextjs',
+          '@debugg-ai/nextjs',
           'next/dist/client/components/request-async-storage',
           '__SENTRY_CONFIG_IMPORT_PATH__',
           '__SENTRY_WRAPPING_TARGET_FILE__',

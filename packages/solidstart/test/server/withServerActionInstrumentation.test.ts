@@ -1,4 +1,4 @@
-import { SentrySpan } from '@sentry/core';
+import { SentrySpan } from '@debugg-ai/core';
 import * as SentryNode from '@sentry/node';
 import {
   createTransport,

@@ -1,6 +1,6 @@
-import type { Client, Span } from '@sentry/core';
-import { SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
+import type { Client, Span } from '@debugg-ai/core';
+import { SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@debugg-ai/core';
+import * as SentryCore from '@debugg-ai/core';
 import * as SentryNode from '@sentry/node';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { handleRequest, interpolateRouteFromUrlAndParams } from '../../src/server/middleware';
@@ -32,7 +32,7 @@ describe('sentryMiddleware', () => {
       } as any;
     });
     vi.spyOn(SentryNode, 'getActiveSpan').mockImplementation(getSpanMock);
-    vi.spyOn(SentryNode, 'getClient').mockImplementation(() => ({}) as Client);
+    vi.spyOn(SentryNode, 'getClient').mockImplementation(() => ({} as Client));
     vi.spyOn(SentryNode, 'getTraceMetaTags').mockImplementation(
       () => `
     <meta name="sentry-trace" content="123">

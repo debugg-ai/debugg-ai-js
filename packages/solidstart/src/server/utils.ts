@@ -1,5 +1,5 @@
-import type { EventProcessor, Options } from '@sentry/core';
-import { logger } from '@sentry/core';
+import type { EventProcessor, Options } from '@debugg-ai/core';
+import { logger } from '@debugg-ai/core';
 import { flush, getGlobalScope } from '@sentry/node';
 import { DEBUG_BUILD } from '../common/debug-build';
 
@@ -39,6 +39,7 @@ export function isRedirect(error: unknown): boolean {
  */
 export function filterLowQualityTransactions(options: Options): void {
   getGlobalScope().addEventProcessor(
+    // @ts-expect-error
     Object.assign(
       (event => {
         if (event.type !== 'transaction') {

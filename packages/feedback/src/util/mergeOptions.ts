@@ -1,4 +1,4 @@
-import type { FeedbackFormData, FeedbackInternalOptions } from '@sentry/core';
+import type { FeedbackFormData, FeedbackInternalOptions } from '@debugg-ai/core';
 import type { OptionalFeedbackConfiguration } from '../core/types';
 
 /**

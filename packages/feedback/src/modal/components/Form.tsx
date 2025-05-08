@@ -3,8 +3,8 @@ import type {
   FeedbackInternalOptions,
   FeedbackScreenshotIntegration,
   SendFeedback,
-} from '@sentry/core';
-import { logger } from '@sentry/core';
+} from '@debugg-ai/core';
+import { logger } from '@debugg-ai/core';
 import type { JSX, VNode } from 'preact';
 import { h } from 'preact'; // eslint-disable-line @typescript-eslint/no-unused-vars
 import { useCallback, useState } from 'preact/hooks';

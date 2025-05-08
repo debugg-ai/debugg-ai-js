@@ -1,5 +1,4 @@
-import { ConnectInstrumentation } from '@opentelemetry/instrumentation-connect';
-import type { IntegrationFn, Span } from '@sentry/core';
+import type { IntegrationFn, Span } from '@debugg-ai/core';
 import {
   captureException,
   defineIntegration,
@@ -7,7 +6,8 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   spanToJSON,
-} from '@sentry/core';
+} from '@debugg-ai/core';
+import { ConnectInstrumentation } from '@opentelemetry/instrumentation-connect';
 import { generateInstrumentOnce } from '../../otel/instrument';
 import { ensureIsWrapped } from '../../utils/ensureIsWrapped';
 
@@ -38,7 +38,7 @@ const _connectIntegration = (() => {
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  *
  * Sentry.init({
  *   integrations: [Sentry.connectIntegration()],
@@ -60,7 +60,7 @@ function connectErrorMiddleware(err: any, req: any, res: any, next: any): void {
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  * const connect = require("connect");
  *
  * const app = connect();

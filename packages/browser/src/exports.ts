@@ -14,7 +14,7 @@ export type {
   User,
   Session,
   ReportDialogOptions,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export type { BrowserOptions } from './client';
 
@@ -61,14 +61,14 @@ export {
   spanToTraceHeader,
   spanToBaggageHeader,
   updateSpanName,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export {
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
   SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export { WINDOW } from './helpers';
 export { BrowserClient } from './client';

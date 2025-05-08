@@ -1,4 +1,4 @@
-import type { Span, SpanAttributes } from '@sentry/core';
+import type { Span, SpanAttributes } from '@debugg-ai/core';
 import {
   browserPerformanceTimeOrigin,
   getActiveSpan,
@@ -11,7 +11,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   spanToJSON,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import {
   addInpInstrumentationHandler,
   addPerformanceInstrumentationHandler,

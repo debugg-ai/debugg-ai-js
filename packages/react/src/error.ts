@@ -1,5 +1,5 @@
-import { captureException, withScope } from '@sentry/browser';
-import { isError } from '@sentry/core';
+import { captureException, withScope } from '@debugg-ai/browser';
+import { isError } from '@debugg-ai/core';
 import type { ErrorInfo } from 'react';
 import { version } from 'react';
 

@@ -1,5 +1,5 @@
-import type { EnvelopeItemType } from '@sentry/core';
-import { parseSemver } from '@sentry/core';
+import type { EnvelopeItemType } from '@debugg-ai/core';
+import { parseSemver } from '@debugg-ai/core';
 import type * as http from 'http';
 import { describe } from 'vitest';
 

@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import type { RequestEventData, Span, TransactionSource, WrappedFunction } from '@sentry/core';
+import type { RequestEventData, Span, TransactionSource, WrappedFunction } from '@debugg-ai/core';
 import {
   continueTrace,
   fill,
@@ -19,7 +19,7 @@ import {
   startSpan,
   winterCGRequestToRequestData,
   withIsolationScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../utils/debug-build';
 import { createRoutes, getTransactionName } from '../utils/utils';
 import { extractData, isDeferredData, isResponse, isRouteErrorResponse, json } from '../utils/vendor/response';

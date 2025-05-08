@@ -3,8 +3,8 @@
  */
 
 /* eslint-disable @typescript-eslint/unbound-method */
-import type { Span } from '@sentry/core';
-import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@sentry/core';
+import type { Span } from '@debugg-ai/core';
+import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@debugg-ai/core';
 import * as SentrySvelte from '@sentry/svelte';
 import { writable } from 'svelte/store';
 import { beforeEach, describe, expect, it, vi } from 'vitest';

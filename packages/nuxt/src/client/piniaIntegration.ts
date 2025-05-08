@@ -1,5 +1,5 @@
-import type { IntegrationFn } from '@sentry/core';
-import { consoleSandbox, defineIntegration } from '@sentry/core';
+import type { IntegrationFn } from '@debugg-ai/core';
+import { consoleSandbox, defineIntegration } from '@debugg-ai/core';
 import { createSentryPiniaPlugin } from '@sentry/vue';
 
 const INTEGRATION_NAME = 'Pinia';

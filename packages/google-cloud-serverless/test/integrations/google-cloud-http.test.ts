@@ -1,5 +1,5 @@
 import { BigQuery } from '@google-cloud/bigquery';
-import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN } from '@sentry/core';
+import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN } from '@debugg-ai/core';
 import { createTransport, NodeClient, setCurrentClient } from '@sentry/node';
 import * as fs from 'fs';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment

@@ -4,8 +4,8 @@ import type {
   FeedbackScreenshotIntegration,
   Integration,
   IntegrationFn,
-} from '@sentry/core';
-import { addIntegration, isBrowser, logger } from '@sentry/core';
+} from '@debugg-ai/core';
+import { addIntegration, isBrowser, logger } from '@debugg-ai/core';
 import {
   ADD_SCREENSHOT_LABEL,
   CANCEL_BUTTON_LABEL,
@@ -47,7 +47,7 @@ type BuilderOptions =
     }
   | {
       // The type here should be `keyof typeof LazyLoadableIntegrations`, but that'll cause a cicrular
-      // dependency with @sentry/core
+      // dependency with @debugg-ai/core
       lazyLoadIntegration: (
         name: 'feedbackModalIntegration' | 'feedbackScreenshotIntegration',
         scriptNonce?: string,

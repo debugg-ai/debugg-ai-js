@@ -1,7 +1,7 @@
-import type { BrowserOptions } from '@sentry/browser';
-import { init as browserInit, setContext } from '@sentry/browser';
-import type { Client } from '@sentry/core';
-import { applySdkMetadata } from '@sentry/core';
+import type { BrowserOptions } from '@debugg-ai/browser';
+import { init as browserInit, setContext } from '@debugg-ai/browser';
+import type { Client } from '@debugg-ai/core';
+import { applySdkMetadata } from '@debugg-ai/core';
 import { version } from 'react';
 
 /**

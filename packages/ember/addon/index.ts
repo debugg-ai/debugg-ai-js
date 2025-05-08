@@ -5,13 +5,13 @@ import { getOwnConfig, isDevelopingApp, macroCondition } from '@embroider/macros
 import type { BrowserOptions } from '@sentry/browser';
 import { startSpan } from '@sentry/browser';
 import * as Sentry from '@sentry/browser';
-import type { Client, TransactionSource } from '@sentry/core';
+import type { Client, TransactionSource } from '@debugg-ai/core';
 import {
   applySdkMetadata,
   GLOBAL_OBJ,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import Ember from 'ember';
 import type { EmberSentryConfig, GlobalConfig, OwnConfig } from './types';
 

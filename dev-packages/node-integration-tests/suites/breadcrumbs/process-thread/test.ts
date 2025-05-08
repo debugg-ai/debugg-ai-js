@@ -1,4 +1,4 @@
-import type { Event } from '@sentry/core';
+import type { Event } from '@debugg-ai/core';
 import { afterAll, expect, test } from 'vitest';
 import { conditionalTest } from '../../../utils';
 import { cleanupChildProcesses, createRunner } from '../../../utils/runner';

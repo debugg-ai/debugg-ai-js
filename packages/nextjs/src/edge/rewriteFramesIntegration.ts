@@ -1,10 +1,10 @@
-import type { IntegrationFn, StackFrame } from '@sentry/core';
+import type { IntegrationFn, StackFrame } from '@debugg-ai/core';
 import {
   defineIntegration,
   escapeStringForRegex,
   GLOBAL_OBJ,
   rewriteFramesIntegration as originalRewriteFramesIntegration,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 const globalWithInjectedValues = GLOBAL_OBJ as typeof GLOBAL_OBJ & {
   _sentryRewriteFramesDistDir?: string;

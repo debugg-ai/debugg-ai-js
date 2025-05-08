@@ -1,4 +1,4 @@
-import { type Integration } from '@sentry/core';
+import { type Integration } from '@debugg-ai/core';
 import * as sentryNode from '@sentry/node';
 import type { Mock } from 'bun:test';
 import { afterEach, beforeEach, describe, expect, it, mock, spyOn } from 'bun:test';

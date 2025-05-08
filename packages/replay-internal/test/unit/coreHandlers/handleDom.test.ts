@@ -2,7 +2,7 @@
  * @vitest-environment jsdom
  */
 
-import type { HandlerDataDom } from '@sentry/core';
+import type { HandlerDataDom } from '@debugg-ai/core';
 import { describe, expect, test } from 'vitest';
 import { handleDom } from '../../../src/coreHandlers/handleDom';
 

@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
-import type { ClientReport } from '@sentry/core';
-import { extractTraceparentData, parseBaggageHeader } from '@sentry/core';
+import type { ClientReport } from '@debugg-ai/core';
+import { extractTraceparentData, parseBaggageHeader } from '@debugg-ai/core';
 import { sentryTest } from '../../../../../../utils/fixtures';
 import {
   envelopeRequestParser,

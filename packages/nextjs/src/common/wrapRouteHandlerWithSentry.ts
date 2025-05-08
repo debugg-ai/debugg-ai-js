@@ -1,4 +1,4 @@
-import type { RequestEventData } from '@sentry/core';
+import type { RequestEventData } from '@debugg-ai/core';
 import {
   captureException,
   getActiveSpan,
@@ -15,7 +15,7 @@ import {
   winterCGHeadersToDict,
   withIsolationScope,
   withScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { isNotFoundNavigationError, isRedirectNavigationError } from './nextNavigationErrorUtils';
 import type { RouteHandlerContext } from './types';
 import { commonObjectToIsolationScope } from './utils/tracingUtils';

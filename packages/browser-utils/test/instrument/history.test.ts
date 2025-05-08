@@ -1,4 +1,4 @@
-import * as instrumentHandlersModule from '@sentry/core';
+import * as instrumentHandlersModule from '@debugg-ai/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { WINDOW } from '../../src/types';
 import { instrumentHistory } from './../../src/instrument/history';

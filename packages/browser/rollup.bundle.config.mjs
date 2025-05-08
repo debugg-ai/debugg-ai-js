@@ -19,7 +19,7 @@ browserPluggableIntegrationFiles.forEach(integrationName => {
   const integrationsBundleConfig = makeBaseBundleConfig({
     bundleType: 'addon',
     entrypoints: [`src/integrations/${integrationName}.ts`],
-    licenseTitle: `@sentry/browser - ${integrationName}`,
+    licenseTitle: `@debugg-ai/browser - ${integrationName}`,
     outputFileBase: () => `bundles/${integrationName}`,
   });
 
@@ -30,7 +30,7 @@ reexportedPluggableIntegrationFiles.forEach(integrationName => {
   const integrationsBundleConfig = makeBaseBundleConfig({
     bundleType: 'addon',
     entrypoints: [`src/integrations-bundle/index.${integrationName}.ts`],
-    licenseTitle: `@sentry/browser - ${integrationName}`,
+    licenseTitle: `@debugg-ai/browser - ${integrationName}`,
     outputFileBase: () => `bundles/${integrationName}`,
   });
 
@@ -44,7 +44,7 @@ builds.push(
     makeBaseBundleConfig({
       bundleType: 'addon',
       entrypoints: ['src/pluggable-exports-bundle/index.multiplexedtransport.ts'],
-      licenseTitle: '@sentry/browser - multiplexedtransport',
+      licenseTitle: '@debugg-ai/browser - multiplexedtransport',
       outputFileBase: () => 'bundles/multiplexedtransport',
     }),
   ),
@@ -53,42 +53,42 @@ builds.push(
 const baseBundleConfig = makeBaseBundleConfig({
   bundleType: 'standalone',
   entrypoints: ['src/index.bundle.ts'],
-  licenseTitle: '@sentry/browser',
+  licenseTitle: '@debugg-ai/browser',
   outputFileBase: () => 'bundles/bundle',
 });
 
 const tracingBaseBundleConfig = makeBaseBundleConfig({
   bundleType: 'standalone',
   entrypoints: ['src/index.bundle.tracing.ts'],
-  licenseTitle: '@sentry/browser (Performance Monitoring)',
+  licenseTitle: '@debugg-ai/browser (Performance Monitoring)',
   outputFileBase: () => 'bundles/bundle.tracing',
 });
 
 const replayBaseBundleConfig = makeBaseBundleConfig({
   bundleType: 'standalone',
   entrypoints: ['src/index.bundle.replay.ts'],
-  licenseTitle: '@sentry/browser (Replay)',
+  licenseTitle: '@debugg-ai/browser (Replay)',
   outputFileBase: () => 'bundles/bundle.replay',
 });
 
 const feedbackBaseBundleConfig = makeBaseBundleConfig({
   bundleType: 'standalone',
   entrypoints: ['src/index.bundle.feedback.ts'],
-  licenseTitle: '@sentry/browser & @sentry/feedback',
+  licenseTitle: '@debugg-ai/browser & @sentry/feedback',
   outputFileBase: () => 'bundles/bundle.feedback',
 });
 
 const tracingReplayBaseBundleConfig = makeBaseBundleConfig({
   bundleType: 'standalone',
   entrypoints: ['src/index.bundle.tracing.replay.ts'],
-  licenseTitle: '@sentry/browser (Performance Monitoring and Replay)',
+  licenseTitle: '@debugg-ai/browser (Performance Monitoring and Replay)',
   outputFileBase: () => 'bundles/bundle.tracing.replay',
 });
 
 const tracingReplayFeedbackBaseBundleConfig = makeBaseBundleConfig({
   bundleType: 'standalone',
   entrypoints: ['src/index.bundle.tracing.replay.feedback.ts'],
-  licenseTitle: '@sentry/browser (Performance Monitoring, Replay, and Feedback)',
+  licenseTitle: '@debugg-ai/browser (Performance Monitoring, Replay, and Feedback)',
   outputFileBase: () => 'bundles/bundle.tracing.replay.feedback',
 });
 

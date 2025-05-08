@@ -4,8 +4,8 @@ import {
   SEMATTRS_HTTP_STATUS_CODE,
   SEMATTRS_RPC_GRPC_STATUS_CODE,
 } from '@opentelemetry/semantic-conventions';
-import type { SpanAttributes, SpanStatus } from '@sentry/core';
-import { getSpanStatusFromHttpCode, SPAN_STATUS_ERROR, SPAN_STATUS_OK } from '@sentry/core';
+import type { SpanAttributes, SpanStatus } from '@debugg-ai/core';
+import { getSpanStatusFromHttpCode, SPAN_STATUS_ERROR, SPAN_STATUS_OK } from '@debugg-ai/core';
 import type { AbstractSpan } from '../types';
 import { spanHasAttributes, spanHasStatus } from './spanTypes';
 
@@ -88,8 +88,8 @@ function inferStatusFromAttributes(attributes: SpanAttributes): SpanStatus | und
     typeof httpCodeAttribute === 'number'
       ? httpCodeAttribute
       : typeof httpCodeAttribute === 'string'
-        ? parseInt(httpCodeAttribute)
-        : undefined;
+      ? parseInt(httpCodeAttribute)
+      : undefined;
 
   if (typeof numberHttpCode === 'number') {
     return getSpanStatusFromHttpCode(numberHttpCode);

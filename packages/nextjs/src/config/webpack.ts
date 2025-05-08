@@ -1,7 +1,7 @@
 /* eslint-disable complexity */
 /* eslint-disable max-lines */
 
-import { escapeStringForRegex, loadModule, logger, parseSemver } from '@sentry/core';
+import { escapeStringForRegex, loadModule, logger, parseSemver } from '@debugg-ai/core';
 import * as chalk from 'chalk';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -115,8 +115,8 @@ export function constructWebpackConfigFunction(
     const middlewareLocationFolder = pagesDirPath
       ? path.join(pagesDirPath, '..')
       : appDirPath
-        ? path.join(appDirPath, '..')
-        : projectDir;
+      ? path.join(appDirPath, '..')
+      : projectDir;
 
     const staticWrappingLoaderOptions = {
       appDir: appDirPath,
@@ -343,7 +343,7 @@ export function constructWebpackConfigFunction(
       if (clientSentryConfigFileName) {
         // eslint-disable-next-line no-console
         console.warn(
-          `[@sentry/nextjs] DEPRECATION WARNING: It is recommended renaming your \`${clientSentryConfigFileName}\` file, or moving its content to \`instrumentation-client.ts\`. When using Turbopack \`${clientSentryConfigFileName}\` will no longer work. Read more about the \`instrumentation-client.ts\` file: https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation-client`,
+          `[@debugg-ai/nextjs] DEPRECATION WARNING: It is recommended renaming your \`${clientSentryConfigFileName}\` file, or moving its content to \`instrumentation-client.ts\`. When using Turbopack \`${clientSentryConfigFileName}\` will no longer work. Read more about the \`instrumentation-client.ts\` file: https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation-client`,
         );
       }
     }
@@ -366,7 +366,7 @@ export function constructWebpackConfigFunction(
           // We only update this if no explicit value is set
           // (Next.js defaults to `false`: https://github.com/vercel/next.js/blob/5f4f96c133bd6b10954812cc2fef6af085b82aa5/packages/next/src/build/webpack/config/blocks/base.ts#L61)
           if (!newConfig.devtool) {
-            logger.info(`[@sentry/nextjs] Automatically enabling source map generation for ${runtime} build.`);
+            logger.info(`[@debugg-ai/nextjs] Automatically enabling source map generation for ${runtime} build.`);
             // `hidden-source-map` produces the same sourcemaps as `source-map`, but doesn't include the `sourceMappingURL`
             // comment at the bottom. For folks who aren't publicly hosting their sourcemaps, this is helpful because then
             // the browser won't look for them and throw errors into the console when it can't find them. Because this is a
@@ -382,7 +382,7 @@ export function constructWebpackConfigFunction(
           // enable source map deletion if not explicitly disabled
           if (!isServer && userSentryOptions.sourcemaps?.deleteSourcemapsAfterUpload === undefined) {
             logger.warn(
-              '[@sentry/nextjs] Source maps will be automatically deleted after being uploaded to Sentry. If you want to keep the source maps, set the `sourcemaps.deleteSourcemapsAfterUpload` option to false in `withSentryConfig()`. If you do not want to generate and upload sourcemaps at all, set the `sourcemaps.disable` option to true.',
+              '[@debugg-ai/nextjs] Source maps will be automatically deleted after being uploaded to Sentry. If you want to keep the source maps, set the `sourcemaps.deleteSourcemapsAfterUpload` option to false in `withSentryConfig()`. If you do not want to generate and upload sourcemaps at all, set the `sourcemaps.disable` option to true.',
             );
             userSentryOptions.sourcemaps = {
               ...userSentryOptions.sourcemaps,
@@ -494,7 +494,7 @@ function warnAboutMissingOnRequestErrorHandler(instrumentationFile: string | nul
       // eslint-disable-next-line no-console
       console.warn(
         chalk.yellow(
-          '[@sentry/nextjs] Could not find a Next.js instrumentation file. This indicates an incomplete configuration of the Sentry SDK. An instrumentation file is required for the Sentry SDK to be initialized on the server: https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/#create-initialization-config-files (you can suppress this warning by setting SENTRY_SUPPRESS_INSTRUMENTATION_FILE_WARNING=1 as environment variable)',
+          '[@debugg-ai/nextjs] Could not find a Next.js instrumentation file. This indicates an incomplete configuration of the Sentry SDK. An instrumentation file is required for the Sentry SDK to be initialized on the server: https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/#create-initialization-config-files (you can suppress this warning by setting SENTRY_SUPPRESS_INSTRUMENTATION_FILE_WARNING=1 as environment variable)',
         ),
       );
     }
@@ -505,7 +505,7 @@ function warnAboutMissingOnRequestErrorHandler(instrumentationFile: string | nul
     // eslint-disable-next-line no-console
     console.warn(
       chalk.yellow(
-        '[@sentry/nextjs] Could not find `onRequestError` hook in instrumentation file. This indicates outdated configuration of the Sentry SDK. Use `Sentry.captureRequestError` to instrument the `onRequestError` hook: https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/#errors-from-nested-react-server-components',
+        '[@debugg-ai/nextjs] Could not find `onRequestError` hook in instrumentation file. This indicates outdated configuration of the Sentry SDK. Use `Sentry.captureRequestError` to instrument the `onRequestError` hook: https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/#errors-from-nested-react-server-components',
       ),
     );
   }
@@ -536,7 +536,7 @@ function warnAboutDeprecatedConfigFiles(
     if (fs.existsSync(path.resolve(projectDir, filename))) {
       // eslint-disable-next-line no-console
       console.warn(
-        `[@sentry/nextjs] It appears you've configured a \`${filename}\` file. Please ensure to put this file's content into the \`register()\` function of a Next.js instrumentation file instead. To ensure correct functionality of the SDK, \`Sentry.init\` must be called inside of an instrumentation file. Learn more about setting up an instrumentation file in Next.js: https://nextjs.org/docs/app/building-your-application/optimizing/instrumentation. You can safely delete the \`${filename}\` file afterward.`,
+        `[@debugg-ai/nextjs] It appears you've configured a \`${filename}\` file. Please ensure to put this file's content into the \`register()\` function of a Next.js instrumentation file instead. To ensure correct functionality of the SDK, \`Sentry.init\` must be called inside of an instrumentation file. Learn more about setting up an instrumentation file in Next.js: https://nextjs.org/docs/app/building-your-application/optimizing/instrumentation. You can safely delete the \`${filename}\` file afterward.`,
       );
     }
   }

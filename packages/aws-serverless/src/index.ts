@@ -126,7 +126,7 @@ export {
   dedupeIntegration,
   extraErrorDataIntegration,
   rewriteFramesIntegration,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 
 export { awsIntegration } from './integration/aws';
 export { awsLambdaIntegration } from './integration/awslambda';

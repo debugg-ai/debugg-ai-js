@@ -4,7 +4,7 @@ import { context, ROOT_CONTEXT, SpanKind, trace, TraceFlags } from '@opentelemet
 import type { ReadableSpan } from '@opentelemetry/sdk-trace-base';
 import { Span as SpanClass } from '@opentelemetry/sdk-trace-base';
 import { SEMATTRS_HTTP_METHOD } from '@opentelemetry/semantic-conventions';
-import type { Event, Scope } from '@sentry/core';
+import type { Event, Scope } from '@debugg-ai/core';
 import {
   getClient,
   getCurrentScope,
@@ -19,7 +19,7 @@ import {
   spanToJSON,
   suppressTracing,
   withScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { continueTrace, startInactiveSpan, startSpan, startSpanManual } from '../src/trace';
 import type { AbstractSpan } from '../src/types';

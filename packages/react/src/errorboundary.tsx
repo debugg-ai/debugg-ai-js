@@ -1,7 +1,7 @@
-import type { ReportDialogOptions } from '@sentry/browser';
-import { getClient, showReportDialog, withScope } from '@sentry/browser';
-import type { Scope } from '@sentry/core';
-import { logger } from '@sentry/core';
+import type { ReportDialogOptions } from '@debugg-ai/browser';
+import { getClient, showReportDialog, withScope } from '@debugg-ai/browser';
+import type { Scope } from '@debugg-ai/core';
+import { logger } from '@debugg-ai/core';
 import * as React from 'react';
 import { DEBUG_BUILD } from './debug-build';
 import { captureReactException } from './error';

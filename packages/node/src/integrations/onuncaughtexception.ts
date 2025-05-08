@@ -1,4 +1,4 @@
-import { captureException, defineIntegration, getClient, logger } from '@sentry/core';
+import { captureException, defineIntegration, getClient, logger } from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../debug-build';
 import type { NodeClient } from '../sdk/client';
 import { logAndExitProcess } from '../utils/errorhandling';

@@ -1,5 +1,5 @@
 import type { BrowserOptions } from '@sentry/browser';
-import type { Options } from '@sentry/core';
+import type { Options } from '@debugg-ai/core';
 import type { SentryVitePluginOptions } from '@sentry/vite-plugin';
 
 type SdkInitPaths = {

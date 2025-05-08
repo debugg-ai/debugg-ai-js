@@ -1,6 +1,6 @@
 import { RPCType } from '@opentelemetry/core';
 import { ATTR_HTTP_ROUTE } from '@opentelemetry/semantic-conventions';
-import { getActiveSpan, getRootSpan, getTraceMetaTags, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@sentry/core';
+import { getActiveSpan, getRootSpan, getTraceMetaTags, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@debugg-ai/core';
 import { PassThrough } from 'stream';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 import { getMetaTagTransformer, wrapSentryHandleRequest } from '../../src/server/wrapSentryHandleRequest';
@@ -10,7 +10,7 @@ vi.mock('@opentelemetry/core', () => ({
   getRPCMetadata: vi.fn(),
 }));
 
-vi.mock('@sentry/core', () => ({
+vi.mock('@debugg-ai/core', () => ({
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE: 'sentry.source',
   getActiveSpan: vi.fn(),
   getRootSpan: vi.fn(),

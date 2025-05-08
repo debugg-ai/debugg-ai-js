@@ -1,4 +1,4 @@
-import { getDefaultIsolationScope } from '@sentry/core';
+import { getDefaultIsolationScope } from '@debugg-ai/core';
 import * as Sentry from '@sentry/nuxt';
 import { defineEventHandler } from '#imports';
 

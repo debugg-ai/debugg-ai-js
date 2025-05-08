@@ -1,4 +1,4 @@
-import { captureException, consoleSandbox } from '@sentry/core';
+import { captureException, consoleSandbox } from '@debugg-ai/core';
 import type { HandleServerError } from '@sveltejs/kit';
 import { flushIfServerless } from '../server-common/utils';
 

@@ -3,7 +3,7 @@
  */
 
 import '../../utils/mock-internal-setTimeout';
-import type { Breadcrumb } from '@sentry/core';
+import type { Breadcrumb } from '@debugg-ai/core';
 import { beforeAll, beforeEach, describe, expect, it, test, vi } from 'vitest';
 import { ClickDetector, ignoreElement } from '../../../src/coreHandlers/handleClick';
 import type { ReplayContainer } from '../../../src/types';

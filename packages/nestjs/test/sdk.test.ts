@@ -1,4 +1,4 @@
-import { SDK_VERSION } from '@sentry/core';
+import { SDK_VERSION } from '@debugg-ai/core';
 import * as SentryNode from '@sentry/node';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { init as nestInit } from '../src/sdk';

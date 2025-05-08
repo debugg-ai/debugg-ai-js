@@ -1,4 +1,4 @@
-import { createTransport, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, setCurrentClient } from '@sentry/core';
+import { createTransport, SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, setCurrentClient } from '@debugg-ai/core';
 import { NodeClient } from '@sentry/node';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 import type { GrpcFunction, GrpcFunctionObject, Stub } from '../../src/integrations/google-cloud-grpc';
@@ -10,8 +10,8 @@ const mockFill = vi.fn();
 
 let mockClient: NodeClient;
 
-vi.mock('@sentry/core', async () => {
-  const original = await vi.importActual('@sentry/core');
+vi.mock('@debugg-ai/core', async () => {
+  const original = await vi.importActual('@debugg-ai/core');
   return {
     ...original,
     fill: (obj: any, name: string, replacement: any) => {

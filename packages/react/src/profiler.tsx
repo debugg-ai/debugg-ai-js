@@ -1,6 +1,6 @@
-import { startInactiveSpan } from '@sentry/browser';
-import type { Span } from '@sentry/core';
-import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, spanToJSON, timestampInSeconds, withActiveSpan } from '@sentry/core';
+import { startInactiveSpan } from '@debugg-ai/browser';
+import type { Span } from '@debugg-ai/core';
+import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, spanToJSON, timestampInSeconds, withActiveSpan } from '@debugg-ai/core';
 import * as React from 'react';
 import { REACT_MOUNT_OP, REACT_RENDER_OP, REACT_UPDATE_OP } from './constants';
 import { hoistNonReactStatics } from './hoist-non-react-statics';

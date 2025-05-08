@@ -1,4 +1,4 @@
-import { resetInstrumentationHandlers } from '@sentry/core';
+import { resetInstrumentationHandlers } from '@debugg-ai/core';
 import { vi } from 'vitest';
 import type { Replay as ReplayIntegration } from '../../src/integration';
 import type { ReplayContainer } from '../../src/replay';

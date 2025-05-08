@@ -1,4 +1,4 @@
-import type { Package } from '@sentry/core';
+import type { Package } from '@debugg-ai/core';
 import * as fs from 'fs';
 import * as path from 'path';
 

@@ -1,4 +1,4 @@
-import type { Event, EventHint } from '@sentry/core';
+import type { Event, EventHint } from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../debug-build';
 import type { ReplayContainer } from '../types';
 import { isErrorEvent, isFeedbackEvent, isReplayEvent, isTransactionEvent } from '../util/eventUtils';

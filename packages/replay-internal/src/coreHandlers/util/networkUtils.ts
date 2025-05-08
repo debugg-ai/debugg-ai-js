@@ -1,4 +1,4 @@
-import { stringMatchesSomePattern } from '@sentry/core';
+import { stringMatchesSomePattern } from '@debugg-ai/core';
 import type { NetworkMetaWarning } from '@sentry-internal/browser-utils';
 import { serializeFormData } from '@sentry-internal/browser-utils';
 import { NETWORK_BODY_MAX_SIZE, WINDOW } from '../../constants';

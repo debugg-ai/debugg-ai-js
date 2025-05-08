@@ -1,5 +1,5 @@
-import type { BrowserClientReplayOptions, Client, Integration, IntegrationFn, ReplayRecordingMode } from '@sentry/core';
-import { consoleSandbox, isBrowser, parseSampleRate } from '@sentry/core';
+import type { BrowserClientReplayOptions, Client, Integration, IntegrationFn, ReplayRecordingMode } from '@debugg-ai/core';
+import { consoleSandbox, isBrowser, parseSampleRate } from '@debugg-ai/core';
 import {
   DEFAULT_FLUSH_MAX_DELAY,
   DEFAULT_FLUSH_MIN_DELAY,

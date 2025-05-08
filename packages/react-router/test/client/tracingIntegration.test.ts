@@ -1,5 +1,5 @@
 import * as sentryBrowser from '@sentry/browser';
-import type { Client } from '@sentry/core';
+import type { Client } from '@debugg-ai/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import * as hydratedRouterModule from '../../src/client/hydratedRouter';
 import { reactRouterTracingIntegration } from '../../src/client/tracingIntegration';

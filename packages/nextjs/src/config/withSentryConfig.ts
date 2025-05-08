@@ -1,7 +1,7 @@
 /* eslint-disable max-lines */
 /* eslint-disable complexity */
-import { isThenable, parseSemver } from '@sentry/core';
-import { getSentryRelease } from '@sentry/node';
+import { isThenable, parseSemver } from '@debugg-ai/core';
+import { getSentryRelease } from '@debugg-ai/node';
 import * as childProcess from 'child_process';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -59,7 +59,7 @@ function getFinalConfigObject(
         showedExportModeTunnelWarning = true;
         // eslint-disable-next-line no-console
         console.warn(
-          '[@sentry/nextjs] The Sentry Next.js SDK `tunnelRoute` option will not work in combination with Next.js static exports. The `tunnelRoute` option uses serverside features that cannot be accessed in export mode. If you still want to tunnel Sentry events, set up your own tunnel: https://docs.sentry.io/platforms/javascript/troubleshooting/#using-the-tunnel-option',
+          '[@debugg-ai/nextjs] The Sentry Next.js SDK `tunnelRoute` option will not work in combination with Next.js static exports. The `tunnelRoute` option uses serverside features that cannot be accessed in export mode. If you still want to tunnel Sentry events, set up your own tunnel: https://docs.sentry.io/platforms/javascript/troubleshooting/#using-the-tunnel-option',
         );
       }
     } else {
@@ -86,7 +86,7 @@ function getFinalConfigObject(
   } else {
     // eslint-disable-next-line no-console
     console.log(
-      "[@sentry/nextjs] The Sentry SDK was not able to determine your Next.js version. If you are using Next.js version 15 or greater, please add `experimental.clientTraceMetadata: ['sentry-trace', 'baggage']` to your Next.js config to enable pageload tracing for App Router.",
+      "[@debugg-ai/nextjs] The Sentry SDK was not able to determine your Next.js version. If you are using Next.js version 15 or greater, please add `experimental.clientTraceMetadata: ['sentry-trace', 'baggage']` to your Next.js config to enable pageload tracing for App Router.",
     );
   }
 
@@ -124,7 +124,7 @@ function getFinalConfigObject(
       if (incomingUserNextConfigObject.experimental?.instrumentationHook === false) {
         // eslint-disable-next-line no-console
         console.warn(
-          '[@sentry/nextjs] You turned off the `experimental.instrumentationHook` option. Note that Sentry will not be initialized if you did not set it up inside `instrumentation.(js|ts)`.',
+          '[@debugg-ai/nextjs] You turned off the `experimental.instrumentationHook` option. Note that Sentry will not be initialized if you did not set it up inside `instrumentation.(js|ts)`.',
         );
       }
       incomingUserNextConfigObject.experimental = {
@@ -141,13 +141,13 @@ function getFinalConfigObject(
       if (incomingUserNextConfigObject.experimental.instrumentationHook === false) {
         // eslint-disable-next-line no-console
         console.warn(
-          '[@sentry/nextjs] You set `experimental.instrumentationHook` to `false`. If you are using Next.js version 15 or greater, you can remove that option. If you are using Next.js version 14 or lower, you need to set `experimental.instrumentationHook` in your `next.config.(js|mjs)` to `true` for the SDK to be properly initialized in combination with `instrumentation.(js|ts)`.',
+          '[@debugg-ai/nextjs] You set `experimental.instrumentationHook` to `false`. If you are using Next.js version 15 or greater, you can remove that option. If you are using Next.js version 14 or lower, you need to set `experimental.instrumentationHook` in your `next.config.(js|mjs)` to `true` for the SDK to be properly initialized in combination with `instrumentation.(js|ts)`.',
         );
       }
     } else {
       // eslint-disable-next-line no-console
       console.log(
-        "[@sentry/nextjs] The Sentry SDK was not able to determine your Next.js version. If you are using Next.js version 15 or greater, Next.js will probably show you a warning about the `experimental.instrumentationHook` being set. To silence Next.js' warning, explicitly set the `experimental.instrumentationHook` option in your `next.config.(js|mjs|ts)` to `undefined`. If you are on Next.js version 14 or lower, you can silence this particular warning by explicitly setting the `experimental.instrumentationHook` option in your `next.config.(js|mjs)` to `true`.",
+        "[@debugg-ai/nextjs] The Sentry SDK was not able to determine your Next.js version. If you are using Next.js version 15 or greater, Next.js will probably show you a warning about the `experimental.instrumentationHook` being set. To silence Next.js' warning, explicitly set the `experimental.instrumentationHook` option in your `next.config.(js|mjs|ts)` to `undefined`. If you are on Next.js version 14 or lower, you can silence this particular warning by explicitly setting the `experimental.instrumentationHook` option in your `next.config.(js|mjs)` to `true`.",
       );
       incomingUserNextConfigObject.experimental = {
         instrumentationHook: true,
@@ -160,11 +160,12 @@ function getFinalConfigObject(
   const instrumentationClientFileContents = getInstrumentationClientFileContents();
   if (
     instrumentationClientFileContents !== undefined &&
+    typeof instrumentationClientFileContents === 'string' &&
     !instrumentationClientFileContents.includes('onRouterTransitionStart')
   ) {
     // eslint-disable-next-line no-console
     console.warn(
-      '[@sentry/nextjs] ACTION REQUIRED: To instrument navigations, the Sentry SDK requires you to export an `onRouterTransitionStart` hook from your `instrumentation-client.(js|ts)` file. You can do so by adding `export const onRouterTransitionStart = Sentry.captureRouterTransitionStart;` to the file.',
+      '[@debugg-ai/nextjs] ACTION REQUIRED: To instrument navigations, the Sentry SDK requires you to export an `onRouterTransitionStart` hook from your `instrumentation-client.(js|ts)` file. You can do so by adding `export const onRouterTransitionStart = Sentry.captureRouterTransitionStart;` to the file.',
     );
   }
 
@@ -194,12 +195,12 @@ function getFinalConfigObject(
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.warn(
-          `[@sentry/nextjs] WARNING: You are using the Sentry SDK with Turbopack (\`next dev --turbo\`). The Sentry SDK is compatible with Turbopack on Next.js version 15.3.0 or later. You are currently on ${nextJsVersion}. Please upgrade to a newer Next.js version to use the Sentry SDK with Turbopack. Note that the SDK will continue to work for non-Turbopack production builds. This warning is only about dev-mode.`,
+          `[@debugg-ai/nextjs] WARNING: You are using the Sentry SDK with Turbopack (\`next dev --turbo\`). The Sentry SDK is compatible with Turbopack on Next.js version 15.3.0 or later. You are currently on ${nextJsVersion}. Please upgrade to a newer Next.js version to use the Sentry SDK with Turbopack. Note that the SDK will continue to work for non-Turbopack production builds. This warning is only about dev-mode.`,
         );
       } else if (process.env.NODE_ENV === 'production') {
         // eslint-disable-next-line no-console
         console.warn(
-          `[@sentry/nextjs] WARNING: You are using the Sentry SDK with Turbopack (\`next build --turbo\`). The Sentry SDK is compatible with Turbopack on Next.js version 15.3.0 or later. You are currently on ${nextJsVersion}. Please upgrade to a newer Next.js version to use the Sentry SDK with Turbopack. Note that as Turbopack is still experimental for production builds, some of the Sentry SDK features like source maps will not work. Follow this issue for progress on Sentry + Turbopack: https://github.com/getsentry/sentry-javascript/issues/8105.`,
+          `[@debugg-ai/nextjs] WARNING: You are using the Sentry SDK with Turbopack (\`next build --turbo\`). The Sentry SDK is compatible with Turbopack on Next.js version 15.3.0 or later. You are currently on ${nextJsVersion}. Please upgrade to a newer Next.js version to use the Sentry SDK with Turbopack. Note that as Turbopack is still experimental for production builds, some of the Sentry SDK features like source maps will not work. Follow this issue for progress on Sentry + Turbopack: https://github.com/getsentry/sentry-javascript/issues/8105.`,
         );
       }
     }
@@ -239,7 +240,7 @@ function setUpTunnelRewriteRules(userNextConfig: NextConfigObject, tunnelPath: s
           value: '(?<projectid>\\d*)',
         },
       ],
-      destination: 'https://o:orgid.ingest.sentry.io/api/:projectid/envelope/?hsts=0',
+      destination: 'https://debugg.ai/api/v1/:orgid/:projectid/',
     };
 
     const tunnelRouteRewriteWithRegion = {
@@ -263,7 +264,7 @@ function setUpTunnelRewriteRules(userNextConfig: NextConfigObject, tunnelPath: s
           value: '(?<region>[a-z]{2})',
         },
       ],
-      destination: 'https://o:orgid.ingest.:region.sentry.io/api/:projectid/envelope/?hsts=0',
+      destination: 'https://debugg.ai/api/v1/:orgid/:projectid/',
     };
 
     // Order of these is important, they get applied first to last.

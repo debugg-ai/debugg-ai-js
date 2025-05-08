@@ -56,7 +56,7 @@ packages:
     unpublish: $all
     # proxy: npmjs # Don't proxy for E2E tests!
 
-  '@sentry/core':
+  '@debugg-ai/core':
     access: $all
     publish: $all
     unpublish: $all

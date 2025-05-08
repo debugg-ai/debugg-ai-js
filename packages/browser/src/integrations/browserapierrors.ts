@@ -1,5 +1,5 @@
-import type { IntegrationFn, WrappedFunction } from '@sentry/core';
-import { defineIntegration, fill, getFunctionName, getOriginalFunction } from '@sentry/core';
+import type { IntegrationFn, WrappedFunction } from '@debugg-ai/core';
+import { defineIntegration, fill, getFunctionName, getOriginalFunction } from '@debugg-ai/core';
 import { WINDOW, wrap } from '../helpers';
 
 const DEFAULT_EVENT_TARGET = [

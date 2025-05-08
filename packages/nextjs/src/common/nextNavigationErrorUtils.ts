@@ -1,4 +1,4 @@
-import { isError } from '@sentry/core';
+import { isError } from '@debugg-ai/core';
 
 /**
  * Determines whether input is a Next.js not-found error.

@@ -1,5 +1,5 @@
 import type { BasicTracerProvider } from '@opentelemetry/sdk-trace-base';
-import type { Scope } from '@sentry/core';
+import type { Scope } from '@debugg-ai/core';
 import {
   getCurrentScope,
   getIsolationScope,
@@ -7,7 +7,7 @@ import {
   setAsyncContextStrategy,
   withIsolationScope,
   withScope,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { afterAll, afterEach, beforeEach, describe, expect, it, test } from 'vitest';
 import { setOpenTelemetryContextAsyncContextStrategy } from '../src/asyncContextStrategy';
 import { setupOtel } from './helpers/initOtel';

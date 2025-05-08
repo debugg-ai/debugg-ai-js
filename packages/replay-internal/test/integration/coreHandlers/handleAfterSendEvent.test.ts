@@ -3,8 +3,8 @@
  */
 
 import '../../utils/mock-internal-setTimeout';
-import type { ErrorEvent, Event } from '@sentry/core';
-import { getClient } from '@sentry/core';
+import type { ErrorEvent, Event } from '@debugg-ai/core';
+import { getClient } from '@debugg-ai/core';
 import type { MockInstance } from 'vitest';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import { UNABLE_TO_SEND_REPLAY } from '../../../src/constants';

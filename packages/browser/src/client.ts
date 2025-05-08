@@ -8,7 +8,7 @@ import type {
   ParameterizedString,
   Scope,
   SeverityLevel,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import {
   _INTERNAL_flushLogsBuffer,
   addAutoIpAddressToSession,
@@ -16,7 +16,7 @@ import {
   applySdkMetadata,
   Client,
   getSDKSource,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { eventFromException, eventFromMessage } from './eventbuilder';
 import { WINDOW } from './helpers';
 import type { BrowserTransportOptions } from './transports/types';
@@ -25,7 +25,7 @@ const DEFAULT_FLUSH_INTERVAL = 5000;
 
 /**
  * Configuration options for the Sentry Browser SDK.
- * @see @sentry/core Options for more information.
+ * @see @debugg-ai/core Options for more information.
  */
 export type BrowserOptions = Options<BrowserTransportOptions> &
   BrowserClientReplayOptions &

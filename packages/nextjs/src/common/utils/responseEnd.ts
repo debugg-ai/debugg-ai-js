@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import { fill, flush, logger, setHttpStatus } from '@sentry/core';
+import type { Span } from '@debugg-ai/core';
+import { fill, flush, logger, setHttpStatus } from '@debugg-ai/core';
 import type { ServerResponse } from 'http';
 import { DEBUG_BUILD } from '../debug-build';
 import type { ResponseEndMethod, WrappedResponseEndMethod } from '../types';

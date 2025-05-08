@@ -1,4 +1,4 @@
-import { defineIntegration, endSession, getIsolationScope, startSession } from '@sentry/core';
+import { defineIntegration, endSession, getIsolationScope, startSession } from '@debugg-ai/core';
 
 const INTEGRATION_NAME = 'ProcessSession';
 

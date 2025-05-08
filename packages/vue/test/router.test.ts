@@ -1,7 +1,7 @@
 import * as SentryBrowser from '@sentry/browser';
-import type { Span, SpanAttributes } from '@sentry/core';
-import * as SentryCore from '@sentry/core';
-import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@sentry/core';
+import type { Span, SpanAttributes } from '@debugg-ai/core';
+import * as SentryCore from '@debugg-ai/core';
+import { SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SEMANTIC_ATTRIBUTE_SENTRY_SOURCE } from '@debugg-ai/core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import type { Route } from '../src/router';
 import { instrumentVueRouter } from '../src/router';
@@ -11,8 +11,8 @@ const MOCK_SPAN = {
 };
 
 const captureExceptionSpy = vi.spyOn(SentryBrowser, 'captureException');
-vi.mock('@sentry/core', async () => {
-  const actual = await vi.importActual('@sentry/core');
+vi.mock('@debugg-ai/core', async () => {
+  const actual = await vi.importActual('@debugg-ai/core');
   return {
     ...actual,
     getActiveSpan: vi.fn().mockReturnValue({

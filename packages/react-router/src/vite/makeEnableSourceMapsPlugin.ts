@@ -1,4 +1,4 @@
-import { consoleSandbox } from '@sentry/core';
+import { consoleSandbox } from '@debugg-ai/core';
 import type { Plugin, UserConfig } from 'vite';
 import type { SentryReactRouterBuildOptions } from './types';
 

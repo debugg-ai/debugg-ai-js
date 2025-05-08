@@ -1,5 +1,5 @@
-import type { Log, LogSeverityLevel, ParameterizedString } from '@sentry/core';
-import { _INTERNAL_captureLog } from '@sentry/core';
+import type { Log, LogSeverityLevel, ParameterizedString } from '@debugg-ai/core';
+import { _INTERNAL_captureLog } from '@debugg-ai/core';
 
 /**
  * Capture a log with the given level.
@@ -202,4 +202,4 @@ export function fatal(message: ParameterizedString, attributes?: Log['attributes
   captureLog('fatal', message, attributes);
 }
 
-export { fmt } from '@sentry/core';
+export { fmt } from '@debugg-ai/core';

@@ -1,5 +1,5 @@
 import { startBrowserTracingNavigationSpan } from '@sentry/browser';
-import type { Span } from '@sentry/core';
+import type { Span } from '@debugg-ai/core';
 import {
   consoleSandbox,
   getActiveSpan,
@@ -10,7 +10,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
   spanToJSON,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { DataRouter, RouterState } from 'react-router';
 import { DEBUG_BUILD } from '../common/debug-build';
 
@@ -107,6 +107,7 @@ function maybeCreateNavigationTransaction(name: string, source: 'url' | 'route')
     return undefined;
   }
 
+  // @ts-expect-error
   return startBrowserTracingNavigationSpan(client, {
     name,
     attributes: {

@@ -1,5 +1,5 @@
-import type { ReplayEvent } from '@sentry/core';
-import { makeDsn } from '@sentry/core';
+import type { ReplayEvent } from '@debugg-ai/core';
+import { makeDsn } from '@debugg-ai/core';
 import { describe, expect, it } from 'vitest';
 import { createReplayEnvelope } from '../../../src/util/createReplayEnvelope';
 
@@ -90,7 +90,7 @@ describe('Unit | util | createReplayEnvelope', () => {
         event_id: REPLAY_ID,
         sdk: { name: 'sentry.javascript.unknown', version: '7.25.0' },
         sent_at: expect.any(String),
-        dsn: 'https://abc@sentry.io:1234/123',
+        dsn: 'https://abc@debugg.ai:1234/123',
       },
       [
         [

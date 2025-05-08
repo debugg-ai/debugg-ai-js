@@ -2,7 +2,7 @@ import type { Baggage, Context, Span, SpanContext, TextMapGetter, TextMapSetter 
 import { context, INVALID_TRACEID, propagation, trace, TraceFlags } from '@opentelemetry/api';
 import { isTracingSuppressed, W3CBaggagePropagator } from '@opentelemetry/core';
 import { ATTR_URL_FULL, SEMATTRS_HTTP_URL } from '@opentelemetry/semantic-conventions';
-import type { continueTrace, DynamicSamplingContext, Options } from '@sentry/core';
+import type { continueTrace, DynamicSamplingContext, Options } from '@debugg-ai/core';
 import {
   generateSentryTraceHeader,
   getClient,
@@ -17,7 +17,7 @@ import {
   SENTRY_BAGGAGE_KEY_PREFIX,
   spanToJSON,
   stringMatchesSomePattern,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { SENTRY_BAGGAGE_HEADER, SENTRY_TRACE_HEADER, SENTRY_TRACE_STATE_URL } from './constants';
 import { DEBUG_BUILD } from './debug-build';
 import { getScopesFromContext, setScopesOnContext } from './utils/contextData';

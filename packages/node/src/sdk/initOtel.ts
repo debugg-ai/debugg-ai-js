@@ -1,3 +1,4 @@
+import { consoleSandbox, GLOBAL_OBJ, logger, SDK_VERSION } from '@debugg-ai/core';
 import { context, diag, DiagLogLevel, propagation, trace } from '@opentelemetry/api';
 import { Resource } from '@opentelemetry/resources';
 import type { SpanProcessor } from '@opentelemetry/sdk-trace-base';
@@ -7,8 +8,7 @@ import {
   ATTR_SERVICE_VERSION,
   SEMRESATTRS_SERVICE_NAMESPACE,
 } from '@opentelemetry/semantic-conventions';
-import { consoleSandbox, GLOBAL_OBJ, logger, SDK_VERSION } from '@sentry/core';
-import { SentryPropagator, SentrySampler, SentrySpanProcessor } from '@sentry/opentelemetry';
+import { SentryPropagator, SentrySampler, SentrySpanProcessor } from '@debugg-ai/opentelemetry';
 import { createAddHookMessageChannel } from 'import-in-the-middle';
 import moduleModule from 'module';
 import { DEBUG_BUILD } from '../debug-build';

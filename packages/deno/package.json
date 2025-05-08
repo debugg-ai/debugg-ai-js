@@ -24,7 +24,7 @@
     "/build"
   ],
   "dependencies": {
-    "@sentry/core": "9.15.0"
+    "@debugg-ai/core": "1.0.8"
   },
   "scripts": {
     "deno-types": "node ./scripts/download-deno-types.mjs",

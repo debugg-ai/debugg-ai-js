@@ -7,7 +7,7 @@ export function createWorkerCodeBuilder(entry, outDir) {
     makeBaseBundleConfig({
       bundleType: 'node-worker',
       entrypoints: [entry],
-      licenseTitle: '@sentry/node',
+      licenseTitle: '@debugg-ai/node',
       outputFileBase: () => 'worker-script.js',
       packageSpecificConfig: {
         output: {

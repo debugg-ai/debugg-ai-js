@@ -1,8 +1,8 @@
+import type { IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration, getRootSpan, spanToJSON } from '@debugg-ai/core';
 import type { AttributeValue } from '@opentelemetry/api';
 import { GraphQLInstrumentation } from '@opentelemetry/instrumentation-graphql';
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration, getRootSpan, spanToJSON } from '@sentry/core';
-import { SEMANTIC_ATTRIBUTE_SENTRY_GRAPHQL_OPERATION } from '@sentry/opentelemetry';
+import { SEMANTIC_ATTRIBUTE_SENTRY_GRAPHQL_OPERATION } from '@debugg-ai/opentelemetry';
 import { generateInstrumentOnce } from '../../otel/instrument';
 import { addOriginToSpan } from '../../utils/addOriginToSpan';
 
@@ -109,7 +109,7 @@ const _graphqlIntegration = ((options: GraphqlOptions = {}) => {
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  *
  * Sentry.init({
  *  integrations: [Sentry.graphqlIntegration()],

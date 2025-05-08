@@ -1,6 +1,6 @@
 /* eslint-disable import/export */
 
-import type { Client, Integration, Options, StackParser } from '@sentry/core';
+import type { Client, Integration, Options, StackParser } from '@debugg-ai/core';
 import type { SentryNuxtClientOptions, SentryNuxtServerOptions } from './common/types';
 import type * as clientSdk from './index.client';
 import type * as serverSdk from './index.server';

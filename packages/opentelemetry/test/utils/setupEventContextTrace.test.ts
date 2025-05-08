@@ -1,5 +1,5 @@
 import type { BasicTracerProvider } from '@opentelemetry/sdk-trace-base';
-import { captureException, setCurrentClient } from '@sentry/core';
+import { captureException, setCurrentClient } from '@debugg-ai/core';
 import { afterAll, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { setupEventContextTrace } from '../../src/setupEventContextTrace';
 import { setupOtel } from '../helpers/initOtel';

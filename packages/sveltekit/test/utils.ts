@@ -1,5 +1,5 @@
-import type { ClientOptions } from '@sentry/core';
-import { createTransport, resolvedSyncPromise } from '@sentry/core';
+import type { ClientOptions } from '@debugg-ai/core';
+import { createTransport, resolvedSyncPromise } from '@debugg-ai/core';
 
 export function getDefaultNodeClientOptions(options: Partial<ClientOptions> = {}): ClientOptions {
   return {

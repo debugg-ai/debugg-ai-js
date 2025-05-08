@@ -1,4 +1,4 @@
-import { logger } from '@sentry/core';
+import { logger } from '@debugg-ai/core';
 import type { Nitro } from 'nitropack';
 import { addSentryPluginToVite } from '../vite/sentrySolidStartVite';
 import type { SentrySolidStartPluginOptions } from '../vite/types';

@@ -1,1 +1,1 @@
-export { rewriteFramesIntegration } from '@sentry/core';
+export { rewriteFramesIntegration } from '@debugg-ai/core';

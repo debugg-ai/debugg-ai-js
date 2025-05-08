@@ -1,4 +1,4 @@
-import { logger } from '@sentry/core';
+import { logger } from '@debugg-ai/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { _clampSpanProcessorTimeout } from '../../src/sdk/initOtel';
 

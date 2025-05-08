@@ -1,5 +1,5 @@
-import type { Span } from '@sentry/core';
-import { getCurrentScope, logger, spanToJSON, timestampInSeconds, uuid4 } from '@sentry/core';
+import type { Span } from '@debugg-ai/core';
+import { getCurrentScope, logger, spanToJSON, timestampInSeconds, uuid4 } from '@debugg-ai/core';
 import { DEBUG_BUILD } from '../debug-build';
 import { WINDOW } from '../helpers';
 import type { JSSelfProfile } from './jsSelfProfiling';

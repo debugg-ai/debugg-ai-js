@@ -1,5 +1,5 @@
-import type { BaseTransportOptions, Transport, TransportMakeRequestResponse, TransportRequest } from '@sentry/core';
-import { createTransport, SENTRY_BUFFER_FULL_ERROR, suppressTracing } from '@sentry/core';
+import type { BaseTransportOptions, Transport, TransportMakeRequestResponse, TransportRequest } from '@debugg-ai/core';
+import { createTransport, SENTRY_BUFFER_FULL_ERROR, suppressTracing } from '@debugg-ai/core';
 
 export interface CloudflareTransportOptions extends BaseTransportOptions {
   /** Fetch API init parameters. */

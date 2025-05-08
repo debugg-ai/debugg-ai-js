@@ -1,10 +1,10 @@
-import type { Span } from '@sentry/core';
+import type { Span } from '@debugg-ai/core';
 import {
   addNonEnumerableProperty,
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   withActiveSpan,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import type { CatchTarget, InjectableTarget, NextFunction, Observable, Subscription } from './types';
 
 const sentryPatched = 'sentryPatched';

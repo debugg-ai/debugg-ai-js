@@ -1,4 +1,4 @@
-import { captureException, isNodeEnv } from '@sentry/core';
+import { captureException, isNodeEnv } from '@debugg-ai/core';
 import { isResponse } from '../utils/vendor/response';
 
 /**

@@ -1,5 +1,5 @@
-import type { Transport } from '@sentry/core';
-import { type ProfilingIntegration } from '@sentry/core';
+import type { Transport } from '@debugg-ai/core';
+import { type ProfilingIntegration } from '@debugg-ai/core';
 import * as Sentry from '@sentry/node';
 import { expect, it, vi } from 'vitest';
 import { _nodeProfilingIntegration } from '../src/integration';

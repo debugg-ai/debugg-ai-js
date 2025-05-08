@@ -1,5 +1,5 @@
-import type { Client, Event, EventHint, Integration, IntegrationFn } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
+import type { Client, Event, EventHint, Integration, IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration } from '@debugg-ai/core';
 import { copyFlagsFromScopeToEvent, insertFlagToScope } from '../../utils/featureFlags';
 
 export interface FeatureFlagsIntegration extends Integration {
@@ -15,8 +15,8 @@ export interface FeatureFlagsIntegration extends Integration {
  *
  * @example
  * ```
- * import * as Sentry from '@sentry/browser';
- * import { type FeatureFlagsIntegration } from '@sentry/browser';
+ * import * as Sentry from '@debugg-ai/browser';
+ * import { type FeatureFlagsIntegration } from '@debugg-ai/browser';
  *
  * // Setup
  * Sentry.init(..., integrations: [Sentry.featureFlagsIntegration()])

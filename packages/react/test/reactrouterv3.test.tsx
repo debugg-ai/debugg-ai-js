@@ -1,7 +1,7 @@
 /**
  * @vitest-environment jsdom
  */
-import { BrowserClient } from '@sentry/browser';
+import { BrowserClient } from '@debugg-ai/browser';
 import {
   createTransport,
   getCurrentScope,
@@ -9,7 +9,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
   setCurrentClient,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { act, render } from '@testing-library/react';
 import * as React from 'react';
 import { createMemoryHistory, createRoutes, IndexRoute, match, Route, Router } from 'react-router-3';
@@ -26,7 +26,7 @@ const mockRootSpan = {
   },
 };
 
-vi.mock('@sentry/browser', async requireActual => {
+vi.mock('@debugg-ai/browser', async requireActual => {
   const actual = (await requireActual()) as any;
   return {
     ...actual,
@@ -41,7 +41,7 @@ vi.mock('@sentry/browser', async requireActual => {
   };
 });
 
-vi.mock('@sentry/core', async requireActual => {
+vi.mock('@debugg-ai/core', async requireActual => {
   return {
     ...(await requireActual()),
     getRootSpan: () => {

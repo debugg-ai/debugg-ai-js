@@ -1,5 +1,4 @@
-import { FastifyInstrumentation } from '@opentelemetry/instrumentation-fastify';
-import type { IntegrationFn, Span } from '@sentry/core';
+import type { IntegrationFn, Span } from '@debugg-ai/core';
 import {
   captureException,
   defineIntegration,
@@ -8,7 +7,8 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_OP,
   SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
   spanToJSON,
-} from '@sentry/core';
+} from '@debugg-ai/core';
+import { FastifyInstrumentation } from '@opentelemetry/instrumentation-fastify';
 import { generateInstrumentOnce } from '../../otel/instrument';
 import { ensureIsWrapped } from '../../utils/ensureIsWrapped';
 
@@ -119,7 +119,7 @@ const _fastifyIntegration = (() => {
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  *
  * Sentry.init({
  *   integrations: [Sentry.fastifyIntegration()],
@@ -147,7 +147,7 @@ function defaultShouldHandleError(_error: Error, _request: MinimalFastifyRequest
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  * const Fastify = require("fastify");
  *
  * const app = Fastify();

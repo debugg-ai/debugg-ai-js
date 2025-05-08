@@ -6,7 +6,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import { defaultStackParser } from '../src';
 import { eventFromMessage, eventFromUnknownInput, extractMessage, extractType } from '../src/eventbuilder';
 
-vi.mock('@sentry/core', async requireActual => {
+vi.mock('@debugg-ai/core', async requireActual => {
   return {
     ...((await requireActual()) as any),
     getClient() {

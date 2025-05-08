@@ -1,4 +1,4 @@
-import { consoleSandbox } from '@sentry/core';
+import { consoleSandbox } from '@debugg-ai/core';
 import type { InputPluginOption } from 'rollup';
 
 /** THIS FILE IS AN UTILITY FOR NITRO-BASED PACKAGES AND SHOULD BE KEPT IN SYNC IN NUXT, SOLIDSTART, ETC. */

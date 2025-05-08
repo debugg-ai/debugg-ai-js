@@ -1,4 +1,4 @@
-import * as SentryCore from '@sentry/core';
+import * as SentryCore from '@debugg-ai/core';
 import { describe, expect, test, vi } from 'vitest';
 import { CloudflareClient } from '../src/client';
 import { init } from '../src/sdk';

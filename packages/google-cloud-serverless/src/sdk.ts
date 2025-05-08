@@ -1,5 +1,5 @@
-import type { Integration, Options } from '@sentry/core';
-import { applySdkMetadata } from '@sentry/core';
+import type { Integration, Options } from '@debugg-ai/core';
+import { applySdkMetadata } from '@debugg-ai/core';
 import type { NodeClient, NodeOptions } from '@sentry/node';
 import { getDefaultIntegrationsWithoutPerformance, init as initNode } from '@sentry/node';
 import { googleCloudGrpcIntegration } from './integrations/google-cloud-grpc';
@@ -20,6 +20,7 @@ function getCjsOnlyIntegrations(): Integration[] {
 
 /** Get the default integrations for the GCP SDK. */
 export function getDefaultIntegrations(_options: Options): Integration[] {
+  // @ts-expect-error
   return [...getDefaultIntegrationsWithoutPerformance(), ...getCjsOnlyIntegrations()];
 }
 
@@ -28,11 +29,14 @@ export function getDefaultIntegrations(_options: Options): Integration[] {
  */
 export function init(options: NodeOptions = {}): NodeClient | undefined {
   const opts = {
+    // @ts-expect-error
     defaultIntegrations: getDefaultIntegrations(options),
     ...options,
   };
 
+  // @ts-expect-error
   applySdkMetadata(opts, 'google-cloud-serverless');
 
+  // @ts-expect-error
   return initNode(opts);
 }

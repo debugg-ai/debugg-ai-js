@@ -1,4 +1,4 @@
-import type { IntegrationFn } from '@sentry/core';
+import type { IntegrationFn } from '@debugg-ai/core';
 import { httpIntegration as originalHttpIntegration } from '@sentry/node';
 
 type HttpOptions = Parameters<typeof originalHttpIntegration>[0];
@@ -13,4 +13,5 @@ export const httpIntegration = ((options: HttpOptions = {}) => {
     // We disable incoming request spans here, because otherwise we'd end up with duplicate spans.
     disableIncomingRequestSpans: true,
   });
+  // @ts-expect-error
 }) satisfies IntegrationFn;

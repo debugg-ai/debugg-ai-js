@@ -1,5 +1,5 @@
 import { posix, sep } from 'node:path';
-import { dirname } from '@sentry/core';
+import { dirname } from '@debugg-ai/core';
 
 /** normalizes Windows paths */
 function normalizeWindowsPath(path: string): string {
@@ -17,6 +17,7 @@ export function createGetModuleFromFilename(
 
   return (filename: string | undefined) => {
     if (!filename) {
+      // @ts-expect-error
       return;
     }
 

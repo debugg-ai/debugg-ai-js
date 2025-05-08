@@ -1,4 +1,4 @@
-import { applySdkMetadata, logger, setTag } from '@sentry/core';
+import { applySdkMetadata, logger, setTag } from '@debugg-ai/core';
 import type { NodeClient, NodeOptions } from '@sentry/node';
 import { init as initNodeSdk } from '@sentry/node';
 import { DEBUG_BUILD } from '../common/debug-build';
@@ -13,6 +13,7 @@ export function init(options: NodeOptions): NodeClient | undefined {
 
   DEBUG_BUILD && logger.log('Initializing SDK...');
 
+  // @ts-expect-error
   applySdkMetadata(opts, 'react-router', ['react-router', 'node']);
 
   const client = initNodeSdk(opts);

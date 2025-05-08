@@ -17,7 +17,7 @@ import type { Span } from '../../../src/types-hoist/span';
 import type { TestClientOptions } from '../../mocks/client';
 import { getDefaultTestClientOptions, TestClient } from '../../mocks/client';
 
-const dsn = 'https://123@sentry.io/42';
+const dsn = 'https://123@debugg.ai/42';
 
 const SCOPE_TRACE_ID = '12345678901234567890123456789012';
 

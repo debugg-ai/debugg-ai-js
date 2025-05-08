@@ -1,6 +1,6 @@
+import type { IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration } from '@debugg-ai/core';
 import { MongoDBInstrumentation } from '@opentelemetry/instrumentation-mongodb';
-import type { IntegrationFn } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
 import { generateInstrumentOnce } from '../../otel/instrument';
 import { addOriginToSpan } from '../../utils/addOriginToSpan';
 
@@ -78,7 +78,7 @@ const _mongoIntegration = (() => {
  *
  * @example
  * ```javascript
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@debugg-ai/node');
  *
  * Sentry.init({
  *  integrations: [Sentry.mongoIntegration()],

@@ -1,4 +1,4 @@
-import type { ClientOptions, Options, TracePropagationTargets } from '@sentry/core';
+import type { ClientOptions, Options, TracePropagationTargets } from '@debugg-ai/core';
 import type { DenoTransportOptions } from './transports';
 
 export interface BaseDenoOptions {
@@ -29,7 +29,7 @@ export interface BaseDenoOptions {
 
 /**
  * Configuration options for the Sentry Deno SDK
- * @see @sentry/core Options for more information.
+ * @see @debugg-ai/core Options for more information.
  */
 export interface DenoOptions extends Options<DenoTransportOptions>, BaseDenoOptions {}
 

@@ -1,5 +1,5 @@
-import type { Client, Event, EventHint, IntegrationFn } from '@sentry/core';
-import { defineIntegration } from '@sentry/core';
+import type { Client, Event, EventHint, IntegrationFn } from '@debugg-ai/core';
+import { defineIntegration } from '@debugg-ai/core';
 import { copyFlagsFromScopeToEvent, insertFlagToScope } from '../../../utils/featureFlags';
 import type { FeatureGate, StatsigClient } from './types';
 
@@ -11,7 +11,7 @@ import type { FeatureGate, StatsigClient } from './types';
  * @example
  * ```
  * import { StatsigClient } from '@statsig/js-client';
- * import * as Sentry from '@sentry/browser';
+ * import * as Sentry from '@debugg-ai/browser';
  *
  * const statsigClient = new StatsigClient();
  *

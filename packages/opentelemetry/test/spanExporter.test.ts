@@ -1,5 +1,5 @@
 import { ATTR_HTTP_RESPONSE_STATUS_CODE } from '@opentelemetry/semantic-conventions';
-import { SDK_VERSION, SEMANTIC_ATTRIBUTE_SENTRY_OP, startInactiveSpan, startSpanManual } from '@sentry/core';
+import { SDK_VERSION, SEMANTIC_ATTRIBUTE_SENTRY_OP, startInactiveSpan, startSpanManual } from '@debugg-ai/core';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { createTransactionForOtelSpan } from '../src/spanExporter';
 import { cleanupOtel, mockSdkInit } from './helpers/mockSdkInit';

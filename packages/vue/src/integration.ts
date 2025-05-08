@@ -1,4 +1,4 @@
-import { consoleSandbox, defineIntegration, GLOBAL_OBJ, hasSpansEnabled } from '@sentry/core';
+import { consoleSandbox, defineIntegration, GLOBAL_OBJ, hasSpansEnabled } from '@debugg-ai/core';
 import { DEFAULT_HOOKS } from './constants';
 import { DEBUG_BUILD } from './debug-build';
 import { attachErrorHandler } from './errorhandler';
@@ -26,6 +26,7 @@ export const vueIntegration = defineIntegration((integrationOptions: Partial<Vue
   return {
     name: INTEGRATION_NAME,
     setup(client) {
+      // @ts-expect-error
       const options: Options = { ...DEFAULT_CONFIG, ...client.getOptions(), ...integrationOptions };
       if (!options.Vue && !options.app) {
         consoleSandbox(() => {

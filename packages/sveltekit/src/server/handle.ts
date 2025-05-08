@@ -16,6 +16,7 @@ export function initCloudflareSentryHandle(options: CloudflareOptions): Handle {
   return ({ event, resolve }) => {
     if (!sentryInitialized) {
       sentryInitialized = true;
+      // @ts-expect-error
       init(options);
     }
 

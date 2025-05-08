@@ -1,4 +1,4 @@
-import type { ErrorEvent, Event, FeedbackEvent, ReplayEvent, TransactionEvent } from '@sentry/core';
+import type { ErrorEvent, Event, FeedbackEvent, ReplayEvent, TransactionEvent } from '@debugg-ai/core';
 
 /** If the event is an error event */
 export function isErrorEvent(event: Event): event is ErrorEvent {

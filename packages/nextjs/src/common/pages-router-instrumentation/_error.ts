@@ -1,4 +1,4 @@
-import { captureException, httpRequestToRequestData, vercelWaitUntil, withScope } from '@sentry/core';
+import { captureException, httpRequestToRequestData, vercelWaitUntil, withScope } from '@debugg-ai/core';
 import type { NextPageContext } from 'next';
 import { flushSafelyWithTimeout } from '../utils/responseEnd';
 

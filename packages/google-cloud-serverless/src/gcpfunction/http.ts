@@ -7,7 +7,7 @@ import {
   SEMANTIC_ATTRIBUTE_SENTRY_SOURCE,
   setHttpStatus,
   stripUrlQueryAndFragment,
-} from '@sentry/core';
+} from '@debugg-ai/core';
 import { captureException, continueTrace, flush, getCurrentScope, startSpanManual } from '@sentry/node';
 import { DEBUG_BUILD } from '../debug-build';
 import { domainify, markEventUnhandled, proxyFunction } from '../utils';
@@ -78,6 +78,7 @@ function _wrapHttpFunction(fn: HttpFunction, options: Partial<WrapperOptions>): 
           return handleCallbackErrors(
             () => fn(req, res),
             err => {
+              // @ts-expect-error
               captureException(err, scope => markEventUnhandled(scope));
             },
           );

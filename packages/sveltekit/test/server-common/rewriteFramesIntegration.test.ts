@@ -1,6 +1,6 @@
 import { rewriteFramesIntegration } from '@sentry/browser';
-import type { Event, StackFrame } from '@sentry/core';
-import { basename } from '@sentry/core';
+import type { Event, StackFrame } from '@debugg-ai/core';
+import { basename } from '@debugg-ai/core';
 import { describe, expect, it } from 'vitest';
 import { rewriteFramesIteratee } from '../../src/server-common/rewriteFramesIntegration';
 import type { GlobalWithSentryValues } from '../../src/vite/injectGlobalValues';

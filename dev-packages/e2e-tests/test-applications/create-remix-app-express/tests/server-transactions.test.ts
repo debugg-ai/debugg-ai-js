@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { uuid4 } from '@sentry/core';
+import { uuid4 } from '@debugg-ai/core';
 
 import { waitForTransaction } from '@sentry-internal/test-utils';
 
