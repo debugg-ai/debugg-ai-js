@@ -34,7 +34,7 @@ export declare const withErrorBoundary: typeof clientSdk.withErrorBoundary;
 
 export declare const logger: typeof clientSdk.logger | typeof serverSdk.logger;
 
-export { withSentryConfig } from './config';
+export { withDebuggAIConfig } from './config';
 
 /**
  * Wraps a Next.js Pages Router API route with Sentry error and performance instrumentation.

@@ -123,14 +123,14 @@ the migration are now tracked in the root CHANGELOG.md.
 
 - fix(require): require is no longer async (#174) by @JonasBa
 
-## 1.0.8
+## 1.0.9
 
 ### Various fixes & improvements
 
 - fix: use gnu aarch compiler for arm64 binary (#172) by @bohdanw2
 - fix: Issue fixed for building binary with recompileFromSource (#173) by @whaagmans
 
-## 1.0.8
+## 1.0.9
 
 ### Various fixes & improvements
 
@@ -141,7 +141,7 @@ the migration are now tracked in the root CHANGELOG.md.
 - build: just dont handle errors (ee0f9b95) by @JonasBa
 - build: improve recompile error handling (07f2fd4d) by @JonasBa
 
-## 1.0.8
+## 1.0.9
 
 ### Various fixes & improvements
 

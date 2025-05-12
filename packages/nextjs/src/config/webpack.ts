@@ -35,8 +35,8 @@ let showedMissingGlobalErrorWarningMsg = false;
  *   - `entry`, to include user's sentry config files (where `Sentry.init` is called) in the build
  *   - `plugins`, to add SentryWebpackPlugin
  *
- * @param userNextConfig The user's existing nextjs config, as passed to `withSentryConfig`
- * @param userSentryOptions The user's SentryWebpackPlugin config, as passed to `withSentryConfig`
+ * @param userNextConfig The user's existing nextjs config, as passed to `withDebuggAIConfig`
+ * @param userSentryOptions The user's SentryWebpackPlugin config, as passed to `withDebuggAIConfig`
  * @returns The function to set as the nextjs config's `webpack` value
  */
 export function constructWebpackConfigFunction(
@@ -382,7 +382,7 @@ export function constructWebpackConfigFunction(
           // enable source map deletion if not explicitly disabled
           if (!isServer && userSentryOptions.sourcemaps?.deleteSourcemapsAfterUpload === undefined) {
             logger.warn(
-              '[@debugg-ai/nextjs] Source maps will be automatically deleted after being uploaded to Sentry. If you want to keep the source maps, set the `sourcemaps.deleteSourcemapsAfterUpload` option to false in `withSentryConfig()`. If you do not want to generate and upload sourcemaps at all, set the `sourcemaps.disable` option to true.',
+              '[@debugg-ai/nextjs] Source maps will be automatically deleted after being uploaded to DebuggAI. If you want to keep the source maps, set the `sourcemaps.deleteSourcemapsAfterUpload` option to false in `withDebugAIConfig)`. If you do not want to generate and upload sourcemaps at all, set the `sourcemaps.disable` option to true.',
             );
             userSentryOptions.sourcemaps = {
               ...userSentryOptions.sourcemaps,

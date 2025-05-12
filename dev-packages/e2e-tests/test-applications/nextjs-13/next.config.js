@@ -1,4 +1,4 @@
-const { withSentryConfig } = require('@sentry/nextjs');
+const { withDebuggAIConfig } = require('@sentry/nextjs');
 
 /** @type {import('next').NextConfig} */
 const moduleExports = {
@@ -11,7 +11,7 @@ const moduleExports = {
   pageExtensions: ['jsx', 'js', 'tsx', 'ts', 'page.tsx'],
 };
 
-module.exports = withSentryConfig(moduleExports, {
+module.exports = withDebuggAIConfig(moduleExports, {
   silent: true,
   excludeServerRoutes: ['/api/endpoint-excluded-with-string', /\/api\/endpoint-excluded-with-regex/],
 });

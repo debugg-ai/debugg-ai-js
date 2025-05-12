@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { defaultRuntimePhase, defaultsObject, exportedNextConfig, userNextConfig } from './fixtures';
 import { materializeFinalNextConfig } from './testUtils';
 
-describe('withSentryConfig', () => {
+describe('withDebuggAIConfig', () => {
   it('includes expected properties', () => {
     const finalConfig = materializeFinalNextConfig(exportedNextConfig);
 

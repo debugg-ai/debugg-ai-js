@@ -1,7 +1,7 @@
 import type { GLOBAL_OBJ } from '@debugg-ai/core';
 import type { SentryWebpackPluginOptions } from '@sentry/webpack-plugin';
 
-// The first argument to `withSentryConfig` (which is the user's next config).
+// The first argument to `withDebuggAIConfig` (which is the user's next config).
 export type ExportedNextConfig = NextConfigObject | NextConfigFunction;
 
 // Vendored from Next.js (this type is not complete - extend if necessary)

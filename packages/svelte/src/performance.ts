@@ -18,7 +18,7 @@ const defaultTrackComponentOptions: {
  * updates and records them as spans.
  *
  * This function is injected automatically into your Svelte components' code
- * if you are using the withSentryConfig wrapper.
+ * if you are using the withDebuggAIConfig wrapper.
  *
  * Alternatively, you can call it yourself if you don't want to use the preprocessor.
  */
@@ -38,7 +38,7 @@ export function trackComponent(options?: TrackComponentOptions): void {
       recordUpdateSpans(componentName);
     } catch {
       logger.warn(
-        "Cannot track component updates. This is likely because you're using Svelte 5 in Runes mode. Set `trackUpdates: false` in `withSentryConfig` or `trackComponent` to disable this warning.",
+        "Cannot track component updates. This is likely because you're using Svelte 5 in Runes mode. Set `trackUpdates: false` in `withDebuggAIConfig` or `trackComponent` to disable this warning.",
       );
     }
   }

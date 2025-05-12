@@ -14,7 +14,7 @@ const defaultSentryOptions: SentrySvelteConfigOptions = {
  *
  * @return The wrapped and modified config to be exported
  */
-export function withSentryConfig(
+export function withDebuggAIConfig(
   originalConfig: SvelteConfig,
   sentryOptions?: SentrySvelteConfigOptions,
 ): SvelteConfig {

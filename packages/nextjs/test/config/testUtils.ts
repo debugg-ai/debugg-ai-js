@@ -8,25 +8,25 @@ import type {
   WebpackConfigObjectWithModuleRules,
 } from '../../src/config/types';
 import { constructWebpackConfigFunction } from '../../src/config/webpack';
-import { withSentryConfig } from '../../src/config/withSentryConfig';
+import { withDebuggAIConfig } from '../../src/config/withDebuggAIConfig';
 import { defaultRuntimePhase, defaultsObject } from './fixtures';
 
 /**
- * Derive the final values of all next config options, by first applying `withSentryConfig` and then, if it returns a
+ * Derive the final values of all next config options, by first applying `withDebuggAIConfig` and then, if it returns a
  *  function, running that function.
  *
  * @param exportedNextConfig Next config options provided by the user
  * @param userSentryWebpackPluginConfig SentryWebpackPlugin options provided by the user
  *
- * @returns The config values next will receive directly from `withSentryConfig` or when it calls the function returned
- * by `withSentryConfig`
+ * @returns The config values next will receive directly from `withDebuggAIConfig` or when it calls the function returned
+ * by `withDebuggAIConfig`
  */
 export function materializeFinalNextConfig(
   exportedNextConfig: ExportedNextConfig,
   runtimePhase?: string,
   sentryBuildOptions?: SentryBuildOptions,
 ): NextConfigObject {
-  const sentrifiedConfig = withSentryConfig(exportedNextConfig, sentryBuildOptions);
+  const sentrifiedConfig = withDebuggAIConfig(exportedNextConfig, sentryBuildOptions);
   let finalConfigValues = sentrifiedConfig;
 
   if (typeof sentrifiedConfig === 'function') {

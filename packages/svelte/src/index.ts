@@ -9,4 +9,4 @@ export { init } from './sdk';
 
 export { trackComponent } from './performance';
 
-export { withSentryConfig } from './config';
+export { withDebuggAIConfig } from './config';

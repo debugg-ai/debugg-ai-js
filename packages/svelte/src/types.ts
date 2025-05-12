@@ -17,7 +17,7 @@ export type SvelteConfig = {
 };
 
 /**
- * Options users can provide to `withSentryConfig` to customize what Sentry adds too the Svelte config
+ * Options users can provide to `withDebuggAIConfig` to customize what Sentry adds too the Svelte config
  */
 export type SentrySvelteConfigOptions = {
   componentTracking?: ComponentTrackingInitOptions;

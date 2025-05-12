@@ -7,7 +7,7 @@ const globalWithInjectedValues = GLOBAL_OBJ as typeof GLOBAL_OBJ & {
 };
 
 /**
- * Applies the `tunnel` option to the Next.js SDK options based on `withSentryConfig`'s `tunnelRoute` option.
+ * Applies the `tunnel` option to the Next.js SDK options based on `withDebuggAIConfig`'s `tunnelRoute` option.
  */
 export function applyTunnelRouteOption(options: BrowserOptions): void {
   const tunnelRouteOption = process.env._sentryRewritesTunnelPath || globalWithInjectedValues._sentryRewritesTunnelPath;

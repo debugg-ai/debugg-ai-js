@@ -57,7 +57,7 @@
   },
   "dependencies": {
     "@sentry/browser": "9.15.0",
-    "@debugg-ai/core": "1.0.8",
+    "@debugg-ai/core": "1.0.11",
     "@sentry/node": "9.15.0",
     "@sentry/vite-plugin": "^2.22.6"
   },

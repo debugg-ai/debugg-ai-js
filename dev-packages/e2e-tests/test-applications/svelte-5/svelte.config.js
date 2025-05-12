@@ -1,4 +1,4 @@
-import { withSentryConfig } from '@sentry/svelte';
+import { withDebuggAIConfig } from '@sentry/svelte';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 const config = {
@@ -7,7 +7,7 @@ const config = {
   preprocess: vitePreprocess(),
 };
 
-const configWithSentry = withSentryConfig(config, {
+const configWithSentry = withDebuggAIConfig(config, {
   componentTracking: { trackComponents: true, trackInit: true },
 });
 

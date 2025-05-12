@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { withSentryConfig } from '../src/config';
+import { withDebuggAIConfig } from '../src/config';
 import { componentTrackingPreprocessor, FIRST_PASS_COMPONENT_TRACKING_PREPROC_ID } from '../src/preprocessors';
 import type { SentryPreprocessorGroup, SentrySvelteConfigOptions, SvelteConfig } from '../src/types';
 
-describe('withSentryConfig', () => {
+describe('withDebuggAIConfig', () => {
   it.each([
     [
       'no preprocessors specified',
@@ -32,7 +32,7 @@ describe('withSentryConfig', () => {
       },
     ],
   ])('adds our preprocessors by default to the provided svelte config with %s', (_, originalConfig: SvelteConfig) => {
-    const wrappedConfig = withSentryConfig(originalConfig);
+    const wrappedConfig = withDebuggAIConfig(originalConfig);
     const originalPreprocs = originalConfig.preprocess;
     const originalNumberOfPreprocs = originalPreprocs
       ? Array.isArray(originalPreprocs)
@@ -57,7 +57,7 @@ describe('withSentryConfig', () => {
       preprocess: sentryPreproc,
     };
 
-    const wrappedConfig = withSentryConfig(originalConfig);
+    const wrappedConfig = withDebuggAIConfig(originalConfig);
 
     expect(wrappedConfig).toEqual({ ...originalConfig });
   });
@@ -69,7 +69,7 @@ describe('withSentryConfig', () => {
       },
     };
 
-    const wrappedConfig = withSentryConfig(withSentryConfig(withSentryConfig(originalConfig)));
+    const wrappedConfig = withDebuggAIConfig(withDebuggAIConfig(withDebuggAIConfig(originalConfig)));
 
     expect(wrappedConfig).toEqual({ ...originalConfig, preprocess: expect.any(Array) });
     expect(wrappedConfig.preprocess).toHaveLength(1);
@@ -84,7 +84,7 @@ describe('withSentryConfig', () => {
     };
 
     const sentryOptions: SentrySvelteConfigOptions = { componentTracking: { trackComponents: false } };
-    const wrappedConfig = withSentryConfig(originalConfig, sentryOptions);
+    const wrappedConfig = withDebuggAIConfig(originalConfig, sentryOptions);
 
     expect(wrappedConfig).toEqual(originalConfig);
   });

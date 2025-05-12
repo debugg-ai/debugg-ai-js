@@ -1,6 +1,6 @@
 {
   "name": "@debugg-ai/core",
-  "version": "1.0.8",
+  "version": "1.0.11",
   "description": "Base implementation for all DebuggAI js wrappers of the Sentry Open Source SDK",
   "repository": "git://github.com/debugg-ai/debugg-ai-js.git",
   "homepage": "https://github.com/debugg-ai/debugg-ai-js/tree/master/packages/core",

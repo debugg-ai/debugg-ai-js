@@ -45,7 +45,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@debugg-ai/core": "1.0.8",
+    "@debugg-ai/core": "1.0.11",
     "@sentry/react": "9.15.0",
     "@sentry/webpack-plugin": "3.3.1"
   },

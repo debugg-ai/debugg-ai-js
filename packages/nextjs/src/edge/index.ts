@@ -108,6 +108,6 @@ export function init(options: VercelEdgeOptions = {}): void {
 /**
  * Just a passthrough in case this is imported from the client.
  */
-export function withSentryConfig<T>(exportedUserNextConfig: T): T {
+export function withDebuggAIConfig<T>(exportedUserNextConfig: T): T {
   return exportedUserNextConfig;
 }

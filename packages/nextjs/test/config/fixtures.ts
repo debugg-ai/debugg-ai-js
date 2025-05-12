@@ -25,13 +25,13 @@ export const userNextConfig: NextConfigObject = {
   }),
 };
 
-/** Mocks of the arguments passed to `withSentryConfig` */
+/** Mocks of the arguments passed to `withDebuggAIConfig` */
 export const exportedNextConfig = userNextConfig;
 export const userSentryWebpackPluginConfig = { org: 'squirrelChasers', project: 'simulator' };
 process.env.SENTRY_AUTH_TOKEN = 'dogsarebadatkeepingsecrets';
 process.env.SENTRY_RELEASE = 'doGsaREgReaT';
 
-/** Mocks of the arguments passed to the result of `withSentryConfig` (when it's a function). */
+/** Mocks of the arguments passed to the result of `withDebuggAIConfig` (when it's a function). */
 export const defaultRuntimePhase = 'ball-fetching';
 // `defaultConfig` is the defaults for all nextjs options (we don't use these at all in the tests, so for our purposes
 // here the values don't matter)

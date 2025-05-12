@@ -23,7 +23,7 @@ let showedExportModeTunnelWarning = false;
  * @param sentryBuildOptions Additional options to configure instrumentation and
  * @returns The modified config to be exported
  */
-export function withSentryConfig<C>(nextConfig?: C, sentryBuildOptions: SentryBuildOptions = {}): C {
+export function withDebuggAIConfig<C>(nextConfig?: C, sentryBuildOptions: SentryBuildOptions = {}): C {
   const castNextConfig = (nextConfig as NextConfig) || {};
   if (typeof castNextConfig === 'function') {
     return function (this: unknown, ...webpackConfigFunctionArgs: unknown[]): ReturnType<NextConfigFunction> {

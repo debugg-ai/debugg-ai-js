@@ -31,7 +31,7 @@
     "@nestjs/core": "10.4.6",
     "@nestjs/platform-express": "10.4.6",
     "@sentry/aws-serverless": "9.15.0",
-    "@debugg-ai/core": "1.0.8",
+    "@debugg-ai/core": "1.0.11",
     "@sentry/node": "9.15.0",
     "@types/mongodb": "^3.6.20",
     "@types/mysql": "^2.15.21",

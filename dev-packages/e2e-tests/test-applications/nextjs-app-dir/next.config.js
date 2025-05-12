@@ -1,4 +1,4 @@
-const { withSentryConfig } = require('@sentry/nextjs');
+const { withDebuggAIConfig } = require('@sentry/nextjs');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -8,7 +8,7 @@ const nextConfig = {
   },
 };
 
-module.exports = withSentryConfig(nextConfig, {
+module.exports = withDebuggAIConfig(nextConfig, {
   debug: true,
   sourcemaps: {
     deleteSourcemapsAfterUpload: true,

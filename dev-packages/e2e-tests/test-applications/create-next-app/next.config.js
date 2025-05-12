@@ -1,3 +1,3 @@
-const { withSentryConfig } = require('@sentry/nextjs');
+const { withDebuggAIConfig } = require('@debugg-ai/nextjs');
 
-module.exports = withSentryConfig();
+module.exports = withDebuggAIConfig();
